@@ -1,11 +1,14 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import TechMarquee from "@/components/TechMarquee";
-import Services from "@/components/Services";
-import Expertise from "@/components/Expertise";
-import Impact from "@/components/Impact";
-import WhyUs from "@/components/WhyUs";
-import Process from "@/components/Process";
+import Navbar from "@/components/landingpage/Navbar";
+import Hero from "@/components/landingpage/Hero";
+import TechMarquee from "@/components/landingpage/TechMarquee";
+import Services from "@/components/landingpage/Services";
+import Expertise from "@/components/landingpage/Expertise";
+import Impact from "@/components/landingpage/Impact";
+import WhyUs from "@/components/landingpage/WhyUs";
+import Process from "@/components/landingpage/Process";
+import Clients from "@/components/landingpage/Clients";
+import CTA from "@/components/landingpage/CTA";
+import Footer from "@/components/landingpage/Footer";
 export default function Home() {
   return (
     <main>
@@ -16,7 +19,10 @@ export default function Home() {
       <Expertise />
       <Impact />
       <WhyUs />
-      <Process/>
+      <Process />
+      <Clients />
+      <CTA />
+      <Footer/>
     </main>
   );
 }

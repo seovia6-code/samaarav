@@ -1,10 +1,16 @@
 @import "tailwindcss";
 
+/* =========================================
+   GLOBAL THEME
+========================================= */
+
 :root {
   --background: #fffdf3;
   --foreground: #171717;
-  --muted: #6b6b67;
-  --border: #dedcd2;
+
+  --line: rgba(23, 23, 23, 0.12);
+  --line-light: rgba(23, 23, 23, 0.07);
+  --muted: rgba(23, 23, 23, 0.55);
 }
 
 * {
@@ -17,7 +23,156 @@ html {
 
 body {
   margin: 0;
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-inter), sans-serif;
+  background: #fffdf3;
+  color: #171717;
+  font-family: "Inter", sans-serif;
+}
+
+
+/* =========================================
+   PLEURAT STYLE PAGE GRID
+========================================= */
+
+.site-grid {
+  position: relative;
+  min-height: 100vh;
+
+  background-color: #fffdf3;
+
+  /*
+    Fine horizontal lines
+  */
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(23, 23, 23, 0.055) 0px,
+    rgba(23, 23, 23, 0.055) 1px,
+    transparent 1px,
+    transparent 5px
+  );
+}
+
+
+/* =========================================
+   MAIN PAGE FRAME
+========================================= */
+
+.page-frame {
+  width: calc(100% - 7vw);
+  max-width: 1600px;
+  margin: 0 auto;
+
+  border-left: 1px solid rgba(23, 23, 23, 0.14);
+  border-right: 1px solid rgba(23, 23, 23, 0.14);
+
+  min-height: 100vh;
+}
+
+
+/* =========================================
+   SECTION BORDER
+========================================= */
+
+.section-border {
+  border-top: 1px solid rgba(23, 23, 23, 0.12);
+}
+
+
+/* =========================================
+   FINE DIVIDER
+========================================= */
+
+.fine-border {
+  border-color: rgba(23, 23, 23, 0.10);
+}
+
+
+/* =========================================
+   PLEURAT HORIZONTAL LINES
+========================================= */
+
+.pleurat-lines {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(23, 23, 23, 0.045) 0px,
+    rgba(23, 23, 23, 0.045) 1px,
+    transparent 1px,
+    transparent 5px
+  );
+}
+
+
+/* =========================================
+   SECTION WITH LINES
+========================================= */
+
+.pleurat-section {
+  position: relative;
+
+  border-top: 1px solid rgba(23, 23, 23, 0.12);
+
+  background-color: rgba(255, 253, 243, 0.75);
+
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(23, 23, 23, 0.045) 0px,
+    rgba(23, 23, 23, 0.045) 1px,
+    transparent 1px,
+    transparent 5px
+  );
+}
+
+
+/* =========================================
+   SUBTLE HOVER
+========================================= */
+
+a {
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* =========================================
+   SELECTION
+========================================= */
+
+::selection {
+  background: #171717;
+  color: #fffdf3;
+}
+
+
+/* =========================================
+   CLIENT MARQUEE
+========================================= */
+
+@keyframes clients-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes clients-marquee-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.clients-marquee {
+  animation: clients-marquee 28s linear infinite;
+  will-change: transform;
+}
+
+.clients-marquee-reverse {
+  animation: clients-marquee-reverse 28s linear infinite;
+  will-change: transform;
 }
