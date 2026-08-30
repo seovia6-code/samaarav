@@ -32,57 +32,6 @@ const nodes = [
   { x: "91%", y: "75%", size: 7, color: "#999999", delay: 1.7 },
 ];
 
-// Colorful floating technology nodes
-const floatingNodes = [
-  {
-    x: "7%",
-    y: "55%",
-    color: "linear-gradient(135deg,#ff6b4a,#f51672)",
-    symbol: "✦",
-    size: 48,
-    delay: 0,
-  },
-  {
-    x: "22%",
-    y: "23%",
-    color: "linear-gradient(135deg,#18d69b,#18b8d5)",
-    symbol: "{}",
-    size: 52,
-    delay: 1.2,
-  },
-  {
-    x: "39%",
-    y: "68%",
-    color: "linear-gradient(135deg,#ffb629,#ff7b20)",
-    symbol: "♥",
-    size: 46,
-    delay: 0.6,
-  },
-  {
-    x: "67%",
-    y: "30%",
-    color: "linear-gradient(135deg,#21d6b1,#18aeea)",
-    symbol: "▱",
-    size: 50,
-    delay: 1.8,
-  },
-  {
-    x: "77%",
-    y: "62%",
-    color: "linear-gradient(135deg,#3bc7ff,#493cff)",
-    symbol: "</>",
-    size: 48,
-    delay: 0.8,
-  },
-  {
-    x: "88%",
-    y: "34%",
-    color: "linear-gradient(135deg,#ffb52e,#ff7b25)",
-    symbol: "✺",
-    size: 48,
-    delay: 2,
-  },
-];
 
 export default function Hero() {
   return (
@@ -316,42 +265,6 @@ export default function Hero() {
             />
           ))}
 
-          {/* Colorful floating nodes */}
-          {floatingNodes.map((node, index) => (
-            <motion.div
-              key={index}
-              className="absolute flex items-center justify-center rounded-full text-white shadow-sm"
-              style={{
-                left: node.x,
-                top: node.y,
-                width: node.size,
-                height: node.size,
-                background: node.color,
-              }}
-              animate={{
-                x: [0, 18, -12, 0],
-                y: [0, -20, 12, 0],
-                rotate: [0, 5, -5, 0],
-                scale: [1, 1.06, 0.97, 1],
-              }}
-              transition={{
-                duration: 8 + (index % 3),
-                delay: node.delay,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              <span
-                className={
-                  node.symbol === "{}" || node.symbol === "</>"
-                    ? "font-mono text-xs font-bold"
-                    : "text-lg"
-                }
-              >
-                {node.symbol}
-              </span>
-            </motion.div>
-          ))}
 
           {/* Tiny moving particles */}
           {Array.from({ length: 25 }).map((_, index) => (
