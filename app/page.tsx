@@ -1,3 +1,4 @@
+import Loader from "@/components/landingpage/Loader";
 import Navbar from "@/components/landingpage/Navbar";
 import Hero from "@/components/landingpage/Hero";
 import TechMarquee from "@/components/landingpage/TechMarquee";
@@ -9,9 +10,11 @@ import Process from "@/components/landingpage/Process";
 import Clients from "@/components/landingpage/Clients";
 import CTA from "@/components/landingpage/CTA";
 import Footer from "@/components/landingpage/Footer";
+
 export default function Home() {
   return (
     <main>
+      <Loader />
       <Navbar />
       <Hero />
       <TechMarquee />
@@ -22,7 +25,7 @@ export default function Home() {
       <Process />
       <Clients />
       <CTA />
-      <Footer/>
+      <Footer />
     </main>
   );
 }

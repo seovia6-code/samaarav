@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const nodes = [
   { x: "8%", y: "28%", size: 8, color: "#8a8a8a", delay: 0 },
@@ -34,17 +35,32 @@ const nodes = [
 
 
 export default function Hero() {
+  const containerRef = useRef<HTMLElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
+
+  const headingX1 = useTransform(scrollYProgress, [0, 1], ["0%", "15vw"]);
+  const headingX2 = useTransform(scrollYProgress, [0, 1], ["0%", "-15vw"]);
+  const headingX3 = useTransform(scrollYProgress, [0, 1], ["0%", "20vw"]);
+  const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "40vh"]);
+  const nodesY = useTransform(scrollYProgress, [0, 1], ["0%", "-30vh"]);
+  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "20vh"]);
+
   return (
     <>
       <section
         id="home"
+        ref={containerRef}
         className="relative min-h-screen overflow-hidden px-6 pb-12 pt-32 md:px-10 md:pt-40 lg:px-14"
       >
         {/* =====================================================
             BACKGROUND
         ====================================================== */}
 
-        <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        <motion.div style={{ y: bgY }} className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
           {/* Horizontal lines */}
           <div className="absolute inset-0 bg-[repeating-linear-gradient(to_bottom,transparent_0px,transparent_7px,rgba(0,0,0,0.045)_8px)]" />
 
@@ -238,7 +254,8 @@ export default function Hero() {
             />
           </svg>
 
-          {/* Small moving nodes */}
+          {/* Small moving nodes with parallax */}
+          <motion.div style={{ y: nodesY }} className="absolute inset-0">
           {nodes.map((node, index) => (
             <motion.span
               key={index}
@@ -264,7 +281,7 @@ export default function Hero() {
               }}
             />
           ))}
-
+          </motion.div>
 
           {/* Tiny moving particles */}
           {Array.from({ length: 25 }).map((_, index) => (
@@ -288,7 +305,7 @@ export default function Hero() {
               }}
             />
           ))}
-        </div>
+        </motion.div>
 
         {/* =====================================================
             HERO CONTENT
@@ -298,11 +315,17 @@ export default function Hero() {
           {/* Heading */}
           <div className="max-w-[1500px]">
             <motion.h1
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 1,
-                ease: "easeOut",
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: { opacity: 0 },
+                visible: {
+                  opacity: 1,
+                  transition: {
+                    staggerChildren: 0.25,
+                    delayChildren: 2.5,
+                  },
+                },
               }}
               className="
                 text-[15vw]
@@ -313,31 +336,66 @@ export default function Hero() {
                 lg:text-[8.7vw]
               "
             >
-              TALENT.
-              <br />
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 100, rotateX: 15 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    rotateX: 0,
+                    transition: { duration: 1.4, ease: [0.16, 1, 0.3, 1] },
+                  },
+                }}
+                style={{ transformPerspective: 1000, x: headingX1 }}
+                className="origin-bottom"
+              >
+                TALENT.
+              </motion.div>
 
-              <span className="ml-0 md:ml-[5vw]">
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 100, rotateX: 15 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    rotateX: 0,
+                    transition: { duration: 1.4, ease: [0.16, 1, 0.3, 1] },
+                  },
+                }}
+                style={{ transformPerspective: 1000, x: headingX2 }}
+                className="ml-0 origin-bottom md:ml-[5vw] mt-4 md:mt-0"
+              >
                 TECHNOLOGY.
-              </span>
+              </motion.div>
 
-              <br />
-
-              <span className="ml-[8vw] md:ml-[10vw]">
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 100, rotateX: 15 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    rotateX: 0,
+                    transition: { duration: 1.4, ease: [0.16, 1, 0.3, 1] },
+                  },
+                }}
+                style={{ transformPerspective: 1000, x: headingX3 }}
+                className="ml-[8vw] origin-bottom md:ml-[10vw] mt-4 md:mt-0"
+              >
                 TRANSFORMATION.
-              </span>
+              </motion.div>
             </motion.h1>
           </div>
 
           {/* Bottom content */}
-          <div className="mt-20 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+          <motion.div style={{ y: contentY }} className="mt-20 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             {/* Description */}
             <motion.p
-              initial={{ opacity: 0, y: 25 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.7,
-                delay: 0.35,
-                ease: "easeOut",
+                duration: 1.2,
+                delay: 3.2,
+                ease: [0.16, 1, 0.3, 1],
               }}
               className="
                 max-w-md
@@ -354,12 +412,12 @@ export default function Hero() {
 
             {/* Buttons */}
             <motion.div
-              initial={{ opacity: 0, y: 25 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.7,
-                delay: 0.5,
-                ease: "easeOut",
+                duration: 1.2,
+                delay: 3.4,
+                ease: [0.16, 1, 0.3, 1],
               }}
               className="flex flex-wrap gap-3"
             >
@@ -398,7 +456,7 @@ export default function Hero() {
                 Our Services ↗
               </a>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </>

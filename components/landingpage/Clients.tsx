@@ -14,29 +14,65 @@ export default function Clients() {
       className="relative overflow-hidden border-y border-black/10 py-24"
     >
       {/* Heading */}
-      <div className="px-6 md:px-10 lg:px-14">
+      <motion.div 
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.2 },
+          },
+        }}
+        className="px-6 md:px-10 lg:px-14"
+      >
         <div className="mb-16 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="mb-4 text-xs uppercase tracking-[0.25em] text-black/40">
+            <motion.p 
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0, transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } }
+              }}
+              className="mb-4 text-xs uppercase tracking-[0.25em] text-black/40"
+            >
               Trusted Enterprises
-            </p>
+            </motion.p>
 
-            <h2 className="max-w-4xl text-[11vw] font-medium leading-[0.85] tracking-[-0.07em] md:text-[7vw] lg:text-[6vw]">
+            <motion.h2 
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] } }
+              }}
+              className="max-w-4xl text-[11vw] font-medium leading-[0.85] tracking-[-0.07em] md:text-[7vw] lg:text-[6vw]"
+            >
               TRUSTED
               <br />
               BY INDUSTRY.
-            </h2>
+            </motion.h2>
           </div>
 
-          <p className="max-w-sm text-sm leading-relaxed text-black/50 md:text-base">
+          <motion.p 
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } }
+            }}
+            className="max-w-sm text-sm leading-relaxed text-black/50 md:text-base"
+          >
             We connect exceptional technology talent with organizations building
             what comes next.
-          </p>
+          </motion.p>
         </div>
-      </div>
+      </motion.div>
 
       {/* First row */}
-      <div className="relative mb-7 overflow-hidden">
+      <motion.div 
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+        className="relative mb-7 overflow-hidden"
+      >
         <motion.div
           className="flex w-max items-center gap-8"
           animate={{ x: ["0%", "-50%"] }}
@@ -50,10 +86,16 @@ export default function Clients() {
             <LogoCard key={`row-one-${client.name}-${index}`} client={client} />
           ))}
         </motion.div>
-      </div>
+      </motion.div>
 
       {/* Second row */}
-      <div className="relative overflow-hidden">
+      <motion.div 
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+        className="relative overflow-hidden"
+      >
         <motion.div
           className="flex w-max items-center gap-8"
           animate={{ x: ["-50%", "0%"] }}
@@ -67,7 +109,7 @@ export default function Clients() {
             <LogoCard key={`row-two-${client.name}-${index}`} client={client} />
           ))}
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 }
