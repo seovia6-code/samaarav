@@ -34,36 +34,37 @@ const steps = [
   },
 ];
 
-function Card({ step, index, progress, targetScale }: { step: any, index: number, progress: any, targetScale: number }) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "start start"]
-  });
-
-  const scale = useTransform(progress, [index * 0.25, 1], [1, targetScale]);
+function TimelineItem({ step, index }: { step: any; index: number }) {
+  const isEven = index % 2 === 0;
 
   return (
-    <div ref={containerRef} className="sticky top-0 flex h-screen items-center justify-center pt-24 md:pt-32">
-      <motion.div 
-        style={{ backgroundColor: step.color, color: step.textColor, scale, top: `calc(-5vh + ${index * 25}px)` }} 
-        className="relative flex h-[400px] w-full max-w-5xl flex-col justify-between overflow-hidden rounded-3xl border border-black/10 p-10 shadow-lg md:h-[500px] md:p-16 lg:flex-row lg:items-center lg:justify-between"
-      >
-        <div className="flex h-full w-full flex-col justify-between">
-          <div className="text-[6rem] font-medium leading-none tracking-[-0.09em] opacity-20 md:text-[8rem]">
+    <div className="relative flex w-full flex-col items-start md:flex-row md:items-center md:justify-between my-8 md:my-12">
+      {/* Desktop alternating layout */}
+      <div className={`w-full md:w-[45%] ${isEven ? "md:pr-12" : "md:pl-12 md:order-2"}`}>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="relative flex flex-col justify-between overflow-hidden rounded-2xl border border-black/10 p-8 shadow-sm md:p-10"
+          style={{ backgroundColor: step.color, color: step.textColor }}
+        >
+          <div className="mb-6 text-[3rem] font-medium leading-none tracking-[-0.09em] opacity-20 md:text-[5rem]">
             {step.number}
           </div>
-          <div className="max-w-2xl">
-            <h3 className="mb-4 text-4xl font-medium tracking-[-0.05em] md:text-5xl">
+          <div className="max-w-xl">
+            <h3 className="mb-3 text-2xl font-medium tracking-[-0.05em] md:text-3xl">
               {step.title}
             </h3>
-            <p className="text-lg leading-relaxed opacity-70 md:text-xl">
+            <p className="text-base leading-relaxed opacity-70 md:text-lg">
               {step.description}
             </p>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
+
+      {/* Empty space for alternating layout on desktop */}
+      <div className={`hidden md:block w-[45%] ${isEven ? "md:order-2" : ""}`}></div>
     </div>
   );
 }
@@ -72,13 +73,15 @@ export default function Process() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end end"]
+    offset: ["start center", "end center"],
   });
 
+  const dotTop = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+
   return (
-    <section ref={containerRef} id="process" className="relative px-6 pb-24 md:px-10 lg:px-14">
+    <section id="process" className="relative px-6 pb-24 pt-32 md:px-10 lg:px-14">
       {/* Header */}
-      <div className="sticky top-10 mb-20 flex flex-col gap-8 md:flex-row md:items-end md:justify-between pt-24">
+      <div className="mb-24 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="mb-6 text-xs uppercase tracking-[0.2em] text-[#6B6B67]">
             Our Process
@@ -97,19 +100,22 @@ export default function Process() {
         </p>
       </div>
 
-      <div className="relative w-full">
-        {steps.map((step, index) => {
-          const targetScale = 1 - ((steps.length - index) * 0.05);
-          return (
-            <Card 
-              key={index} 
-              index={index} 
-              step={step} 
-              progress={scrollYProgress} 
-              targetScale={targetScale} 
-            />
-          );
-        })}
+      <div ref={containerRef} className="relative mx-auto mt-20 w-full max-w-6xl">
+        {/* Dashed Center Line */}
+        <div className="absolute bottom-0 left-0 top-0 w-px -translate-x-1/2 border-l-2 border-dashed border-black/15 md:left-1/2"></div>
+
+        {/* Animated Moving Square */}
+        <motion.div
+          className="absolute left-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 bg-[#3B82F6] shadow-[0_0_20px_rgba(59,130,246,0.8)] md:left-1/2"
+          style={{ top: dotTop }}
+        />
+
+        {/* Steps */}
+        <div className="flex flex-col pl-10 md:pl-0">
+          {steps.map((step, index) => (
+            <TimelineItem key={index} step={step} index={index} />
+          ))}
+        </div>
       </div>
     </section>
   );
