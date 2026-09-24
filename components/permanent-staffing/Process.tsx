@@ -6,29 +6,36 @@ import { motion, useScroll, useTransform } from "framer-motion";
 const steps = [
   {
     number: "01",
-    title: "Share Requirements",
-    description: "Tell us about your technology hiring requirements, skills, experience, and team needs.",
+    title: "Discovery & Alignment",
+    description: "We engage closely with your stakeholders to understand the role, team dynamics, technical requirements, and long-term goals.",
     color: "#ffffff",
     textColor: "#171717",
   },
   {
     number: "02",
-    title: "Receive Pre-Vetted Profiles",
-    description: "Our team identifies and presents qualified technology professionals aligned with your requirements.",
+    title: "Targeted Sourcing",
+    description: "Leveraging our vast global network, we identify active and passive candidates who match the exact skill and culture profile required.",
     color: "#f5f5f5",
     textColor: "#171717",
   },
   {
     number: "03",
-    title: "Interview Candidates",
-    description: "Review profiles, connect with candidates, and identify the professionals who best fit your organization.",
+    title: "Rigorous Screening",
+    description: "Every candidate undergoes a multi-tier evaluation process including technical assessments, behavioral interviews, and reference checks.",
     color: "#eaeaea",
     textColor: "#171717",
   },
   {
     number: "04",
-    title: "Onboard Talent",
-    description: "Once you select your candidate, we help move the process forward so your new talent can get started.",
+    title: "Interview & Selection",
+    description: "We coordinate the interview process, provide debriefs, and assist in offer negotiation to ensure a smooth closing.",
+    color: "#dedede",
+    textColor: "#171717",
+  },
+  {
+    number: "05",
+    title: "Onboarding & Aftercare",
+    description: "Our job doesn't end at the offer. We facilitate seamless onboarding and check in regularly to ensure long-term success.",
     color: "#171717",
     textColor: "#ffffff",
   },
@@ -37,18 +44,13 @@ const steps = [
 function Card({ step, index, progress, targetScale }: { step: any, index: number, progress: any, targetScale: number }) {
   const containerRef = useRef<HTMLDivElement>(null);
   
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "start start"]
-  });
-
-  const scale = useTransform(progress, [index * 0.25, 1], [1, targetScale]);
+  const scale = useTransform(progress, [index * 0.2, 1], [1, targetScale]);
 
   return (
     <div ref={containerRef} className="sticky top-0 flex h-screen items-center justify-center pt-24 md:pt-32">
       <motion.div 
         style={{ backgroundColor: step.color, color: step.textColor, scale, top: `calc(-5vh + ${index * 25}px)` }} 
-        className="relative flex h-[400px] w-full max-w-5xl flex-col justify-between overflow-hidden rounded-3xl border border-black/10 p-10 shadow-lg md:h-[500px] md:p-16 lg:flex-row lg:items-center lg:justify-between"
+        className="relative flex h-[400px] w-full max-w-5xl flex-col justify-between overflow-hidden rounded-3xl border border-black/10 p-10 shadow-lg md:h-[500px] md:p-16"
       >
         <div className="flex h-full w-full flex-col justify-between">
           <div className="text-[6rem] font-medium leading-none tracking-[-0.09em] opacity-20 md:text-[8rem]">
@@ -76,25 +78,18 @@ export default function Process() {
   });
 
   return (
-    <section ref={containerRef} id="process" className="relative px-6 pb-24 md:px-10 lg:px-14">
-      {/* Header */}
+    <section ref={containerRef} className="relative px-6 pb-24 md:px-10 lg:px-14">
       <div className="sticky top-10 mb-20 flex flex-col gap-8 md:flex-row md:items-end md:justify-between pt-24">
         <div>
           <p className="mb-6 text-xs uppercase tracking-[0.2em] text-[#6B6B67]">
-            Our Process
+            How We Work
           </p>
-
           <h2 className="max-w-4xl text-[12vw] font-medium leading-[0.82] tracking-[-0.07em] md:text-[8vw] lg:text-[7vw]">
-            FROM NEED
+            OUR PROVEN
             <br />
-            TO TALENT
+            PROCESS
           </h2>
         </div>
-
-        <p className="max-w-md text-base leading-relaxed text-[#6B6B67] md:text-lg">
-          A simple four-step process designed to help businesses find
-          qualified technology professionals efficiently.
-        </p>
       </div>
 
       <div className="relative w-full">

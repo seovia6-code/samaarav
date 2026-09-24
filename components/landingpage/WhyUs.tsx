@@ -51,7 +51,7 @@ export default function WhyUs() {
       <div className="mb-20 flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="mb-6 text-xs uppercase tracking-[0.2em] text-[#6B6B67]">
-            Why Kapil Tech
+            Why Samaarav
           </p>
 
           <h2 className="max-w-4xl text-[12vw] font-medium leading-[0.82] tracking-[-0.07em] md:text-[8vw] lg:text-[7vw]">

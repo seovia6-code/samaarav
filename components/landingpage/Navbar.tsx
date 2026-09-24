@@ -24,7 +24,7 @@ export default function Navbar() {
           href="/"
           className="text-lg font-semibold tracking-[-0.04em]"
         >
-          KAPILTECH
+          SAMAARAV
         </a>
 
         {/* Navigation */}

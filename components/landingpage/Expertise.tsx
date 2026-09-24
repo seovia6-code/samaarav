@@ -1,100 +1,128 @@
 "use client";
 
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const expertise = [
   {
     name: "AI",
     title: "AI & Data Engineering",
-    description:
-      "Transform raw data into actionable intelligence with AI solutions, machine learning models, predictive analytics, computer vision, generative AI, recommendation engines, and real-time analytics.",
-    roles: [
-      "AI/ML Engineers",
-      "Data Engineers",
-      "QA Engineers",
-    ],
+    description: "Transform raw data into actionable intelligence with AI solutions, machine learning models, predictive analytics, computer vision, generative AI, recommendation engines, and real-time analytics.",
+    roles: ["AI/ML Engineers", "Data Engineers", "QA Engineers"],
+    color: "#ffffff",
+    textColor: "#171717",
   },
   {
     name: "SAP",
     title: "SAP Technology",
-    description:
-      "Access experienced SAP professionals and consultants to support enterprise technology initiatives and business transformation.",
-    roles: [
-      "SAP Consultants",
-      "SAP Specialists",
-      "SAP Professionals",
-    ],
+    description: "Access experienced SAP professionals and consultants to support enterprise technology initiatives and business transformation.",
+    roles: ["SAP Consultants", "SAP Specialists", "SAP Professionals"],
+    color: "#f5f5f5",
+    textColor: "#171717",
   },
   {
     name: "INFOR",
     title: "Infor Technology",
-    description:
-      "Connect with professionals experienced in enterprise resource planning and Infor technology environments.",
-    roles: [
-      "Infor Consultants",
-      "ERP Specialists",
-      "Technology Professionals",
-    ],
+    description: "Connect with professionals experienced in enterprise resource planning and Infor technology environments.",
+    roles: ["Infor Consultants", "ERP Specialists", "Technology Professionals"],
+    color: "#eaeaea",
+    textColor: "#171717",
   },
   {
     name: "ODOO",
     title: "Odoo Technology",
-    description:
-      "Build and scale technology teams with professionals experienced in Odoo and enterprise business applications.",
-    roles: [
-      "Odoo Developers",
-      "Odoo Consultants",
-      "ERP Professionals",
-    ],
+    description: "Build and scale technology teams with professionals experienced in Odoo and enterprise business applications.",
+    roles: ["Odoo Developers", "Odoo Consultants", "ERP Professionals"],
+    color: "#dedede",
+    textColor: "#171717",
   },
   {
     name: "WEB",
     title: "Web Technology",
-    description:
-      "Find skilled professionals who can support modern web development and digital technology initiatives.",
-    roles: [
-      "Web Developers",
-      "Full Stack Developers",
-      "Software Engineers",
-    ],
+    description: "Find skilled professionals who can support modern web development and digital technology initiatives.",
+    roles: ["Web Developers", "Full Stack Developers", "Software Engineers"],
+    color: "#d4d4d4",
+    textColor: "#171717",
   },
   {
     name: "QA",
     title: "Quality Assurance",
-    description:
-      "Build quality-focused teams with professionals experienced in automated testing, regression testing, performance testing, and quality assurance.",
-    roles: [
-      "QA Engineers",
-      "Automation Engineers",
-      "Test Engineers",
-    ],
+    description: "Build quality-focused teams with professionals experienced in automated testing, regression testing, performance testing, and quality assurance.",
+    roles: ["QA Engineers", "Automation Engineers", "Test Engineers"],
+    color: "#cbcbcb",
+    textColor: "#171717",
   },
   {
     name: "CLOUD",
     title: "Cloud Technology",
-    description:
-      "Access cloud technology professionals to support scalable, modern, and globally distributed technology environments.",
-    roles: [
-      "Cloud Engineers",
-      "Cloud Architects",
-      "DevOps Professionals",
-    ],
+    description: "Access cloud technology professionals to support scalable, modern, and globally distributed technology environments.",
+    roles: ["Cloud Engineers", "Cloud Architects", "DevOps Professionals"],
+    color: "#171717",
+    textColor: "#ffffff",
   },
 ];
 
-export default function Expertise() {
-  const [active, setActive] = useState(0);
-
-  const current = expertise[active];
+function Card({ item, index, progress, targetScale }: { item: any, index: number, progress: any, targetScale: number }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  
+  const scale = useTransform(progress, [index * (1/expertise.length), 1], [1, targetScale]);
 
   return (
-    <section
-      id="expertise"
-      className="px-6 py-24 md:px-10 md:py-32 lg:px-14"
-    >
+    <div ref={containerRef} className="sticky top-0 flex h-screen items-center justify-center pt-24 md:pt-32">
+      <motion.div 
+        style={{ backgroundColor: item.color, color: item.textColor, scale, top: `calc(-5vh + ${index * 15}px)` }} 
+        className="relative flex h-[500px] w-full max-w-5xl flex-col justify-between overflow-hidden rounded-3xl border border-black/10 p-10 shadow-lg md:h-[600px] md:p-16"
+      >
+        <div className="flex h-full w-full flex-col justify-between">
+          <div className="flex items-end justify-between">
+            <div className="text-[5rem] font-medium leading-none tracking-[-0.09em] opacity-20 md:text-[7rem]">
+              {String(index + 1).padStart(2, "0")}
+            </div>
+            <div className="text-2xl font-medium tracking-tight opacity-40 md:text-4xl">
+              {item.name}
+            </div>
+          </div>
+          
+          <div className="mt-8 flex flex-col justify-between gap-10 md:flex-row md:items-end">
+            <div className="max-w-xl">
+              <h3 className="mb-4 text-3xl font-medium tracking-[-0.05em] md:text-5xl">
+                {item.title}
+              </h3>
+              <p className="text-base leading-relaxed opacity-70 md:text-lg">
+                {item.description}
+              </p>
+            </div>
+            
+            <div className="min-w-[200px]">
+              <p className="mb-4 text-xs uppercase tracking-[0.18em] opacity-50">
+                Key Roles We Fill
+              </p>
+              <div className="space-y-2">
+                {item.roles.map((role: string) => (
+                  <div key={role} className="border-b border-current pb-2 text-sm md:text-base opacity-90">
+                    {role}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+
+export default function Expertise() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"]
+  });
+
+  return (
+    <section ref={containerRef} id="expertise" className="relative px-6 pb-24 md:px-10 lg:px-14">
       {/* Header */}
-      <div className="mb-20">
+      <div className="sticky top-10 mb-20 pt-24">
         <p className="mb-6 text-xs uppercase tracking-[0.2em] text-[#6B6B67]">
           Technology Expertise
         </p>
@@ -108,79 +136,19 @@ export default function Expertise() {
         </h2>
       </div>
 
-      {/* Technology navigation */}
-      <div className="grid border-t border-[#DEDCD2] lg:grid-cols-[0.8fr_1.2fr]">
-        <div className="border-b border-[#DEDCD2] lg:border-b-0 lg:border-r">
-          {expertise.map((item, index) => {
-            const isActive = active === index;
-
-            return (
-              <button
-                key={item.name}
-                onMouseEnter={() => setActive(index)}
-                onClick={() => setActive(index)}
-                className="flex w-full items-center justify-between border-b border-[#DEDCD2] py-6 text-left md:py-8"
-              >
-                <span
-                  className={`text-3xl font-medium tracking-[-0.04em] transition-all duration-300 md:text-5xl ${
-                    isActive
-                      ? "translate-x-3 text-[#171717]"
-                      : "text-[#6B6B67]"
-                  }`}
-                >
-                  {item.name}
-                </span>
-
-                <span
-                  className={`text-lg transition-transform duration-300 ${
-                    isActive ? "rotate-0" : "-rotate-45"
-                  }`}
-                >
-                  ↗
-                </span>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Content */}
-        <div className="min-h-[500px] p-8 md:p-12 lg:p-20">
-          <motion.div
-            key={active}
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45 }}
-          >
-            <div className="mb-10 text-[7rem] font-medium leading-none tracking-[-0.08em] text-[#171717]/10 md:text-[10rem]">
-              {String(active + 1).padStart(2, "0")}
-            </div>
-
-            <h3 className="mb-6 text-4xl font-medium tracking-[-0.05em] md:text-5xl">
-              {current.title}
-            </h3>
-
-            <p className="mb-12 max-w-xl text-base leading-relaxed text-[#6B6B67] md:text-lg">
-              {current.description}
-            </p>
-
-            <div>
-              <p className="mb-5 text-xs uppercase tracking-[0.18em] text-[#6B6B67]">
-                Key Roles We Fill
-              </p>
-
-              <div className="space-y-3">
-                {current.roles.map((role) => (
-                  <div
-                    key={role}
-                    className="border-b border-[#DEDCD2] pb-3 text-lg"
-                  >
-                    {role}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        </div>
+      <div className="relative w-full">
+        {expertise.map((item, index) => {
+          const targetScale = 1 - ((expertise.length - index) * 0.03);
+          return (
+            <Card 
+              key={item.name} 
+              index={index} 
+              item={item} 
+              progress={scrollYProgress} 
+              targetScale={targetScale} 
+            />
+          );
+        })}
       </div>
     </section>
   );

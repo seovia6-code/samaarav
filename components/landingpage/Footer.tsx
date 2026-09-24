@@ -9,7 +9,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="lg:col-span-2">
           <h2 className="text-4xl font-semibold tracking-[-0.05em] md:text-5xl">
-            KAPILTECH
+            SAMAARAV
           </h2>
 
           <p className="mt-6 max-w-md text-sm leading-relaxed text-[#171717]/60 md:text-base">
@@ -70,7 +70,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="mailto:info@kapiltech.com"
+              href="mailto:info@samaarav.com"
               className="w-fit transition-opacity hover:opacity-50"
             >
               Email ↗
@@ -89,14 +89,14 @@ export default function Footer() {
       {/* Big footer text */}
       <div className="overflow-hidden py-12 md:py-20">
         <h2 className="whitespace-nowrap text-[18vw] font-medium leading-none tracking-[-0.09em] text-[#171717]">
-          KAPILTECH
+          SAMAARAV
         </h2>
       </div>
 
       {/* Bottom */}
       <div className="flex flex-col gap-4 border-t border-[#171717]/15 pt-6 text-xs text-[#171717]/50 md:flex-row md:items-center md:justify-between">
         <p>
-          © {new Date().getFullYear()} KapilTech. All rights reserved.
+          © {new Date().getFullYear()} Samaarav. All rights reserved.
         </p>
 
         <div className="flex gap-6">
