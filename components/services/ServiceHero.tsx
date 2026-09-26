@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-export default function Hero() {
+export default function ServiceHero({ title, subtitle, description, stats }: any) {
   const containerRef = useRef<HTMLElement>(null);
   
   const { scrollYProgress } = useScroll({
@@ -15,6 +15,11 @@ export default function Hero() {
   const headingX2 = useTransform(scrollYProgress, [0, 1], ["0%", "-15vw"]);
   const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "40vh"]);
   const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "20vh"]);
+
+  // Split title by <br /> or <br> to animate parts in opposite directions
+  const titleParts = title.split(/<br\s*\/?>/i);
+  const part1 = titleParts[0] || "";
+  const part2 = titleParts[1] || "";
 
   return (
     <>
@@ -35,7 +40,7 @@ export default function Hero() {
               transition={{ duration: 1, delay: 0.5 }}
               className="mb-8 text-xs uppercase tracking-[0.25em] text-black/40"
             >
-              Permanent IT Staffing
+              {subtitle}
             </motion.p>
             
             <motion.h1
@@ -61,21 +66,23 @@ export default function Hero() {
                 style={{ transformPerspective: 1000, x: headingX1 }}
                 className="origin-bottom"
               >
-                SOLUTIONS
+                {part1}
               </motion.div>
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 100, rotateX: 15 },
-                  visible: {
-                    opacity: 1, y: 0, rotateX: 0,
-                    transition: { duration: 1.4, ease: [0.16, 1, 0.3, 1] },
-                  },
-                }}
-                style={{ transformPerspective: 1000, x: headingX2 }}
-                className="ml-[10vw] origin-bottom mt-4 md:mt-0"
-              >
-                THAT DRIVE GROWTH.
-              </motion.div>
+              {part2 && (
+                <motion.div
+                  variants={{
+                    hidden: { opacity: 0, y: 100, rotateX: 15 },
+                    visible: {
+                      opacity: 1, y: 0, rotateX: 0,
+                      transition: { duration: 1.4, ease: [0.16, 1, 0.3, 1] },
+                    },
+                  }}
+                  style={{ transformPerspective: 1000, x: headingX2 }}
+                  className="ml-[10vw] origin-bottom mt-4 md:mt-0"
+                >
+                  {part2}
+                </motion.div>
+              )}
             </motion.h1>
           </div>
 
@@ -86,7 +93,7 @@ export default function Hero() {
               transition={{ duration: 1.2, delay: 1.5, ease: [0.16, 1, 0.3, 1] }}
               className="max-w-md text-base leading-relaxed text-black/65 md:text-lg"
             >
-              Connect with top-tier tech talent. Build teams that grow with your business. Expert placement in 2-4 weeks.
+              {description}
             </motion.p>
 
             <motion.div
@@ -95,18 +102,12 @@ export default function Hero() {
               transition={{ duration: 1.2, delay: 1.7, ease: [0.16, 1, 0.3, 1] }}
               className="flex gap-8"
             >
-              <div className="flex flex-col gap-2 border-l border-black/15 pl-6">
-                <span className="text-3xl font-medium tracking-tight md:text-4xl">85%</span>
-                <span className="text-xs uppercase tracking-wider text-black/50">Success Rate</span>
-              </div>
-              <div className="flex flex-col gap-2 border-l border-black/15 pl-6">
-                <span className="text-3xl font-medium tracking-tight md:text-4xl">500+</span>
-                <span className="text-xs uppercase tracking-wider text-black/50">Professionals Placed</span>
-              </div>
-              <div className="flex flex-col gap-2 border-l border-black/15 pl-6">
-                <span className="text-3xl font-medium tracking-tight md:text-4xl">95%</span>
-                <span className="text-xs uppercase tracking-wider text-black/50">Client Satisfaction</span>
-              </div>
+              {stats?.slice(0, 3).map((stat: any, index: number) => (
+                <div key={index} className="flex flex-col gap-2 border-l border-black/15 pl-6">
+                  <span className="text-3xl font-medium tracking-tight md:text-4xl">{stat.value}</span>
+                  <span className="text-xs uppercase tracking-wider text-black/50">{stat.label}</span>
+                </div>
+              ))}
             </motion.div>
           </motion.div>
         </div>

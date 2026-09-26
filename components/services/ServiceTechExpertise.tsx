@@ -3,48 +3,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const expertise = [
-  {
-    id: "cloud",
-    title: "Cloud & Infrastructure",
-    description: "AWS, Azure, GCP architects and engineers. Infrastructure as Code, containerization, Kubernetes expertise. We help organizations build secure, scalable cloud environments with certified professionals.",
-    technologies: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform"]
-  },
-  {
-    id: "devops",
-    title: "DevOps & SRE",
-    description: "CI/CD pipeline architects, infrastructure automation, monitoring, and reliability engineers. Our specialists streamline software delivery and ensure highly available, resilient systems.",
-    technologies: ["Jenkins", "GitLab CI", "Ansible", "Prometheus", "Grafana"]
-  },
-  {
-    id: "ai",
-    title: "AI & Machine Learning",
-    description: "ML engineers, data scientists, NLP specialists with deep learning and ML frameworks expertise. We connect businesses with experts capable of transforming complex data into valuable insights.",
-    technologies: ["TensorFlow", "PyTorch", "OpenAI", "Python", "Data Science"]
-  },
-  {
-    id: "fullstack",
-    title: "Full-Stack Development",
-    description: "React, Vue, Angular frontend experts and backend engineers proficient in Node.js, Java, Python. We source developers experienced in building scalable web applications and enterprise-grade software.",
-    technologies: ["React", "Node.js", "Java", "Python", "Vue", "Angular"]
-  },
-  {
-    id: "cyber",
-    title: "Cybersecurity & Compliance",
-    description: "Security engineers, penetration testers, compliance specialists with CISSP, CEH certifications. Our experts strengthen your security posture by mitigating evolving cyber threats.",
-    technologies: ["CISSP", "CEH", "Pen Testing", "SecOps", "Compliance"]
-  },
-  {
-    id: "data",
-    title: "Data Engineering",
-    description: "Data pipeline architects, ETL engineers, big data specialists with Spark, Snowflake expertise. We provide professionals who design reliable data ecosystems at enterprise scale.",
-    technologies: ["Spark", "Snowflake", "Hadoop", "SQL", "ETL Pipelines"]
-  },
-];
-
-export default function TechExpertise() {
+export default function ServiceTechExpertise({ expertise }: { expertise: any[] }) {
+  if (!expertise || expertise.length === 0) return null;
   const [activeTab, setActiveTab] = useState(expertise[0].id);
-
   const activeContent = expertise.find((item) => item.id === activeTab) || expertise[0];
 
   return (
@@ -128,7 +89,7 @@ export default function TechExpertise() {
                     Key Technologies
                   </p>
                   <div className="flex flex-wrap gap-3">
-                    {activeContent.technologies.map((tech) => (
+                    {activeContent.technologies?.map((tech: string) => (
                       <span 
                         key={tech} 
                         className="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-white/80 text-sm font-medium hover:bg-white/10 transition-colors"

@@ -2,7 +2,7 @@
 
 export default function Footer() {
   return (
-    <footer className="bg-[#FFFDF3] px-6 pb-8 pt-20 md:px-10 md:pt-28 lg:px-14">
+    <footer className="bg-[#FFFDF3] px-6 pt-20 md:px-10 md:pt-28 lg:px-14">
       {/* Top section */}
       <div className="grid gap-16 border-b border-[#171717]/15 pb-16 md:grid-cols-2 lg:grid-cols-4">
         
@@ -86,15 +86,8 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Big footer text */}
-      <div className="overflow-hidden py-12 md:py-20">
-        <h2 className="whitespace-nowrap text-[18vw] font-medium leading-none tracking-[-0.09em] text-[#171717]">
-          SAMAARAV
-        </h2>
-      </div>
-
-      {/* Bottom */}
-      <div className="flex flex-col gap-4 border-t border-[#171717]/15 pt-6 text-xs text-[#171717]/50 md:flex-row md:items-center md:justify-between">
+      {/* Bottom info section */}
+      <div className="flex flex-col gap-4 pt-12 pb-4 text-xs text-[#171717]/50 md:flex-row md:items-center md:justify-between">
         <p>
           © {new Date().getFullYear()} Samaarav. All rights reserved.
         </p>
@@ -110,6 +103,13 @@ export default function Footer() {
         </div>
 
         <p>Technology • Talent • Growth</p>
+      </div>
+
+      {/* Big footer text */}
+      <div className="overflow-hidden pt-4 md:pt-8 flex justify-center items-end leading-none">
+        <h2 className="whitespace-nowrap text-[18vw] font-medium leading-[0.75] tracking-[-0.09em] text-[#171717] translate-y-[10%]">
+          SAMAARAV
+        </h2>
       </div>
     </footer>
   );

@@ -3,44 +3,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-const steps = [
-  {
-    number: "01",
-    title: "Discovery & Strategy Session",
-    description: "Initial consultation to understand your hiring needs, team dynamics, tech stack, company culture, and growth roadmap. We gather comprehensive requirements.",
-    color: "#ffffff",
-    textColor: "#171717",
-  },
-  {
-    number: "02",
-    title: "Candidate Sourcing & Assessment",
-    description: "Our team sources candidates from our curated talent network and conducts technical assessments, skills evaluation, and culture fit analysis.",
-    color: "#f5f5f5",
-    textColor: "#171717",
-  },
-  {
-    number: "03",
-    title: "Presentation & Interviews",
-    description: "Live presentation of 3-5 qualified candidates with detailed background briefs. We coordinate interviews, provide feedback loops, and manage logistics seamlessly.",
-    color: "#eaeaea",
-    textColor: "#171717",
-  },
-  {
-    number: "04",
-    title: "Offer & Negotiation",
-    description: "We facilitate competitive offers, handle negotiations, manage counter-offers, and ensure smooth deal closure. Our team provides guidance on market rates.",
-    color: "#dedede",
-    textColor: "#171717",
-  },
-  {
-    number: "05",
-    title: "Onboarding & Aftercare",
-    description: "Post-placement support for 90 days ensures successful integration. We remain your partner throughout, checking in with both employee and employer.",
-    color: "#171717",
-    textColor: "#ffffff",
-  },
-];
-
 function TimelineItem({ step, index }: { step: any; index: number }) {
   const isEven = index % 2 === 0;
 
@@ -54,7 +16,7 @@ function TimelineItem({ step, index }: { step: any; index: number }) {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
           className="relative flex flex-col justify-between overflow-hidden rounded-2xl border border-black/10 p-8 shadow-sm md:p-10"
-          style={{ backgroundColor: step.color, color: step.textColor }}
+          style={{ backgroundColor: step.color || '#fff', color: step.textColor || '#000' }}
         >
           <div className="mb-6 text-[3rem] font-medium leading-none tracking-[-0.09em] opacity-20 md:text-[5rem]">
             {step.number}
@@ -76,7 +38,7 @@ function TimelineItem({ step, index }: { step: any; index: number }) {
   );
 }
 
-export default function Process() {
+export default function ServiceProcess({ steps }: { steps: any[] }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -102,7 +64,7 @@ export default function Process() {
         </div>
         
         <p className="max-w-md text-base leading-relaxed text-[#6B6B67] md:text-lg">
-          A robust 5-step strategy designed to secure top tech talent that perfectly aligns with your organizational culture and goals.
+          A robust strategy designed to secure top tech talent that perfectly aligns with your organizational culture and goals.
         </p>
       </div>
 

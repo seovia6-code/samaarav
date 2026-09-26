@@ -5,20 +5,28 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    question: "How long does the permanent staffing process typically take?",
-    answer: "Our standard time-to-hire is between 2 to 4 weeks. However, this can vary based on the specific niche, role complexity, and the availability of candidates.",
+    question: "What are the main advantages of permanent staffing over temporary/contract roles?",
+    answer: "Permanent staffing offers strategic advantages including institutional knowledge retention, long-term cost efficiency, team stability, and stronger company culture alignment.",
   },
   {
-    question: "Do you offer a replacement guarantee?",
-    answer: "Yes, we stand behind our placements. We offer a standard replacement guarantee if the candidate leaves or is found unsuitable within the first 90 days of employment.",
+    question: "How long does your permanent staffing process typically take?",
+    answer: "Our average timeline is 2-4 weeks from initial consultation to job acceptance. Speed varies based on role complexity, seniority level, and market availability, but we always prioritize quality over speed.",
   },
   {
-    question: "What industries do you specialize in?",
-    answer: "We primarily specialize in Information Technology, focusing heavily on Enterprise Software (SAP, Infor, Odoo), Cloud Infrastructure, AI/ML, and Cybersecurity.",
+    question: "Do you handle different technology stacks and experience levels?",
+    answer: "Yes. We specialize across multiple tech domains including Cloud & Infrastructure, DevOps, AI/ML, Full-Stack Development, and Data Engineering, covering junior developers through Principal/Staff engineers.",
   },
   {
-    question: "How do you source passive candidates?",
-    answer: "We leverage proprietary databases, industry networking events, specialized forums, and deep relationships built by our senior recruiters over the past decade to access talent not actively on the job market.",
+    question: "Why should I work with us instead of other recruitment agencies?",
+    answer: "We bring unique advantages: a tech-native recruiting team, rigorous technical pre-screening, valuable market insights, curated networks of passive candidates, and an 85% placement success rate.",
+  },
+  {
+    question: "How do you ensure cultural fit beyond technical skills?",
+    answer: "We spend time understanding your values and team dynamics. We conduct behavioral assessments and reference checks to ensure candidates share your values around innovation, learning, and collaboration.",
+  },
+  {
+    question: "What happens after placement? Do you provide ongoing support?",
+    answer: "Yes, we provide a 90-day integration support period where we check in regularly to track success metrics, address any concerns, and ensure successful long-term retention.",
   },
 ];
 
