@@ -122,14 +122,14 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href="#about"
+            href="/about"
             className="text-sm text-black/60 transition-colors hover:text-black"
           >
             About
           </Link>
 
           <Link
-            href="#contact"
+            href="/contact"
             className="text-sm text-black/60 transition-colors hover:text-black"
           >
             Contact
@@ -138,7 +138,7 @@ export default function Navbar() {
 
         {/* CTA */}
         <Link
-          href="#contact"
+          href="/contact"
           className="
             rounded-full
             bg-black

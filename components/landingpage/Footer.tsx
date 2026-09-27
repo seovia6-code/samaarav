@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#FFFDF3] px-6 pt-20 md:px-10 md:pt-28 lg:px-14">
       {/* Top section */}
-      <div className="grid gap-16 border-b border-[#171717]/15 pb-16 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-16 border-b border-[#171717]/15 pb-16 md:grid-cols-2 lg:grid-cols-5">
         
         {/* Brand */}
         <div className="lg:col-span-2">
@@ -16,6 +16,20 @@ export default function Footer() {
             Connecting exceptional technology talent with businesses that are
             building what's next.
           </p>
+        </div>
+
+        {/* Registered Office */}
+        <div>
+          <p className="mb-6 text-xs uppercase tracking-[0.2em] text-[#171717]/40">
+            Registered Office
+          </p>
+          <div className="flex flex-col gap-2 text-sm text-[#171717]/70 mb-8 lg:mb-0">
+            <p>London, UK</p>
+            <p>Branch: 44 Widnell Lane, Edinburgh, Scotland, UK</p>
+            <p className="mt-2 text-[#171717]">
+              <a href="tel:+447550051466" className="transition-opacity hover:opacity-50">+44 7550051466</a>
+            </p>
+          </div>
         </div>
 
         {/* Company */}
@@ -70,7 +84,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="mailto:info@samaarav.com"
+              href="mailto:info@samaarav.co.uk"
               className="w-fit transition-opacity hover:opacity-50"
             >
               Email ↗
