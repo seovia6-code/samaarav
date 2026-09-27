@@ -382,6 +382,94 @@ export const servicesData: Record<string, any> = {
       }
     ]
   },
+  "statement-of-work": {
+    title: "Statement of<br />Work",
+    subtitle: "FIXED-SCOPE DELIVERY",
+    description: "Outcome-based workforce solutions where we manage project delivery, resources, and timelines for guaranteed results.",
+    stats: [
+      { value: "98%", label: "On-Time Delivery" },
+      { value: "Fixed", label: "Scope & Budget" },
+      { value: "Zero", label: "Management Overhead" }
+    ],
+    benefits: [
+      {
+        title: "Fixed Scope & Budget",
+        description: "Provides clear deliverables and a defined budget from the start to prevent scope creep and unexpected costs."
+      },
+      {
+        title: "Guaranteed Timelines",
+        description: "Projects include strict milestones and delivery dates backed by our 98% on-time delivery track record."
+      },
+      {
+        title: "Deliverable-Based Payment",
+        description: "Payments are tied to the completion of specific milestones rather than time, ensuring absolute accountability."
+      },
+      {
+        title: "Quality Assurance",
+        description: "Includes defined quality standards, acceptance criteria, comprehensive testing, documentation, and knowledge transfer."
+      }
+    ],
+    expertise: [
+      {
+        id: "app-dev",
+        title: "Custom Application Development",
+        description: "End-to-end development of web and mobile applications delivered by our managed engineering pods.",
+        technologies: ["React", "Node.js", "React Native", "PostgreSQL"]
+      },
+      {
+        id: "cloud-migration",
+        title: "Cloud Migration & Architecture",
+        description: "Lifting and shifting legacy systems to modern cloud infrastructure with zero downtime.",
+        technologies: ["AWS", "Azure", "GCP", "Kubernetes"]
+      },
+      {
+        id: "data-engineering",
+        title: "Data Engineering Pipelines",
+        description: "Building robust ETL pipelines and data warehouses delivered as a complete project.",
+        technologies: ["Snowflake", "Databricks", "Airflow", "Python"]
+      }
+    ],
+    process: [
+      {
+        title: "Requirements Definition",
+        description: "Deep dive into your business needs to finalize the project scope, objectives, and acceptance criteria."
+      },
+      {
+        title: "SOW Drafting",
+        description: "Creating a comprehensive Statement of Work detailing deliverables, timeline, budget, and team composition."
+      },
+      {
+        title: "Team Assembly",
+        description: "We assemble a dedicated squad of developers, architects, and project managers tailored to your SOW."
+      },
+      {
+        title: "Milestone Execution",
+        description: "Development begins with regular sprint reviews and progress tracking tied to defined payment milestones."
+      },
+      {
+        title: "Delivery & Handoff",
+        description: "Final QA, deployment, knowledge transfer, and post-launch support based on the SOW terms."
+      }
+    ],
+    faqs: [
+      {
+        question: "How is SOW different from Contract Staffing?",
+        answer: "In Contract Staffing, you manage the contractor's daily tasks and pay them by the hour. In an SOW model, we manage the team, take on the delivery risk, and you pay for completed deliverables."
+      },
+      {
+        question: "What happens if the project scope changes?",
+        answer: "Any changes to the scope are managed through a formal Change Request process, ensuring transparency in how new requirements affect timelines and budgets."
+      },
+      {
+        question: "Do you provide Project Managers for SOW engagements?",
+        answer: "Yes, every SOW engagement includes a dedicated Project Manager or Scrum Master who oversees delivery and acts as your primary point of contact."
+      },
+      {
+        question: "Is post-launch support included?",
+        answer: "Yes, our SOWs typically include a defined period of warranty and hypercare support after delivery to ensure smooth operation."
+      }
+    ]
+  },
   "ai-ml": {
     title: "AI & ML<br />STAFFING",
     subtitle: "Certified AI & Machine Learning Talent",

@@ -1,0 +1,13 @@
+import ServiceTemplate from "@/components/services/ServiceTemplate";
+import { servicesData } from "@/data/servicesData";
+import { notFound } from "next/navigation";
+
+export default function StatementOfWorkPage() {
+  const data = servicesData["statement-of-work"];
+  
+  if (!data) {
+    notFound();
+  }
+  
+  return <ServiceTemplate data={data} />;
+}
