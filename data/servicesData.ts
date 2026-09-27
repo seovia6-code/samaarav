@@ -686,13 +686,14 @@ export const servicesData: Record<string, any> = {
   },
   "sap": {
     title: "SAP<br />STAFFING",
-    subtitle: "Certified SAP Consultants",
+    subtitle: "Struggling to Find the Right SAP Talent?",
     description: "Accelerate your digital transformation with elite SAP talent. From S/4HANA migrations to complex integrations, we deliver certified consultants who ensure zero compromises.",
     stats: [
       { value: "500+", label: "SAP Consultants Placed" },
       { value: "98%", label: "Client Satisfaction" },
       { value: "Global", label: "Talent Reach" },
     ],
+    benefitsTitle: "Why Leading Enterprises Choose Samaarav for SAP Staffing",
     benefits: [
       {
         number: "01",
@@ -723,6 +724,7 @@ export const servicesData: Record<string, any> = {
         textColor: "#ffffff",
       },
     ],
+    expertiseTitle: "SAP Modules & Specializations We Staff",
     expertise: [
       {
         id: "functional",
@@ -743,53 +745,66 @@ export const servicesData: Record<string, any> = {
         technologies: ["SAP ABAP", "SAP Basis", "SAP BW/4HANA", "SAP GRC"]
       }
     ],
-    process: [
+    textSections: [
+      {
+        title: "Are SAP Staffing Challenges Slowing Your Projects?",
+        content: [
+          "In today's digital transformation landscape, the demand for certified SAP professionals far outpaces supply. Generic IT staffing agencies circulate unqualified resumes, waste your time with irrelevant profiles, and fail to understand the nuances of SAP implementations — costing your business valuable time and budget."
+        ]
+      },
+      {
+        title: "The Real Cost of a Wrong SAP Hire",
+        content: [
+          "Hiring the wrong SAP consultant leads to botched migrations, misaligned system architectures, and critical business disruptions.",
+          "By partnering with Samaarav, you bypass these costly pitfalls. We pre-vet every candidate for both technical proficiency and functional industry knowledge before they ever reach your desk."
+        ]
+      }
+    ],
+    processTitle: "Business Outcomes<br />You Can Expect",
+    processSubtitle: "Partner with Samaarav to accelerate your SAP initiatives and achieve measurable business results through our expert talent solutions.",
+    conversionProcess: [
       {
         number: "01",
-        title: "Landscape Analysis",
-        description: "Deep dive into your SAP landscape and specific module requirements.",
+        title: "On-time SAP project delivery",
+        description: "Meet go-live milestones with confidence, backed by consultants who have done it before.",
         color: "#ffffff",
         textColor: "#171717",
       },
       {
         number: "02",
-        title: "Global Sourcing",
-        description: "Identifying top-tier SAP talent from our specialized global network.",
+        title: "Reduced total cost of SAP ownership",
+        description: "Fewer mis-hires, faster onboarding, and lower rework costs.",
         color: "#f5f5f5",
         textColor: "#171717",
       },
       {
         number: "03",
-        title: "Module-Specific Vetting",
-        description: "Rigorous screening of functional and technical expertise by SAP veterans.",
+        title: "Empowered internal teams",
+        description: "Let your in-house staff focus on strategic SAP governance rather than operational firefighting.",
         color: "#eaeaea",
         textColor: "#171717",
       },
       {
         number: "04",
-        title: "Interviews",
-        description: "Streamlined interview process with the best fit candidates.",
+        title: "Scalable SAP talent pipeline",
+        description: "Access a ready bench of pre-vetted SAP professionals aligned to your growth roadmap.",
         color: "#dedede",
         textColor: "#171717",
       },
       {
         number: "05",
-        title: "Deployment",
-        description: "Contracting, compliance, and successful onboarding to your SAP project.",
+        title: "Accelerated digital transformation",
+        description: "Move your S/4HANA migration, cloud adoption, or SAP upgrade forward without talent bottlenecks.",
         color: "#171717",
         textColor: "#ffffff",
       },
     ],
-    faqs: [
-      {
-        question: "Can you provide entire implementation teams?",
-        answer: "Yes, we can deploy full project teams including Project Managers, Solution Architects, Functional Consultants, and ABAP Developers."
-      },
-      {
-        question: "Do you support niche SAP modules?",
-        answer: "Absolutely. Our extensive network allows us to source talent for niche industry solutions like SAP IS-Retail, IS-Utilities, and more."
-      }
-    ]
+    cta: {
+      title: "Ready to Hire<br /><span class=\"ml-[8vw]\">Top SAP Experts?</span>",
+      description: "Share your SAP staffing requirements today. Our team responds within hours with pre-vetted SAP professionals matched to your modules, industry, and strategic goals.",
+      buttonText: "Let's Talk ↗",
+      buttonLink: "/contact"
+    }
   },
   "infor": {
     title: "INFOR<br />STAFFING",
