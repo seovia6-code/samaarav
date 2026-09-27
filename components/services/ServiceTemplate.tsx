@@ -5,6 +5,8 @@ import StackedSection from "@/components/permanent-staffing/StackedSection";
 import ServiceHero from "./ServiceHero";
 import ServiceBenefits from "./ServiceBenefits";
 import ServiceTechExpertise from "./ServiceTechExpertise";
+import ServiceModelsOffered from "./ServiceModelsOffered";
+import ServiceWhenToUse from "./ServiceWhenToUse";
 import ServiceProcess from "./ServiceProcess";
 import ServiceFAQ from "./ServiceFAQ";
 
@@ -32,6 +34,14 @@ export default function ServiceTemplate({ data }: { data: any }) {
       </div>
 
       <div className="relative z-50 bg-[#faf9f6] rounded-t-[40px] shadow-[0_-15px_30px_rgba(0,0,0,0.05)] border-t border-black/5">
+        {data.modelsOffered && data.modelsOffered.length > 0 && (
+          <ServiceModelsOffered models={data.modelsOffered} />
+        )}
+        
+        {data.whenToUse && data.whenToUse.length > 0 && (
+          <ServiceWhenToUse whenToUse={data.whenToUse} />
+        )}
+
         <ServiceProcess steps={data.process} />
         <ServiceFAQ faqs={data.faqs} />
         <div className="bg-transparent rounded-t-[40px]">

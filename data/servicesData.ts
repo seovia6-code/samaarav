@@ -132,6 +132,42 @@ export const servicesData: Record<string, any> = {
         question: "What if the contractor isn't the right fit?",
         answer: "Within the first two weeks (trial period), if there's a skills mismatch, we replace the contractor at no additional cost. We're committed to your satisfaction and won't charge extra for replacements during this period."
       }
+    ],
+    modelsOffered: [
+      {
+        title: "Contract Staffing",
+        description: "Specialized talent for defined projects and durations, allowing you to access expertise exactly when and where you need it."
+      },
+      {
+        title: "Contract-to-Hire",
+        description: "Evaluate a contractor's technical skills, productivity, and cultural fit over a trial period (typically 3-6 months) before making a commitment to permanent employment."
+      },
+      {
+        title: "Statement of Work (SOW)",
+        description: "An outcome-based workforce solution where we manage project delivery, resources, timelines, and agreed-upon deliverables."
+      },
+      {
+        title: "Temporary Staffing",
+        description: "Flexible staffing to help meet seasonal demands and short-term project requirements with pre-vetted professionals."
+      }
+    ],
+    whenToUse: [
+      {
+        title: "Project-Based Work",
+        description: "When you need specialized talent for a defined project duration without the long-term overhead."
+      },
+      {
+        title: "Skill Gaps",
+        description: "When your current team lacks specific technical expertise required to complete a critical initiative."
+      },
+      {
+        title: "Scaling Quickly",
+        description: "During periods of rapid growth or seasonal demand peaks where immediate workforce scaling is necessary."
+      },
+      {
+        title: "Evaluating Fit",
+        description: "When you want to assess a professional's performance and cultural fit before committing to a permanent hire."
+      }
     ]
   },
   "ai-ml": {
