@@ -20,6 +20,7 @@ const servicesMenu = [
     items: [
       { name: "AI & ML", href: "/services/technology/ai-ml" },
       { name: "Cloud", href: "/services/technology/cloud" },
+      { name: "Cybersecurity", href: "/services/technology/cybersecurity" },
     ]
   },
   {

@@ -472,43 +472,45 @@ export const servicesData: Record<string, any> = {
   },
   "ai-ml": {
     title: "AI & ML<br />STAFFING",
-    subtitle: "Certified AI & Machine Learning Talent",
-    description: "Connect with elite AI/ML engineers, data scientists, and researchers. We deliver technical talent capable of building scalable, responsible AI systems and transforming complex data into business value.",
+    subtitle: "Can't Find the Right AI/ML Engineers for Your Projects?",
+    description: "Samaarav connects enterprises with pre-vetted AI/ML professionals — from data scientists and ML engineers to NLP specialists and MLOps architects — across every major industry and platform. Stop sifting through unqualified resumes. Start building intelligent systems.",
     stats: [
-      { value: "300+", label: "AI Experts Placed" },
-      { value: "95%", label: "Client Retention" },
+      { value: "300+", label: "AI/ML Experts Placed" },
+      { value: "95%", label: "Client Retention Rate" },
       { value: "Top 5%", label: "Vetted Talent" },
     ],
+    benefitsTitle: "Why Enterprises Choose Us for AI/ML Staffing",
     benefits: [
       {
         number: "01",
-        title: "Domain Experts",
-        description: "Our recruiters have deep technical backgrounds to properly evaluate complex AI/ML skillsets.",
+        title: "Deep Technical AI/ML Expertise",
+        description: "Our recruiters are trained in AI/ML domains — they understand PyTorch vs TensorFlow, transformer architectures, feature engineering, and MLOps toolchains. Every candidate assessment goes beyond buzzwords.",
         color: "#ffffff",
         textColor: "#171717",
       },
       {
         number: "02",
-        title: "Speed to Hire",
-        description: "We maintain an active network of passive AI talent, reducing your time-to-hire for niche roles.",
+        title: "Rigorous Technical Vetting",
+        description: "Candidates are assessed for: hands-on ML model development & deployment, proficiency in Python, PyTorch, TensorFlow, Scikit-learn, cloud AI platforms (AWS SageMaker, Azure ML, GCP Vertex AI), and domain-specific expertise.",
         color: "#f5f5f5",
         textColor: "#171717",
       },
       {
         number: "03",
-        title: "Responsible AI",
-        description: "We screen for professionals who understand data ethics, bias mitigation, and compliance.",
+        title: "Flexible Engagement Models",
+        description: "Contract, contract-to-hire, or full-time placements. From a single data scientist to an entire AI center of excellence — we scale our model to fit your project scope and budget.",
         color: "#eaeaea",
         textColor: "#171717",
       },
       {
         number: "04",
-        title: "End-to-End Skillsets",
-        description: "From research and modeling to MLOps and production deployment.",
+        title: "Responsible AI Awareness",
+        description: "Our consultants are screened for awareness of ethical AI, model governance, bias mitigation, and regulatory compliance — critical requirements for enterprise AI deployments.",
         color: "#171717",
         textColor: "#ffffff",
       },
     ],
+    expertiseTitle: "AI/ML Roles & Specializations We Staff",
     expertise: [
       {
         id: "data",
@@ -529,160 +531,346 @@ export const servicesData: Record<string, any> = {
         technologies: ["OpenAI API", "LangChain", "Vector DBs", "Docker", "AWS SageMaker"]
       }
     ],
-    process: [
+    textSections: [
+      {
+        title: "Is the AI Talent Shortage Stalling Your Innovation?",
+        content: [
+          "The global AI talent market is fiercely competitive. Generalist recruiters lack the technical depth to distinguish a machine learning engineer from a data analyst — leading to costly mis-hires, delayed AI initiatives, and failed digital transformation projects."
+        ]
+      },
+      {
+        title: "The Real Cost of a Wrong AI/ML Hire",
+        content: [
+          "• Prolonged model development cycles due to engineers unfamiliar with production ML workflows.",
+          "• Stalled AI roadmaps as teams struggle to find specialists in LLMs, computer vision, or NLP.",
+          "• Wasted budget on data scientists who lack domain expertise or MLOps skills.",
+          "• Missed competitive advantage while rivals deploy AI solutions at speed.",
+          "• Security & compliance risks from AI practitioners inexperienced with responsible AI frameworks."
+        ]
+      },
+      {
+        title: "Samaarav: Your Dedicated AI/ML Staffing Partner",
+        content: [
+          "Samaarav operates exclusively within the technology talent ecosystem, with a focused AI/ML practice staffed by recruiters who understand the difference between a generative AI engineer, a deep learning researcher, and a production ML engineer.",
+          "• Specialized AI/ML recruiters who understand your tech stack.",
+          "• Founders and entrepreneurs intimately familiar with the nuances of AI/ML.",
+          "• Data scientists and engineers with a passion for AI/ML."
+        ]
+      }
+    ],
+    processTitle: "Business Outcomes<br />You Can Expect",
+    processSubtitle: "Partner with Samaarav to accelerate your AI initiatives and achieve measurable business results through our expert talent solutions.",
+    conversionProcess: [
       {
         number: "01",
-        title: "Technical Discovery",
-        description: "We align on your specific ML framework needs, data infrastructure, and deployment targets.",
+        title: "Faster AI Product Launches",
+        description: "Get qualified AI engineers in days, not months — and ship intelligent features on schedule.",
         color: "#ffffff",
         textColor: "#171717",
       },
       {
         number: "02",
-        title: "Targeted Search",
-        description: "We source from specialized AI communities, research institutions, and our proprietary network.",
+        title: "Higher Model Quality",
+        description: "Consultants with real production ML experience reduce model failure rates and rework.",
         color: "#f5f5f5",
         textColor: "#171717",
       },
       {
         number: "03",
-        title: "Technical Assessment",
-        description: "Candidates undergo rigorous algorithmic and architectural system design evaluations.",
+        title: "Reduced AI Project Risk",
+        description: "Vetted expertise in responsible AI and MLOps frameworks minimizes technical and regulatory exposure.",
         color: "#eaeaea",
         textColor: "#171717",
       },
       {
         number: "04",
-        title: "Client Interviews",
-        description: "You interview a curated shortlist of 2-4 highly qualified experts.",
+        title: "Scalable AI Talent Pipeline",
+        description: "Access a ready bench of pre-screened AI/ML professionals aligned to your innovation roadmap.",
         color: "#dedede",
         textColor: "#171717",
       },
       {
         number: "05",
-        title: "Offer & Integration",
-        description: "We manage negotiations and provide integration support for seamless onboarding.",
+        title: "Accelerated Digital Transformation",
+        description: "Eliminate talent bottlenecks that slow your AI-driven competitive advantage.",
         color: "#171717",
         textColor: "#ffffff",
       },
     ],
-    faqs: [
-      {
-        question: "Do you supply GenAI and LLM specialists?",
-        answer: "Yes, we have a dedicated network of Prompt Engineers, LLM integrators, and Generative AI application developers."
-      },
-      {
-        question: "How do you evaluate AI talent?",
-        answer: "We use a multi-tiered approach including technical interviews by subject matter experts, take-home modeling challenges, and portfolio reviews."
-      }
-    ]
+    cta: {
+      title: "Ready to Hire<br /><span class=\"ml-[8vw]\">Top AI/ML Experts?</span>",
+      description: "Share your AI/ML staffing requirements today. Our team responds within hours with pre-vetted candidates matched to your stack and goals.",
+      buttonText: "Let's Talk ↗",
+      buttonLink: "/contact"
+    }
   },
   "cloud": {
     title: "CLOUD<br />STAFFING",
-    subtitle: "AWS, Azure & GCP Certified Talent",
-    description: "Scale your cloud infrastructure with certified Architects and Engineers. We provide talent that builds secure, highly available, and scalable cloud environments.",
+    subtitle: "Can't Find Certified Cloud Engineers for Your Migration or Build?",
+    description: "Samaarav connects enterprises with pre-vetted cloud professionals — from AWS solutions architects and Azure DevOps engineers to GCP data engineers and FinOps specialists. Whether you're migrating, modernizing, or building cloud-native, we deliver the talent that makes it happen.",
     stats: [
-      { value: "400+", label: "Cloud Engineers Placed" },
-      { value: "100%", label: "Certified Talent" },
+      { value: "400+", label: "Cloud Experts Placed" },
+      { value: "96%", label: "Client Satisfaction Rate" },
       { value: "3 Cloud", label: "Major Providers" },
     ],
+    benefitsTitle: "Why Enterprises Choose Samaarav for Cloud Staffing",
     benefits: [
       {
         number: "01",
-        title: "Certified Experts",
-        description: "We rigorously verify certifications across AWS, Azure, and GCP.",
+        title: "Multi-Cloud Platform Expertise",
+        description: "Our recruiters are trained across AWS, Azure, and GCP platforms. We assess candidates on real cloud architectures — not just certification badges — ensuring every hire is genuinely capable of delivering in your environment.",
         color: "#ffffff",
         textColor: "#171717",
       },
       {
         number: "02",
-        title: "Multi-Cloud Focus",
-        description: "Access talent experienced in hybrid and multi-cloud architectural patterns.",
+        title: "Rigorous Cloud Vetting",
+        description: "All cloud consultants are verified for: AWS/Azure/GCP certifications and hands-on experience, infrastructure-as-code proficiency, container and orchestration skills, and cloud security and governance knowledge.",
         color: "#f5f5f5",
         textColor: "#171717",
       },
       {
         number: "03",
-        title: "Security First",
-        description: "Our candidates understand DevSecOps and cloud-native security postures.",
+        title: "Flexible Engagement Models",
+        description: "Contract, contract-to-hire, or permanent. From an individual cloud engineer to a full cloud center of excellence — we structure engagements to match your project scope, timeline, and budget.",
         color: "#eaeaea",
         textColor: "#171717",
       },
       {
         number: "04",
-        title: "Cost Optimization",
-        description: "Hire engineers skilled at FinOps and reducing cloud infrastructure spend.",
+        title: "FinOps & Governance Alignment",
+        description: "We match candidates with experience in cloud cost management, tagging strategies, landing zone design, and enterprise governance frameworks — critical for large-scale cloud programs.",
         color: "#171717",
         textColor: "#ffffff",
       },
     ],
+    expertiseTitle: "Cloud Roles & Specializations We Staff",
     expertise: [
       {
-        id: "aws",
-        title: "AWS Ecosystem",
-        description: "Solutions Architects, DevOps Engineers, and SysOps Administrators specialized in Amazon Web Services.",
-        technologies: ["EC2", "EKS", "Lambda", "CloudFormation", "DynamoDB"]
+        id: "architecture",
+        title: "Architecture & Engineering",
+        description: "Cloud Solutions Architect, Cloud Engineer (AWS/Azure/GCP), DevOps Engineer, and Site Reliability Engineer (SRE).",
+        technologies: ["Solutions Architect", "Cloud Engineer", "DevOps Engineer", "SRE"]
       },
       {
-        id: "azure",
-        title: "Microsoft Azure",
-        description: "Azure Architects and Administrators focused on enterprise cloud migrations and integrations.",
-        technologies: ["Azure Kubernetes", "ARM Templates", "Azure DevOps", "CosmosDB"]
+        id: "platform-sec",
+        title: "Platform & Security",
+        description: "Platform Engineer, Cloud Security Engineer, FinOps Analyst, and Kubernetes / Container Engineer.",
+        technologies: ["Platform Engineer", "Cloud Security", "FinOps Analyst", "Kubernetes / Containers"]
       },
       {
-        id: "gcp",
-        title: "Google Cloud",
-        description: "GCP Data Engineers and Cloud Architects leveraging Google's premier data and ML infrastructure.",
-        technologies: ["GKE", "BigQuery", "Terraform", "Cloud Run", "Pub/Sub"]
+        id: "data-auto",
+        title: "Data & Automation",
+        description: "Data Engineer (Cloud), Cloud Network Engineer, IaC Engineer (Terraform/Ansible), and Cloud Migration Specialist.",
+        technologies: ["Data Engineer", "Cloud Network", "IaC (Terraform/Ansible)", "Cloud Migration"]
       }
     ],
-    process: [
+    textSections: [
+      {
+        title: "Is a Cloud Talent Shortage Delaying Your Modernization Journey?",
+        content: [
+          "Cloud transformation projects are among the most complex and high-stakes IT initiatives an organization can undertake. Generalist staffing agencies routinely misrepresent cloud expertise — leading to misconfigurations, security vulnerabilities, cost overruns, and failed migrations that set businesses back by months or years."
+        ]
+      },
+      {
+        title: "The Real Cost of the Wrong Cloud Hire",
+        content: [
+          "• Cloud migrations derailed by engineers unfamiliar with enterprise-scale lift-and-shift or re-architecting.",
+          "• Security misconfigurations from consultants lacking cloud security and governance expertise.",
+          "• Ballooning cloud bills due to architects without FinOps or cost optimization experience.",
+          "• Missed modernization timelines as projects stall waiting for the right Kubernetes or serverless expertise.",
+          "• Technical debt accumulation from poorly architected cloud environments that require costly rework."
+        ]
+      },
+      {
+        title: "Samaarav: Your Dedicated Cloud Staffing Partner",
+        content: [
+          "Samaarav operates exclusively within the technology talent ecosystem, with a focused Cloud practice staffed by recruiters who understand the difference between a cloud architect, a DevOps engineer, and a platform engineer — ensuring your cloud initiatives are built on a foundation of real expertise.",
+          "• Specialized cloud recruiters with deep AWS, Azure, and GCP expertise.",
+          "• Founders and entrepreneurs who have built and scaled cloud-native platforms.",
+          "• Cloud architects and engineers with a passion for infrastructure as code and DevOps."
+        ]
+      }
+    ],
+    processTitle: "Business Outcomes<br />You Can Expect",
+    processSubtitle: "Partner with Samaarav to accelerate your cloud initiatives and achieve measurable business results through our expert talent solutions.",
+    conversionProcess: [
       {
         number: "01",
-        title: "Architecture Review",
-        description: "We evaluate your current cloud state to find the exact skill gaps.",
+        title: "On-Time Cloud Migrations",
+        description: "Certified architects and engineers who execute complex migrations without costly delays.",
         color: "#ffffff",
         textColor: "#171717",
       },
       {
         number: "02",
-        title: "Candidate Sourcing",
-        description: "Targeted sourcing of certified professionals from our extensive cloud network.",
+        title: "Lower Total Cloud Cost",
+        description: "FinOps-aware professionals who design and govern cost-efficient cloud environments.",
         color: "#f5f5f5",
         textColor: "#171717",
       },
       {
         number: "03",
-        title: "Certification & Skills Check",
-        description: "Verification of credentials and practical infrastructure-as-code assessments.",
+        title: "More Secure Cloud Environments",
+        description: "Security-first cloud engineers who eliminate misconfigurations before they become incidents.",
         color: "#eaeaea",
         textColor: "#171717",
       },
       {
         number: "04",
-        title: "Presentation",
-        description: "Review of shortlisted candidates with detailed technical profiles.",
+        title: "Faster DevOps Delivery",
+        description: "Platform and DevOps engineers who accelerate your CI/CD pipeline velocity.",
         color: "#dedede",
         textColor: "#171717",
       },
       {
         number: "05",
-        title: "Placement",
-        description: "Seamless hiring and integration into your engineering teams.",
+        title: "Scalable Cloud Talent Bench",
+        description: "Pre-vetted professionals ready to deploy as your cloud footprint expands.",
         color: "#171717",
         textColor: "#ffffff",
       },
     ],
-    faqs: [
+    cta: {
+      title: "Ready to Hire<br /><span class=\"ml-[8vw]\">Top Cloud Experts?</span>",
+      description: "Share your cloud staffing requirements today. We respond within hours with certified AWS, Azure, and GCP professionals matched to your environment.",
+      buttonText: "Let's Talk ↗",
+      buttonLink: "/contact"
+    }
+  },
+  "cybersecurity": {
+    title: "CYBERSECURITY<br />STAFFING",
+    subtitle: "Struggling to Find Qualified Cybersecurity Professionals?",
+    description: "Samaarav connects organizations with battle-tested cybersecurity experts — from SOC analysts and penetration testers to CISO-level leaders and cloud security architects. In a threat landscape that never sleeps, you can't afford to wait weeks for the right hire.",
+    stats: [
+      { value: "250+", label: "Cyber Experts Placed" },
+      { value: "97%", label: "Client Satisfaction Rate" },
+      { value: "100%", label: "Pre-Vetted Talent" },
+    ],
+    benefitsTitle: "Why Organizations Choose Samaarav for Cybersecurity Staffing",
+    benefits: [
       {
-        question: "Do you provide Cloud Security specialists?",
-        answer: "Yes, we staff dedicated Cloud Security Engineers and DevSecOps professionals to ensure your infrastructure is secure."
+        number: "01",
+        title: "Domain-Specific Security Expertise",
+        description: "Our recruiters understand certifications like CISSP, CEH, CISM, OSCP, and CCSP — and the real-world skills behind them. We assess candidates on actual security competencies, not just credentials.",
+        color: "#ffffff",
+        textColor: "#171717",
       },
       {
-        question: "Can you help us build a completely new cloud team?",
-        answer: "Absolutely. We specialize in building entire specialized teams (squads) for large-scale cloud migration projects."
+        number: "02",
+        title: "Thorough Security Vetting",
+        description: "All consultants are assessed for: technical security skills and tool proficiency, relevant certifications, hands-on experience in your specific security domain, and background check readiness.",
+        color: "#f5f5f5",
+        textColor: "#171717",
+      },
+      {
+        number: "03",
+        title: "Flexible Engagement Models",
+        description: "Staff augmentation, project-based consulting, or permanent placement. From an individual threat analyst to a fully embedded security operations team — we scale to your needs.",
+        color: "#eaeaea",
+        textColor: "#171717",
+      },
+      {
+        number: "04",
+        title: "Compliance & Framework Alignment",
+        description: "We match candidates with proven experience in your required frameworks — NIST CSF, ISO 27001, MITRE ATT&CK, Zero Trust, SOC 2, CMMC, and more.",
+        color: "#171717",
+        textColor: "#ffffff",
+      },
+    ],
+    expertiseTitle: "Cybersecurity Roles & Specializations We Staff",
+    expertise: [
+      {
+        id: "sec-ops",
+        title: "Security Operations & Engineering",
+        description: "SOC Analyst (L1/L2/L3), Security Engineer (SIEM/SOAR), Incident Response Analyst, and Threat Intelligence Analyst.",
+        technologies: ["SOC Analyst", "Security Engineer", "Incident Response", "Threat Intelligence"]
+      },
+      {
+        id: "offensive",
+        title: "Offensive & Cloud Security",
+        description: "Penetration Tester, Red Team Operator, Cloud Security Architect, and AppSec Engineer.",
+        technologies: ["Penetration Tester", "Red Team Operator", "Cloud Security Architect", "AppSec Engineer"]
+      },
+      {
+        id: "grc",
+        title: "Strategy, GRC & Access",
+        description: "CISO / vCISO, GRC Analyst, IAM / PAM Engineer, and CyberArk specialist.",
+        technologies: ["CISO / vCISO", "GRC Analyst", "IAM / PAM Engineer", "CyberArk"]
       }
-    ]
+    ],
+    textSections: [
+      {
+        title: "Is the Cybersecurity Talent Gap Leaving Your Organization Exposed?",
+        content: [
+          "The global cybersecurity workforce shortage has reached critical levels. With threat actors growing more sophisticated and compliance mandates expanding, organizations face a dangerous gap between the security talent they need and what generalist staffing agencies can deliver."
+        ]
+      },
+      {
+        title: "The Real Cost of a Cybersecurity Staffing Gap",
+        content: [
+          "• Undetected threats and breaches from understaffed or under-skilled security operations centers.",
+          "• Compliance failures in frameworks like NIST, ISO 27001, SOC 2, HIPAA, and PCI-DSS.",
+          "• Delayed incident response due to teams stretched thin or lacking specialized expertise.",
+          "• Reputational and financial damage from data breaches that qualified talent could have prevented.",
+          "• Audit failures and regulatory fines from gaps in security posture and documentation."
+        ]
+      },
+      {
+        title: "Samaarav: Your Dedicated Cybersecurity Staffing Partner",
+        content: [
+          "Samaarav maintains a focused cybersecurity staffing practice with recruiters who understand the nuances between a SOC Tier 2 analyst, a red team operator, and a cloud security architect. We don't send you generic IT resumes — we deliver verified security professionals.",
+          "• Recruiters who understand SOC analysts, red team operators, and cloud security architects.",
+          "• Certified talent matched to your specific threat profile and compliance requirements.",
+          "• We deliver verified, battle-tested security professionals, not generic IT resumes."
+        ]
+      }
+    ],
+    processTitle: "Business Outcomes<br />You Can Expect",
+    processSubtitle: "Partner with Samaarav to accelerate your cybersecurity initiatives and achieve measurable risk reduction.",
+    conversionProcess: [
+      {
+        number: "01",
+        title: "Stronger Security Posture",
+        description: "Qualified professionals who reduce your attack surface and harden defenses from day one.",
+        color: "#ffffff",
+        textColor: "#171717",
+      },
+      {
+        number: "02",
+        title: "Faster Incident Response",
+        description: "Experienced analysts who can detect, contain, and remediate threats at speed.",
+        color: "#f5f5f5",
+        textColor: "#171717",
+      },
+      {
+        number: "03",
+        title: "Continuous Compliance",
+        description: "Certified experts who keep your organization audit-ready across all required frameworks.",
+        color: "#eaeaea",
+        textColor: "#171717",
+      },
+      {
+        number: "04",
+        title: "Reduced Breach Risk",
+        description: "Vetted professionals who understand your threat landscape and industry-specific risks.",
+        color: "#dedede",
+        textColor: "#171717",
+      },
+      {
+        number: "05",
+        title: "Scalable Security Capacity",
+        description: "Access a ready bench of cybersecurity talent that grows with your threat environment.",
+        color: "#171717",
+        textColor: "#ffffff",
+      },
+    ],
+    cta: {
+      title: "Ready to Hire<br /><span class=\"ml-[8vw]\">Top Cybersecurity Experts?</span>",
+      description: "Share your security staffing requirements today. Our team responds within hours with pre-vetted, certified cybersecurity professionals.",
+      buttonText: "Let's Talk ↗",
+      buttonLink: "/contact"
+    }
   },
   "sap": {
     title: "SAP<br />STAFFING",
