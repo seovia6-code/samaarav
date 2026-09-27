@@ -170,6 +170,218 @@ export const servicesData: Record<string, any> = {
       }
     ]
   },
+  "direct-hire": {
+    title: "Direct Hire<br />Services",
+    subtitle: "PERMANENT TALENT ACQUISITION",
+    description: "Identify, attract, and hire the ideal full-time technical talent to drive long-term business growth.",
+    stats: [
+      { value: "90", label: "Day Replacement Guarantee" },
+      { value: "3x", label: "Faster Time-to-Hire" },
+      { value: "95%", label: "Offer Acceptance Rate" }
+    ],
+    benefits: [
+      {
+        title: "Quality Assurance Guarantee",
+        description: "We back our placements with a 90-day replacement guarantee, meaning if a hire does not work out, we replace the candidate free of charge."
+      },
+      {
+        title: "Comprehensive Assessment",
+        description: "Our service covers the entire recruitment lifecycle—from technical interviews and behavioral assessments to team meetings and logistics."
+      },
+      {
+        title: "Offer & Onboarding Support",
+        description: "We assist with negotiating offers, handling counter-offers, managing acceptance, and providing post-placement support for smooth onboarding."
+      },
+      {
+        title: "Strategic Cultural Alignment",
+        description: "Focus on long-term value by attracting committed, permanent professionals who integrate seamlessly into your existing culture."
+      }
+    ],
+    expertise: [
+      {
+        id: "executive",
+        title: "IT Leadership & Executive",
+        description: "CTOs, CIOs, VP of Engineering, and IT Directors who can strategically steer your technology initiatives.",
+        technologies: ["Strategic Planning", "Team Leadership", "Budgeting", "Vendor Management"]
+      },
+      {
+        id: "engineering",
+        title: "Software Engineering",
+        description: "Full-stack, frontend, and backend developers across all modern programming languages and frameworks.",
+        technologies: ["React", "Node.js", "Java", "Python", "Go", "C++"]
+      },
+      {
+        id: "data-cloud",
+        title: "Data & Cloud Infrastructure",
+        description: "Cloud architects, data scientists, and DevOps engineers to build and maintain resilient platforms.",
+        technologies: ["AWS", "Azure", "GCP", "Kubernetes", "Snowflake", "Databricks"]
+      }
+    ],
+    process: [
+      {
+        title: "Requirement Gathering",
+        description: "We deeply analyze your business needs, technical requirements, and cultural expectations."
+      },
+      {
+        title: "Sourcing & Headhunting",
+        description: "Targeted search campaigns to engage both active job seekers and passive top-tier talent."
+      },
+      {
+        title: "Rigorous Screening",
+        description: "In-depth technical assessments, behavioral interviews, and comprehensive reference checking."
+      },
+      {
+        title: "Interview Coordination",
+        description: "Seamless scheduling and facilitation of your internal interview rounds."
+      },
+      {
+        title: "Offer & Negotiation",
+        description: "Managing candidate expectations, negotiating competitive offers, and securing acceptances."
+      },
+      {
+        title: "Onboarding & Follow-up",
+        description: "Ensuring a smooth transition and checking in during the 90-day guarantee period."
+      }
+    ],
+    faqs: [
+      {
+        question: "How does the 90-day replacement guarantee work?",
+        answer: "If the candidate leaves or is terminated for cause within the first 90 days of employment, we will recruit a replacement candidate for that exact role at no additional cost to you."
+      },
+      {
+        question: "What is your typical fee structure for Direct Hire?",
+        answer: "Our direct hire fees are typically calculated as a percentage of the candidate's first-year base salary. We offer competitive rates and only charge once a candidate is successfully hired and starts work."
+      },
+      {
+        question: "How long does the Direct Hire process usually take?",
+        answer: "While timelines vary based on role complexity, we typically present the first batch of qualified candidates within 3-5 business days, with the average time-to-fill ranging from 2 to 4 weeks."
+      },
+      {
+        question: "Do you help with salary benchmarking?",
+        answer: "Yes, we provide current market insights and salary benchmarking data to help you craft competitive offers that attract top talent while aligning with your budget."
+      }
+    ]
+  },
+  "contract-to-hire": {
+    title: "Contract-to-Hire<br />Services",
+    subtitle: "TRY BEFORE YOU BUY",
+    description: "Reduce hiring risk with a 3-6 month trial period. Evaluate technical skills, productivity, and cultural fit before making a permanent commitment.",
+    stats: [
+      { value: "3-6", label: "Months Trial Period" },
+      { value: "92%", label: "Conversion Rate" },
+      { value: "Zero", label: "Conversion Fees" }
+    ],
+    benefits: [
+      {
+        title: "Risk Mitigation",
+        description: "Validate a candidate's actual on-the-job performance and team dynamic fit before offering them a permanent full-time position."
+      },
+      {
+        title: "Role Validation",
+        description: "Unsure if a new role requires a full-time headcount? Contract-to-hire lets you test the business need while getting the work done."
+      },
+      {
+        title: "Structured Feedback",
+        description: "We facilitate formal check-ins at months 1, 3, and 6 to ensure the placement is meeting your expectations and tracking toward conversion."
+      },
+      {
+        title: "Seamless Conversion",
+        description: "Once the trial period concludes, transition top-performing contractors to your permanent payroll smoothly and without friction."
+      }
+    ],
+    expertise: [
+      {
+        id: "engineering",
+        title: "Software Engineering",
+        description: "Developers across the full stack (React, Node.js, Java, Python) who are seeking long-term homes.",
+        technologies: ["React", "Node.js", "Java", "Python"]
+      },
+      {
+        id: "infrastructure",
+        title: "Cloud & DevOps",
+        description: "Engineers responsible for core infrastructure who need to intimately understand your unique architecture.",
+        technologies: ["AWS", "Azure", "Kubernetes", "Terraform"]
+      },
+      {
+        id: "data",
+        title: "Data Science & Analytics",
+        description: "Data professionals whose work impacts long-term strategic decisions and internal reporting.",
+        technologies: ["SQL", "Spark", "Tableau", "Machine Learning"]
+      }
+    ],
+    process: [
+      {
+        title: "Define Evaluation Criteria",
+        description: "Set clear success metrics and expectations for the trial period before the engagement begins."
+      },
+      {
+        title: "Rapid Contractor Placement",
+        description: "Candidates are presented within 24–48 hours, with placements starting within 5–7 days."
+      },
+      {
+        title: "Evaluation Phase",
+        description: "The contractor works alongside your team for 3-6 months, allowing you to assess technical skills and cultural fit."
+      },
+      {
+        title: "Regular Check-ins",
+        description: "Structured feedback and reviews occur at months 1, 3, and 6 to ensure expectations are met."
+      },
+      {
+        title: "Conversion Decision",
+        description: "At the end of month 6, a decision is made based on real performance data against predefined success criteria."
+      }
+    ],
+    whenToUse: [
+      {
+        title: "Uncertainty About Long-Term Need",
+        description: "When you are unsure if a role will remain necessary after a year, validate the need before committing."
+      },
+      {
+        title: "First-Time Team Building",
+        description: "Serves as an effective strategy for organizations building new teams where cultural fit is critical."
+      },
+      {
+        title: "High-Stakes Hiring",
+        description: "For critical roles where the cost of a bad hire is exceptionally high, reducing hiring risk is paramount."
+      },
+      {
+        title: "Immediate Skill Gaps",
+        description: "When you need talent immediately but still want the option to hire them permanently later."
+      }
+    ],
+    conversionProcess: [
+      {
+        title: "Performance Review",
+        description: "Analyzing the 6-month evaluation data and deciding to offer permanent employment."
+      },
+      {
+        title: "Offer Generation",
+        description: "Crafting a competitive full-time offer based on demonstrated value and market rates."
+      },
+      {
+        title: "Seamless Transition",
+        description: "Transferring the employee to your internal payroll without any conversion fees or work gaps."
+      }
+    ],
+    faqs: [
+      {
+        question: "Are there fees when converting a contractor to permanent?",
+        answer: "Typically, if the contractor completes the agreed-upon trial period (e.g., 6 months), there is absolutely zero conversion fee to transition them to your payroll."
+      },
+      {
+        question: "Who provides benefits during the contract period?",
+        answer: "As the employer of record during the contract phase, we handle all payroll, taxes, compliance, and offer health benefits to the contractor."
+      },
+      {
+        question: "What if the contractor doesn't work out during the trial?",
+        answer: "That's the beauty of contract-to-hire. If they aren't the right fit, you can end the contract with standard notice (usually 1-2 weeks) without the complexities of firing a permanent employee, and we will source a replacement."
+      },
+      {
+        question: "Do candidates like contract-to-hire?",
+        answer: "Yes, many top professionals appreciate the opportunity to evaluate your company culture, work-life balance, and management style before fully committing themselves."
+      }
+    ]
+  },
   "ai-ml": {
     title: "AI & ML<br />STAFFING",
     subtitle: "Certified AI & Machine Learning Talent",

@@ -19,7 +19,7 @@ function TimelineItem({ step, index }: { step: any; index: number }) {
           style={{ backgroundColor: step.color || '#fff', color: step.textColor || '#000' }}
         >
           <div className="mb-6 text-[3rem] font-medium leading-none tracking-[-0.09em] opacity-20 md:text-[5rem]">
-            {step.number}
+            {step.number || `0${index + 1}`}
           </div>
           <div className="max-w-xl">
             <h3 className="mb-3 text-2xl font-medium tracking-[-0.05em] md:text-3xl">
@@ -38,7 +38,17 @@ function TimelineItem({ step, index }: { step: any; index: number }) {
   );
 }
 
-export default function ServiceProcess({ steps }: { steps: any[] }) {
+export default function ServiceProcess({ 
+  steps,
+  title = "OUR PROVEN<br />PROCESS",
+  subtitle = "How We Work",
+  description = "A robust strategy designed to secure top tech talent that perfectly aligns with your organizational culture and goals."
+}: { 
+  steps: any[],
+  title?: string,
+  subtitle?: string,
+  description?: string
+}) {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -53,18 +63,17 @@ export default function ServiceProcess({ steps }: { steps: any[] }) {
       <div className="mb-24 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="mb-6 text-xs uppercase tracking-[0.2em] text-[#6B6B67]">
-            How We Work
+            {subtitle}
           </p>
 
-          <h2 className="max-w-4xl text-[11vw] font-medium leading-[0.82] tracking-[-0.07em] md:text-[8vw] lg:text-[7vw]">
-            OUR PROVEN
-            <br />
-            PROCESS
-          </h2>
+          <h2 
+            className="max-w-4xl text-[11vw] font-medium leading-[0.82] tracking-[-0.07em] md:text-[8vw] lg:text-[7vw]"
+            dangerouslySetInnerHTML={{ __html: title }}
+          />
         </div>
         
         <p className="max-w-md text-base leading-relaxed text-[#6B6B67] md:text-lg">
-          A robust strategy designed to secure top tech talent that perfectly aligns with your organizational culture and goals.
+          {description}
         </p>
       </div>
 

@@ -8,6 +8,7 @@ import ServiceTechExpertise from "./ServiceTechExpertise";
 import ServiceModelsOffered from "./ServiceModelsOffered";
 import ServiceWhenToUse from "./ServiceWhenToUse";
 import ServiceProcess from "./ServiceProcess";
+import ServiceConversionProcess from "./ServiceConversionProcess";
 import ServiceFAQ from "./ServiceFAQ";
 
 export default function ServiceTemplate({ data }: { data: any }) {
@@ -39,10 +40,24 @@ export default function ServiceTemplate({ data }: { data: any }) {
         )}
         
         {data.whenToUse && data.whenToUse.length > 0 && (
-          <ServiceWhenToUse whenToUse={data.whenToUse} />
+          <ServiceWhenToUse 
+            whenToUse={data.whenToUse} 
+            title={data.title.includes("Contract-to-Hire") ? "When Contract-to-Hire Works Best" : undefined}
+          />
         )}
 
-        <ServiceProcess steps={data.process} />
+        {data.process && data.process.length > 0 && (
+          <ServiceProcess 
+            steps={data.process} 
+            title={data.title.includes("Contract-to-Hire") ? "TRIAL<br />PROCESS" : undefined}
+            subtitle={data.title.includes("Contract-to-Hire") ? "How the Trial Works" : undefined}
+          />
+        )}
+
+        {data.conversionProcess && data.conversionProcess.length > 0 && (
+          <ServiceConversionProcess steps={data.conversionProcess} />
+        )}
+
         <ServiceFAQ faqs={data.faqs} />
         <div className="bg-transparent rounded-t-[40px]">
           <CTA />

@@ -10,6 +10,8 @@ const servicesMenu = [
     items: [
       { name: "Permanent Staffing", href: "/services/staffing-services/permanent-staffing" },
       { name: "Contract Staffing", href: "/services/staffing-services/contract-staffing" },
+      { name: "Contract-to-Hire", href: "/services/staffing-services/contract-to-hire" },
+      { name: "Direct Hire", href: "/services/staffing-services/direct-hire" },
     ]
   },
   {
