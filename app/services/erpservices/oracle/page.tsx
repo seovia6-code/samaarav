@@ -2,8 +2,8 @@ import ServiceTemplate from "@/components/services/ServiceTemplate";
 import { servicesData } from "@/data/servicesData";
 import { notFound } from "next/navigation";
 
-export default function OdooPage() {
-  const data = servicesData["odoo"];
+export default function OraclePage() {
+  const data = servicesData["oracle"];
   
   if (!data) {
     notFound();

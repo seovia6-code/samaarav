@@ -3,7 +3,13 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function ServiceTechExpertise({ expertise }: { expertise: any[] }) {
+export default function ServiceTechExpertise({ 
+  expertise,
+  title = "Technical Expertise"
+}: { 
+  expertise: any[],
+  title?: string
+}) {
   if (!expertise || expertise.length === 0) return null;
   const [activeTab, setActiveTab] = useState(expertise[0].id);
   const activeContent = expertise.find((item) => item.id === activeTab) || expertise[0];
@@ -11,9 +17,10 @@ export default function ServiceTechExpertise({ expertise }: { expertise: any[] }
   return (
     <section className="relative px-6 py-12 md:px-10 lg:px-14 min-h-screen flex flex-col justify-center w-full bg-[#faf9f6] text-[#171717] rounded-t-[40px]">
       <div className="mb-10 text-center md:text-left pt-10">
-        <h2 className="text-3xl md:text-5xl lg:text-6xl font-medium tracking-[-0.05em] mb-4">
-          Technical Expertise
-        </h2>
+        <h2 
+          className="text-3xl md:text-5xl lg:text-6xl font-medium tracking-[-0.05em] mb-4"
+          dangerouslySetInnerHTML={{ __html: title }}
+        ></h2>
         <p className="text-black/60 text-lg md:text-xl max-w-2xl">
           We specialize across the full spectrum of modern tech roles and emerging technologies.
         </p>

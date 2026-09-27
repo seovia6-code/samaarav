@@ -2,7 +2,15 @@
 
 import { motion } from "framer-motion";
 
-export default function ServiceConversionProcess({ steps }: { steps: any[] }) {
+export default function ServiceConversionProcess({ 
+  steps,
+  title = "Conversion Process",
+  subtitle = "Transitioning from contract to permanent seamlessly."
+}: { 
+  steps: any[],
+  title?: string,
+  subtitle?: string
+}) {
   return (
     <section className="relative px-6 py-20 md:px-10 lg:px-14 flex flex-col justify-center w-full bg-[#faf9f6] text-[#171717]">
       <div className="max-w-7xl mx-auto w-full">
@@ -13,9 +21,8 @@ export default function ServiceConversionProcess({ steps }: { steps: any[] }) {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-5xl lg:text-6xl font-medium tracking-[-0.05em] mb-4"
-          >
-            Conversion Process
-          </motion.h2>
+            dangerouslySetInnerHTML={{ __html: title }}
+          />
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -23,7 +30,7 @@ export default function ServiceConversionProcess({ steps }: { steps: any[] }) {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-black/60 text-lg md:text-xl max-w-2xl"
           >
-            Our structured approach ensures a seamless transition from a contractor to a permanent employee at the end of the evaluation phase.
+            {subtitle}
           </motion.p>
         </div>
 

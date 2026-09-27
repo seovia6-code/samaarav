@@ -2,7 +2,17 @@
 
 import { motion } from "framer-motion";
 
-export default function CTA() {
+export default function CTA({ 
+  title = "BUILD YOUR<br /><span class=\"ml-[8vw]\">NEXT TEAM.</span>", 
+  description = "Whether you're looking for exceptional technology talent or your next career opportunity, let's make it happen.", 
+  buttonText = "Find Talent ↗", 
+  buttonLink = "#contact" 
+}: { 
+  title?: string, 
+  description?: string, 
+  buttonText?: string, 
+  buttonLink?: string 
+}) {
   return (
     <section
       id="contact"
@@ -25,12 +35,9 @@ export default function CTA() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="max-w-7xl text-[13vw] font-medium leading-[0.82] tracking-[-0.07em] md:text-[9vw] lg:text-[8vw]"
-      >
-        BUILD YOUR
-        <br />
-        <span className="ml-[8vw]">NEXT TEAM.</span>
-      </motion.h2>
+        className="max-w-7xl text-[10vw] font-medium leading-[0.82] tracking-[-0.07em] md:text-[9vw] lg:text-[8vw]"
+        dangerouslySetInnerHTML={{ __html: title }}
+      />
 
       {/* Bottom content */}
       <div className="mt-20 flex flex-col gap-12 border-t border-[#FFFDF3]/15 pt-10 md:flex-row md:items-end md:justify-between">
@@ -41,8 +48,7 @@ export default function CTA() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-lg text-base leading-relaxed text-[#FFFDF3]/60 md:text-lg"
         >
-          Whether you're looking for exceptional technology talent or your
-          next career opportunity, let's make it happen.
+          {description}
         </motion.p>
 
         {/* Buttons */}
@@ -54,10 +60,10 @@ export default function CTA() {
           className="flex flex-col gap-3 sm:flex-row"
         >
           <a
-            href="#contact"
+            href={buttonLink}
             className="rounded-full bg-[#FFFDF3] px-7 py-4 text-center text-sm font-medium text-[#171717] transition-transform duration-300 hover:scale-105"
           >
-            Find Talent ↗
+            {buttonText}
           </a>
 
           <a

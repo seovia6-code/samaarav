@@ -793,13 +793,14 @@ export const servicesData: Record<string, any> = {
   },
   "infor": {
     title: "INFOR<br />STAFFING",
-    subtitle: "Certified Infor CloudSuite Consultants",
+    subtitle: "Can't Find Experienced Infor Consultants for Your ERP Project?",
     description: "Empower your manufacturing and enterprise operations with industry-proven Infor talent. We provide specialized consultants for CloudSuite, LN, and M3 deployments.",
     stats: [
       { value: "Top 10%", label: "Vetted Consultants" },
       { value: "Fast", label: "Deployment Times" },
       { value: "100%", label: "Infor Dedicated" },
     ],
+    benefitsTitle: "Why Organizations Choose Samaarav for Infor Staffing",
     benefits: [
       {
         number: "01",
@@ -830,6 +831,7 @@ export const servicesData: Record<string, any> = {
         textColor: "#ffffff",
       },
     ],
+    expertiseTitle: "Infor Products & Roles We Staff",
     expertise: [
       {
         id: "cloudsuite",
@@ -850,7 +852,25 @@ export const servicesData: Record<string, any> = {
         technologies: ["Infor HCM", "Infor EAM", "WFM"]
       }
     ],
-    process: [
+    textSections: [
+      {
+        title: "Is the Limited Infor Talent Pool Stalling Your ERP Program?",
+        content: [
+          "Infor is a specialized ERP ecosystem with a significantly smaller certified talent pool than SAP or Oracle. Most staffing agencies lack the Infor-specific knowledge to differentiate between Infor CloudSuite Industrial, LN, and M3 — resulting in placements that look qualified on paper but fail in practice.",
+          "Our dedicated Infor practice solves this by maintaining active relationships with proven specialists across every major Infor product line."
+        ]
+      },
+      {
+        title: "The Real Cost of a Wrong Infor Hire",
+        content: [
+          "Hiring the wrong Infor consultant doesn't just waste staffing budget—it derails deployment timelines, frustrates internal teams, and delays critical business capabilities.",
+          "By partnering with us, you avoid these costly mistakes. We pre-vet every candidate for both technical proficiency and functional industry knowledge before they ever reach your desk."
+        ]
+      }
+    ],
+    processTitle: "Business Outcomes<br />You Can Expect",
+    processSubtitle: "Partner with Samaarav to achieve these transformative results for your enterprise.",
+    conversionProcess: [
       {
         number: "01",
         title: "Requirements Gathering",
@@ -887,113 +907,243 @@ export const servicesData: Record<string, any> = {
         textColor: "#ffffff",
       },
     ],
-    faqs: [
-      {
-        question: "Do you supply both functional and technical Infor resources?",
-        answer: "Yes, we provide Functional Consultants, Technical Developers (ION, Mongoose), Solution Architects, and Project Managers."
-      }
-    ]
+    cta: {
+      title: "Ready to Hire<br /><span class=\"ml-[8vw]\">Top Infor Experts?</span>",
+      description: "Share your Infor staffing requirements today. Our team responds within hours with pre-vetted Infor professionals matched to your product, version, and industry.",
+      buttonText: "Let's Talk ↗",
+      buttonLink: "/contact"
+    }
   },
   "odoo": {
     title: "ODOO<br />STAFFING",
-    subtitle: "Certified Odoo ERP Consultants",
-    description: "Build flexible, scalable business systems with community and enterprise Odoo specialists. We connect you with top Python developers and Odoo functional experts.",
+    subtitle: "Struggling to Find Qualified Odoo Developers and Consultants?",
+    description: "Samaarav connects growing businesses with pre-vetted Odoo professionals — from functional consultants and Python/XML developers to implementation specialists across Sales, Inventory, Manufacturing, Accounting, and Website/eCommerce modules. Whether you run Odoo Community or Enterprise, we deliver talent that gets your ERP right the first time.",
     stats: [
-      { value: "100%", label: "Python/Odoo Experts" },
-      { value: "Flexible", label: "Contract Models" },
-      { value: "Global", label: "Talent Network" },
+      { value: "200+", label: "Odoo Experts Placed" },
+      { value: "96%", label: "Client Satisfaction Rate" },
+      { value: "100%", label: "Odoo Dedicated" },
     ],
+    benefitsTitle: "Why Growing Businesses Choose Samaarav for Odoo Staffing",
     benefits: [
       {
         number: "01",
-        title: "Enterprise & Community",
-        description: "Experts skilled in both Odoo Community and Odoo Enterprise editions.",
+        title: "Community & Enterprise",
+        description: "Experts skilled in both Odoo Community and Odoo Enterprise editions for any project size.",
         color: "#ffffff",
         textColor: "#171717",
       },
       {
         number: "02",
-        title: "Custom Module Development",
-        description: "Access Python developers who can build bespoke Odoo apps for your exact needs.",
+        title: "Agile Delivery",
+        description: "We combine deep Odoo domain expertise with an agile staffing model to deliver top-tier talent at speed.",
         color: "#f5f5f5",
         textColor: "#171717",
       },
       {
         number: "03",
-        title: "Seamless Integrations",
-        description: "Professionals who can integrate Odoo with third-party tools via API.",
+        title: "Proven Implementation Experience",
+        description: "Generalist staffing agencies confuse basic familiarity with genuine experience. We provide vetted specialists.",
         color: "#eaeaea",
         textColor: "#171717",
       },
       {
         number: "04",
-        title: "Rapid Deployment",
-        description: "Fast-track your ERP implementation with experienced Odoo project managers.",
+        title: "Modular Flexibility",
+        description: "Maximize Odoo's open-source, modular architecture with developers who get it right the first time.",
+        color: "#171717",
+        textColor: "#ffffff",
+      },
+    ],
+    expertiseTitle: "Odoo Modules & Roles We Staff",
+    expertise: [
+      {
+        id: "functional-technical",
+        title: "Functional & Technical",
+        description: "Odoo Functional Consultants, Python Developers, Implementation Architects, and Integration Developers.",
+        technologies: ["Functional Consultant", "Python Developer", "Implementation Architect", "Integration Developer"]
+      },
+      {
+        id: "core-modules",
+        title: "Core Modules",
+        description: "Deep expertise in core business modules from CRM to Manufacturing.",
+        technologies: ["Sales / CRM", "Inventory & Warehouse", "Manufacturing (MRP)", "Accounting & Finance"]
+      },
+      {
+        id: "services-management",
+        title: "Services & Management",
+        description: "Extend Odoo to cover every aspect of your business operations.",
+        technologies: ["HR & Payroll", "Website / eCommerce", "Project Management", "POS (Point of Sale)"]
+      }
+    ],
+    textSections: [
+      {
+        title: "Is a Shortage of Skilled Odoo Talent Holding Back Your ERP Rollout?",
+        content: [
+          "Odoo's open-source, modular architecture makes it one of the most flexible ERP platforms available — but that same flexibility means implementation quality depends entirely on the expertise of the consultants and developers behind it.",
+          "Generalist staffing agencies routinely confuse basic Odoo familiarity with genuine implementation experience, leading to misconfigured modules, broken customizations, and ERP rollouts that never deliver their promised ROI."
+        ]
+      },
+      {
+        title: "The Real Cost of a Wrong Odoo Hire",
+        content: [
+          "Hiring the wrong Odoo developer leads to misconfigured modules, poor system architecture, and broken customizations that can completely derail your operations and increase technical debt.",
+          "By partnering with us, you avoid these costly mistakes. We pre-vet every candidate for both technical proficiency and functional industry knowledge before they ever reach your desk."
+        ]
+      }
+    ],
+    processTitle: "Business Outcomes<br />You Can Expect",
+    processSubtitle: "Partner with Samaarav to achieve measurable business results and maximize your Odoo investment through our expert talent solutions.",
+    conversionProcess: [
+      {
+        number: "01",
+        title: "On-time, on-budget Odoo go-lives",
+        description: "Certified consultants who configure modules correctly and avoid costly rework cycles.",
+        color: "#ffffff",
+        textColor: "#171717",
+      },
+      {
+        number: "02",
+        title: "Reliable custom development",
+        description: "Python and Odoo-native developers who build customizations that survive future upgrades.",
+        color: "#f5f5f5",
+        textColor: "#171717",
+      },
+      {
+        number: "03",
+        title: "Smooth third-party integrations",
+        description: "Specialists who connect Odoo cleanly to your payment, e-commerce, and accounting tools.",
+        color: "#eaeaea",
+        textColor: "#171717",
+      },
+      {
+        number: "04",
+        title: "Maximum ERP ROI",
+        description: "Experts who configure Odoo's full modular potential to match your actual business workflows.",
+        color: "#dedede",
+        textColor: "#171717",
+      },
+      {
+        number: "05",
+        title: "Reduced technical debt",
+        description: "Vetted developers who follow Odoo best practices and write maintainable, upgrade-safe code.",
+        color: "#2a2a2a",
+        textColor: "#ffffff",
+      },
+      {
+        number: "06",
+        title: "Scalable Odoo talent pipeline",
+        description: "A ready bench of pre-vetted Odoo professionals aligned to your growth and module expansion roadmap.",
+        color: "#171717",
+        textColor: "#ffffff",
+      }
+    ],
+    cta: {
+      title: "Ready to Hire<br /><span class=\"ml-[8vw]\">Top Odoo Experts?</span>",
+      description: "Share your Odoo staffing requirements today. Our team responds within hours with pre-vetted Odoo consultants and developers matched to your edition, modules, and business goals.",
+      buttonText: "Let's Talk ↗",
+      buttonLink: "/contact"
+    }
+  },
+  "oracle": {
+    title: "ORACLE<br />STAFFING",
+    subtitle: "Certified Oracle Cloud & EBS Consultants",
+    description: "Empower your business transformation with pre-vetted Oracle specialists. From Oracle Cloud Infrastructure (OCI) to E-Business Suite (EBS) and NetSuite, we connect you with the precise talent required for your ecosystem.",
+    stats: [
+      { value: "100%", label: "Oracle Certified Experts" },
+      { value: "Agile", label: "Delivery Timelines" },
+      { value: "Global", label: "Talent Network" },
+    ],
+    benefits: [
+      {
+        number: "01",
+        title: "Oracle Cloud Infrastructure",
+        description: "Specialized talent for modern OCI migrations, architecture, and deployments.",
+        color: "#ffffff",
+        textColor: "#171717",
+      },
+      {
+        number: "02",
+        title: "E-Business Suite (EBS)",
+        description: "Consultants with deep experience in legacy upgrades, maintenance, and functional modules.",
+        color: "#f5f5f5",
+        textColor: "#171717",
+      },
+      {
+        number: "03",
+        title: "NetSuite Integration",
+        description: "Experts in configuring, customizing, and scaling Oracle NetSuite for mid-market and enterprise.",
+        color: "#eaeaea",
+        textColor: "#171717",
+      },
+      {
+        number: "04",
+        title: "End-to-End Support",
+        description: "From initial implementation to hypercare, managed support, and database administration.",
         color: "#171717",
         textColor: "#ffffff",
       },
     ],
     expertise: [
       {
-        id: "functional",
-        title: "Odoo Functional",
-        description: "Business analysts and functional consultants mapping your processes to Odoo.",
-        technologies: ["Accounting", "Inventory", "Sales", "Manufacturing", "HR"]
+        id: "cloud",
+        title: "Oracle Cloud (OCI & ERP)",
+        description: "Architects and functional consultants deploying modern Oracle Cloud solutions.",
+        technologies: ["OCI", "Oracle ERP Cloud", "Oracle HCM Cloud", "SCM Cloud"]
       },
       {
-        id: "technical",
-        title: "Odoo Technical",
-        description: "Python developers building custom modules and API integrations.",
-        technologies: ["Python", "PostgreSQL", "XML", "JavaScript", "QWeb"]
+        id: "ebs",
+        title: "Oracle EBS & Database",
+        description: "Database administrators and EBS experts for complex enterprise environments.",
+        technologies: ["E-Business Suite", "Oracle DBA", "PL/SQL", "Oracle RAC"]
       },
       {
-        id: "admin",
-        title: "Administration & Support",
-        description: "System administrators ensuring high availability and performance of Odoo instances.",
-        technologies: ["Ubuntu", "Nginx", "Docker", "Database Optimization"]
+        id: "netsuite",
+        title: "Oracle NetSuite",
+        description: "Developers and analysts specializing in NetSuite customization and SuiteScript.",
+        technologies: ["NetSuite ERP", "SuiteScript", "SuiteCommerce"]
       }
     ],
     process: [
       {
         number: "01",
-        title: "Scope Definition",
-        description: "Identifying whether you need functional configuration, custom dev, or both.",
+        title: "Requirements Gathering",
+        description: "Understanding your specific Oracle product suite and project phase.",
         color: "#ffffff",
         textColor: "#171717",
       },
       {
         number: "02",
-        title: "Talent Sourcing",
-        description: "Searching our network of specialized Odoo developers and consultants.",
+        title: "Network Activation",
+        description: "Tapping into our exclusive pool of certified Oracle professionals.",
         color: "#f5f5f5",
         textColor: "#171717",
       },
       {
         number: "03",
-        title: "Code & Skill Review",
-        description: "Evaluating Python proficiency and Odoo architecture understanding.",
+        title: "Screening",
+        description: "Verifying project history, module expertise, and cultural fit.",
         color: "#eaeaea",
         textColor: "#171717",
       },
       {
         number: "04",
-        title: "Interviews",
-        description: "Connecting you with the best Odoo talent for final selection.",
+        title: "Client Evaluation",
+        description: "You interview the top heavily vetted Oracle experts.",
         color: "#dedede",
         textColor: "#171717",
       },
       {
         number: "05",
-        title: "Integration",
-        description: "Onboarding your new Odoo specialist to accelerate your project.",
+        title: "Onboarding",
+        description: "Finalizing contracts and ensuring immediate project impact.",
         color: "#171717",
         textColor: "#ffffff",
       },
     ],
     faqs: [
       {
-        question: "Can we hire an Odoo developer on a contract basis?",
-        answer: "Yes, we offer flexible contract, contract-to-hire, and permanent placement options for Odoo talent."
+        question: "Do you supply both functional and technical Oracle resources?",
+        answer: "Yes, we provide Functional Consultants, Technical Developers (PL/SQL, SuiteScript), Cloud Architects, and Database Administrators."
       }
     ]
   }
