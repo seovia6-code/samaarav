@@ -1061,13 +1061,14 @@ export const servicesData: Record<string, any> = {
   },
   "oracle": {
     title: "ORACLE<br />STAFFING",
-    subtitle: "Certified Oracle Cloud & EBS Consultants",
+    subtitle: "Struggling to Find Qualified Oracle Professionals?",
     description: "Empower your business transformation with pre-vetted Oracle specialists. From Oracle Cloud Infrastructure (OCI) to E-Business Suite (EBS) and NetSuite, we connect you with the precise talent required for your ecosystem.",
     stats: [
       { value: "100%", label: "Oracle Certified Experts" },
       { value: "Agile", label: "Delivery Timelines" },
       { value: "Global", label: "Talent Network" },
     ],
+    benefitsTitle: "Why Enterprises Choose Samaarav for Oracle Staffing",
     benefits: [
       {
         number: "01",
@@ -1098,6 +1099,7 @@ export const servicesData: Record<string, any> = {
         textColor: "#ffffff",
       },
     ],
+    expertiseTitle: "Oracle Modules & Roles We Staff",
     expertise: [
       {
         id: "cloud",
@@ -1118,48 +1120,200 @@ export const servicesData: Record<string, any> = {
         technologies: ["NetSuite ERP", "SuiteScript", "SuiteCommerce"]
       }
     ],
-    process: [
+    textSections: [
+      {
+        title: "Is the Oracle Talent Shortage Blocking Your ERP or Cloud Roadmap?",
+        content: [
+          "Oracle migrations and upgrades are complex undertakings that require highly specialized expertise. Generalist staffing agencies often struggle to source candidates with genuine, hands-on experience in the specific Oracle modules your business relies on, leading to delays and increased risk."
+        ]
+      },
+      {
+        title: "The Real Cost of a Wrong Oracle Hire",
+        content: [
+          "• Oracle ERP go-live delays from consultants unfamiliar with your specific modules and business processes.",
+          "• Data migration failures due to insufficient expertise in Oracle data conversion methodologies.",
+          "• Budget overruns from rework on poorly configured financial, procurement, or supply chain modules.",
+          "• Oracle Cloud Fusion migration risk from consultants without OCI or SaaS upgrade experience.",
+          "• Compliance and audit exposure from poorly implemented Oracle GRC or financial controls."
+        ]
+      },
+      {
+        title: "Samaarav: Your Dedicated Oracle Staffing Partner",
+        content: [
+          "Samaarav maintains an Oracle-specialist staffing practice with recruiters trained to distinguish between Oracle EBS R12, Oracle Cloud Fusion, Oracle Database DBA, and OCI infrastructure roles. We verify real implementation experience — not just familiarity — before any candidate reaches your desk.",
+          "• Oracle-specialist recruiters trained to distinguish between EBS R12, Cloud Fusion, DBA, and OCI roles.",
+          "• Real implementation experience verified before any candidate reaches your desk.",
+          "• Talent matched to your modules, version, and industry for precision delivery.",
+          "Find Your Oracle Talent Today."
+        ]
+      }
+    ],
+    processTitle: "Business Outcomes<br />You Can Expect",
+    processSubtitle: "Partner with Samaarav to accelerate your Oracle initiatives and achieve measurable business results through our expert talent solutions.",
+    conversionProcess: [
       {
         number: "01",
-        title: "Requirements Gathering",
-        description: "Understanding your specific Oracle product suite and project phase.",
+        title: "On-time Oracle go-lives",
+        description: "Certified consultants who execute implementations with precision and deliver on schedule.",
         color: "#ffffff",
         textColor: "#171717",
       },
       {
         number: "02",
-        title: "Network Activation",
-        description: "Tapping into our exclusive pool of certified Oracle professionals.",
+        title: "Reduced rework and cost overruns",
+        description: "Module experts who configure Oracle correctly the first time.",
         color: "#f5f5f5",
         textColor: "#171717",
       },
       {
         number: "03",
-        title: "Screening",
-        description: "Verifying project history, module expertise, and cultural fit.",
+        title: "Smooth Oracle Cloud migrations",
+        description: "Specialists experienced in EBS-to-Fusion migrations who minimize disruption.",
         color: "#eaeaea",
         textColor: "#171717",
       },
       {
         number: "04",
-        title: "Client Evaluation",
-        description: "You interview the top heavily vetted Oracle experts.",
+        title: "Better system performance",
+        description: "Oracle DBAs and architects who optimize your environment for reliability and speed.",
         color: "#dedede",
         textColor: "#171717",
       },
       {
         number: "05",
-        title: "Onboarding",
-        description: "Finalizing contracts and ensuring immediate project impact.",
+        title: "Scalable Oracle talent pipeline",
+        description: "A ready bench of pre-screened Oracle professionals aligned to your upgrade roadmap.",
         color: "#171717",
         textColor: "#ffffff",
       },
     ],
-    faqs: [
+    cta: {
+      title: "Ready to Hire<br /><span class=\"ml-[8vw]\">Top Oracle Experts?</span>",
+      description: "Share your Oracle staffing requirements today. Our team responds within hours with certified Oracle professionals matched to your modules and environment.",
+      buttonText: "Let's Talk ↗",
+      buttonLink: "/contact"
+    }
+  },
+  "epicor": {
+    title: "EPICOR<br />STAFFING",
+    subtitle: "Searching for Experienced Epicor ERP Consultants?",
+    description: "Samaarav connects manufacturers, distributors, and service organizations with pre-vetted Epicor professionals across Epicor Kinetic (ERP 10), Prophet 21, Eclipse, and BisTrack. Epicor expertise is rare — our specialist practice makes finding it fast and reliable.",
+    stats: [
+      { value: "130+", label: "Epicor Experts Placed" },
+      { value: "96%", label: "Client Satisfaction Rate" },
+      { value: "100%", label: "Epicor Dedicated" },
+    ],
+    benefitsTitle: "Why Manufacturers and Distributors Choose Samaarav for Epicor Staffing",
+    benefits: [
       {
-        question: "Do you supply both functional and technical Oracle resources?",
-        answer: "Yes, we provide Functional Consultants, Technical Developers (PL/SQL, SuiteScript), Cloud Architects, and Database Administrators."
+        number: "01",
+        title: "Specialized Network",
+        description: "Access a curated talent pool of certified Epicor Kinetic and Prophet 21 professionals.",
+        color: "#ffffff",
+        textColor: "#171717",
+      },
+      {
+        number: "02",
+        title: "Agile Delivery",
+        description: "We combine deep Epicor domain expertise with an agile staffing model to deliver top-tier talent at speed.",
+        color: "#f5f5f5",
+        textColor: "#171717",
+      },
+      {
+        number: "03",
+        title: "Proven Track Record",
+        description: "Avoid agencies that confuse Epicor versions. We supply specialists with verified implementation histories.",
+        color: "#eaeaea",
+        textColor: "#171717",
+      },
+      {
+        number: "04",
+        title: "Industry Alignment",
+        description: "Consultants who understand shop floor operations, discrete manufacturing, and complex distribution.",
+        color: "#171717",
+        textColor: "#ffffff",
+      },
+    ],
+    expertiseTitle: "Epicor Products & Roles We Staff",
+    expertise: [
+      {
+        id: "core",
+        title: "Core Products",
+        description: "Epicor Kinetic (ERP 10), Epicor Prophet 21, Epicor Eclipse, and Epicor BisTrack specialists.",
+        technologies: ["Epicor Kinetic", "Prophet 21", "Eclipse", "BisTrack"]
+      },
+      {
+        id: "functional",
+        title: "Functional Modules",
+        description: "Experts in Manufacturing, Finance, Supply Chain, and Human Capital Management.",
+        technologies: ["Manufacturing (MES)", "Finance & Accounting", "Supply Chain / Procurement", "HCM / Payroll"]
+      },
+      {
+        id: "technical",
+        title: "Technical & Cloud",
+        description: "Technical Developers, BAQ/BPM Engineers, Cloud Architects, and CRM integrators.",
+        technologies: ["Technical Developer", "BAQ / BPM Engineer", "Cloud / SaaS Architect", "Epicor CRM"]
       }
-    ]
+    ],
+    textSections: [
+      {
+        title: "Is the Epicor Talent Shortage Delaying Your ERP Delivery?",
+        content: [
+          "Epicor is a mid-market ERP leader with a loyal but limited certified consultant community. Generic staffing agencies routinely confuse Epicor product versions, misrepresent functional experience, and fail to provide the exact expertise required for successful implementations."
+        ]
+      },
+      {
+        title: "The Real Cost of a Wrong Epicor Hire",
+        content: [
+          "Hiring the wrong Epicor consultant leads to misconfigured manufacturing modules, delayed go-lives, and costly rework.",
+          "By partnering with Samaarav, you bypass these risks. We pre-vet every candidate for both technical proficiency and functional industry knowledge before they ever reach your desk."
+        ]
+      }
+    ],
+    processTitle: "Business Outcomes<br />You Can Expect",
+    processSubtitle: "Partner with Samaarav to achieve measurable business results and maximize your Epicor investment through our expert talent solutions.",
+    conversionProcess: [
+      {
+        number: "01",
+        title: "On-time Epicor go-lives",
+        description: "Certified consultants who configure Epicor Kinetic and P21 correctly and avoid costly rework cycles.",
+        color: "#ffffff",
+        textColor: "#171717",
+      },
+      {
+        number: "02",
+        title: "Reliable custom development",
+        description: "BAQ and BPM developers who build customizations that survive future upgrades.",
+        color: "#f5f5f5",
+        textColor: "#171717",
+      },
+      {
+        number: "03",
+        title: "Smooth third-party integrations",
+        description: "Specialists who connect Epicor cleanly to your e-commerce and shop floor tools.",
+        color: "#eaeaea",
+        textColor: "#171717",
+      },
+      {
+        number: "04",
+        title: "Maximum ERP ROI",
+        description: "Experts who configure Epicor's full manufacturing potential to match your actual workflows.",
+        color: "#dedede",
+        textColor: "#171717",
+      },
+      {
+        number: "05",
+        title: "Reduced technical debt",
+        description: "Vetted developers who follow Epicor best practices and write maintainable code.",
+        color: "#171717",
+        textColor: "#ffffff",
+      },
+    ],
+    cta: {
+      title: "Ready to Hire<br /><span class=\"ml-[8vw]\">Top Epicor Experts?</span>",
+      description: "Share your Epicor staffing requirements today. Our team responds within hours with pre-vetted Epicor consultants and developers matched to your edition, modules, and business goals.",
+      buttonText: "Let's Talk ↗",
+      buttonLink: "/contact"
+    }
   }
 };

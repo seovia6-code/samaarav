@@ -29,6 +29,7 @@ const servicesMenu = [
       { name: "Infor", href: "/services/erpservices/infor" },
       { name: "Odoo", href: "/services/erpservices/odoo" },
       { name: "Oracle", href: "/services/erpservices/oracle" },
+      { name: "Epicor", href: "/services/erpservices/epicor" },
     ]
   }
 ];
