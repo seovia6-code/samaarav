@@ -1315,5 +1315,129 @@ export const servicesData: Record<string, any> = {
       buttonText: "Let's Talk ↗",
       buttonLink: "/contact"
     }
+  },
+  "ifs": {
+    title: "IFS<br />STAFFING",
+    subtitle: "Looking for Experienced IFS Consultants for Your ERP Program?",
+    description: "Samaarav connects enterprises with pre-vetted IFS professionals across IFS Cloud, IFS Applications 10, Field Service Management, and industry-specific implementations. In a market where genuine IFS expertise is rare, our specialist practice delivers qualified consultants — fast.",
+    stats: [
+      { value: "120+", label: "IFS Experts Placed" },
+      { value: "95%", label: "Client Satisfaction Rate" },
+      { value: "100%", label: "IFS Dedicated" },
+    ],
+    benefitsTitle: "Why Organizations Choose Us for IFS Staffing",
+    benefits: [
+      {
+        number: "01",
+        title: "Genuine IFS Expertise",
+        description: "Our recruiters understand IFS at a technical and functional level — IFS Cloud architecture, Aurena, IFS FSM, Lobby configuration, and IFS component framework.",
+        color: "#ffffff",
+        textColor: "#171717",
+      },
+      {
+        number: "02",
+        title: "Thorough Vetting",
+        description: "All IFS consultants are assessed for implementation experience, FSM configuration expertise, industry-specific knowledge, and IFS technical skills.",
+        color: "#f5f5f5",
+        textColor: "#171717",
+      },
+      {
+        number: "03",
+        title: "Flexible Engagement",
+        description: "Staff augmentation, project delivery, or permanent hire. From a single IFS consultant to a full implementation team — we adapt to your program.",
+        color: "#eaeaea",
+        textColor: "#171717",
+      },
+      {
+        number: "04",
+        title: "Cloud Migration Support",
+        description: "We source consultants with hands-on experience in IFS Applications to IFS Cloud migrations — minimizing technical risk.",
+        color: "#171717",
+        textColor: "#ffffff",
+      },
+    ],
+    expertiseTitle: "IFS Products & Roles We Staff",
+    expertise: [
+      {
+        id: "cloud-core",
+        title: "IFS Cloud & Core",
+        description: "Functional Consultants, Applications 10, Cloud Architects, and Technical Developers.",
+        technologies: ["IFS Cloud", "IFS Applications 10", "Aurena", "Lobby Configuration"]
+      },
+      {
+        id: "industry",
+        title: "Industry & Operations",
+        description: "Aerospace & Defense, Manufacturing, Energy & Utilities, and Project Management specialists.",
+        technologies: ["Aerospace & Defense", "Manufacturing", "Energy & Utilities", "Project Management"]
+      },
+      {
+        id: "modules",
+        title: "Modules & Services",
+        description: "Field Service Management (FSM), Finance, Supply Chain, and HR.",
+        technologies: ["Field Service Mgmt (FSM)", "Finance & Controlling", "Supply Chain", "HR / Payroll"]
+      }
+    ],
+    textSections: [
+      {
+        title: "Is the Scarcity of IFS Talent Blocking Your ERP Delivery?",
+        content: [
+          "IFS is a powerful but specialized ERP platform with a small certified talent community. Most recruiters lack the knowledge to assess IFS expertise beyond a keyword match — leading to placements that cannot navigate IFS Cloud architecture, FSM configuration, or IFS-specific customization frameworks."
+        ]
+      },
+      {
+        title: "The Real Cost of a Wrong IFS Hire",
+        content: [
+          "• Implementation failures from consultants unfamiliar with IFS component-based architecture.",
+          "• FSM configuration errors due to lack of hands-on deployment experience.",
+          "• Costly migration delays from consultants without IFS Cloud or Aurena UI/UX expertise.",
+          "• Poor system adoption when configuration doesn't align to operational workflows."
+        ]
+      }
+    ],
+    processTitle: "Business Outcomes<br />You Can Expect",
+    processSubtitle: "Partner with Samaarav to accelerate your IFS initiatives and achieve measurable business results through our expert talent solutions.",
+    conversionProcess: [
+      {
+        number: "01",
+        title: "Successful IFS Go-Lives",
+        description: "Certified IFS professionals who deliver on time and within the project scope.",
+        color: "#ffffff",
+        textColor: "#171717",
+      },
+      {
+        number: "02",
+        title: "Industry-Aligned Configuration",
+        description: "Consultants who map IFS capabilities to your operational processes and vertical workflows.",
+        color: "#f5f5f5",
+        textColor: "#171717",
+      },
+      {
+        number: "03",
+        title: "Smooth Cloud Transitions",
+        description: "Specialists who reduce disruption during version upgrades or IFS Cloud migrations.",
+        color: "#eaeaea",
+        textColor: "#171717",
+      },
+      {
+        number: "04",
+        title: "Higher Platform Adoption",
+        description: "Experts who configure IFS to drive real user adoption and business value.",
+        color: "#dedede",
+        textColor: "#171717",
+      },
+      {
+        number: "05",
+        title: "Reduced Talent Risk",
+        description: "Pre-vetted professionals from a specialized, hard-to-find talent community.",
+        color: "#171717",
+        textColor: "#ffffff",
+      },
+    ],
+    cta: {
+      title: "Ready to Hire<br /><span class=\"ml-[8vw]\">Top IFS Experts?</span>",
+      description: "Share your IFS staffing requirements today. Our team responds within hours with pre-vetted candidates matched to your version and industry.",
+      buttonText: "Let's Talk ↗",
+      buttonLink: "/contact"
+    }
   }
 };
