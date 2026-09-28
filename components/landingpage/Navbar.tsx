@@ -61,9 +61,22 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="text-lg font-semibold tracking-[-0.04em]"
+          className="flex items-center gap-1"
         >
-          SAMAARAV
+          <div className="flex flex-col">
+            <div className="flex items-center">
+              <span className="text-[22px] font-bold tracking-tight text-[#2d2d32] lowercase leading-none">
+                samaarav
+              </span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-1 -mt-1">
+                <path d="M13 5H20V12" stroke="#10b981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M6 10H13V17" stroke="#10b981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+            <span className="text-[9px] font-medium tracking-wide text-[#2d2d32]/70 mt-[1px]">
+              IT Services & Staffing Solutions
+            </span>
+          </div>
         </Link>
 
         {/* Navigation */}
