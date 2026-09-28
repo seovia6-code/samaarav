@@ -61,7 +61,7 @@ export default function Hero() {
                 style={{ transformPerspective: 1000, x: headingX1 }}
                 className="origin-bottom"
               >
-                SOLUTIONS
+                PERMANENT
               </motion.div>
               <motion.div
                 variants={{
@@ -74,7 +74,7 @@ export default function Hero() {
                 style={{ transformPerspective: 1000, x: headingX2 }}
                 className="ml-[10vw] origin-bottom mt-4 md:mt-0"
               >
-                THAT DRIVE GROWTH.
+                STAFFING.
               </motion.div>
             </motion.h1>
           </div>
