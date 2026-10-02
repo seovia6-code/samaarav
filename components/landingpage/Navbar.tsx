@@ -38,6 +38,7 @@ const servicesMenu = [
 
 export default function Navbar() {
   const [isServicesHovered, setIsServicesHovered] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <header className="fixed left-1/2 top-5 z-50 w-[calc(100%-2rem)] max-w-7xl -translate-x-1/2">
@@ -149,25 +150,73 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* CTA */}
-        <Link
-          href="/contact"
-          className="
-            rounded-full
-            bg-black
-            px-5
-            py-2.5
-            text-xs
-            font-medium
-            text-white
-            transition-transform
-            duration-300
-            hover:scale-105
-          "
-        >
-          Get Started ↗
-        </Link>
+        {/* Mobile Menu Toggle & CTA */}
+        <div className="flex items-center gap-2 md:gap-3">
+          <Link
+            href="/contact"
+            className="
+              rounded-full
+              bg-black
+              px-4
+              py-2
+              text-[11px] md:text-xs md:px-5 md:py-2.5
+              font-medium
+              text-white
+              transition-transform
+              duration-300
+              hover:scale-105
+            "
+          >
+            Get Started ↗
+          </Link>
+
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden flex flex-col items-center justify-center w-9 h-9 rounded-full bg-black/5 hover:bg-black/10 transition-colors"
+          >
+            <div className={`w-4 h-[1.5px] bg-black transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-[4.5px]' : '-translate-y-1'}`} />
+            <div className={`w-4 h-[1.5px] bg-black transition-opacity duration-300 my-[2px] ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`} />
+            <div className={`w-4 h-[1.5px] bg-black transition-transform duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-[4.5px]' : 'translate-y-1'}`} />
+          </button>
+        </div>
       </nav>
+
+      {/* Mobile Menu Dropdown */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -10, scale: 0.95 }}
+            transition={{ duration: 0.2 }}
+            className="absolute top-[calc(100%+10px)] left-0 w-full bg-white/95 backdrop-blur-xl rounded-3xl border border-black/10 shadow-2xl p-6 md:hidden flex flex-col gap-6 max-h-[75vh] overflow-y-auto"
+          >
+            <div className="flex flex-col gap-5">
+              <Link href="#clients" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-semibold text-black/90">Clients</Link>
+              <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-semibold text-black/90">About</Link>
+              <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-semibold text-black/90">Contact</Link>
+              
+              <div className="pt-4 border-t border-black/10">
+                <h4 className="text-sm font-bold uppercase tracking-widest text-black/40 mb-4">Services</h4>
+                <div className="flex flex-col gap-6 pl-2 border-l-2 border-black/5">
+                  {servicesMenu.map((category) => (
+                    <div key={category.title}>
+                      <div className="text-xs font-bold text-black/60 uppercase mb-3 tracking-wider">{category.title}</div>
+                      <div className="flex flex-col gap-3 pl-3">
+                        {category.items.map((item) => (
+                          <Link key={item.name} href={item.href} onClick={() => setIsMobileMenuOpen(false)} className="text-base font-medium text-black/70 hover:text-black">
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
