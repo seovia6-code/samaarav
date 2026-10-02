@@ -144,10 +144,8 @@ export default function Hero() {
               style={{ y: bottomContentY, opacity: bottomContentOpacity }}
               className="mt-10 md:mt-20 flex flex-col gap-6 md:gap-8 md:flex-row md:items-end md:justify-between pb-4 md:pb-8"
             >
-              <p className="max-w-md text-base leading-relaxed text-black/65 md:text-lg">
-                Connecting businesses with exceptional technology talent
-                and delivering strategic consulting solutions that drive
-                meaningful growth.
+              <p className="max-w-md text-base leading-relaxed text-black/80 md:text-lg">
+                Transforming businesses with <span className="font-semibold text-black bg-emerald-100 px-1 rounded">elite tech talent</span> and strategic consulting across <span className="font-semibold text-black bg-blue-100 px-1 rounded">Cloud, AI, and ERP solutions</span> to drive meaningful growth.
               </p>
 
               <div className="flex flex-wrap gap-3">

@@ -51,7 +51,7 @@ function Card({ service, index, progress, targetScale }: { service: any, index: 
     <div ref={containerRef} className="sticky top-0 flex h-screen items-center justify-center pt-24 md:pt-32">
       <motion.div 
         style={{ backgroundColor: service.color, color: service.textColor, scale, top: `calc(-5vh + ${index * 25}px)` }} 
-        className="relative flex h-[400px] w-full max-w-5xl flex-col justify-between overflow-hidden rounded-3xl border border-black/10 p-8 shadow-lg md:h-[500px] md:p-16 lg:flex-row lg:items-center lg:justify-between"
+        className="relative flex h-[400px] w-full max-w-5xl flex-col justify-between overflow-hidden rounded-3xl border border-black/10 p-8 shadow-lg md:h-[450px] md:p-12 lg:p-16 lg:flex-row lg:items-center lg:justify-between"
       >
         <div className="flex h-full w-full flex-col justify-between">
           <div className="text-[6rem] font-medium leading-none tracking-[-0.09em] opacity-20 md:text-[8rem]">
