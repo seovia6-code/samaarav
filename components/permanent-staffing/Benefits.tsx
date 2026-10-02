@@ -36,7 +36,7 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section className="relative px-6 py-12 md:px-10 lg:px-14 min-h-screen flex flex-col justify-center max-h-screen overflow-hidden">
+    <section className="relative px-6 py-12 md:px-10 lg:px-14 min-h-screen flex flex-col justify-center">
       <div className="mb-10 pt-10">
         <p className="mb-2 text-xs uppercase tracking-[0.2em] text-[#6B6B67]">
           Core Benefits

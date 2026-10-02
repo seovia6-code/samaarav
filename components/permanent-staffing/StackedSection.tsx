@@ -21,10 +21,10 @@ export default function StackedSection({ children, index, bgWhite = false }: Sta
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.5]);
 
   return (
-    <div ref={containerRef} className="sticky top-0 flex min-h-screen w-full items-center justify-center">
+    <div ref={containerRef} className="relative md:sticky top-0 flex min-h-screen w-full items-center justify-center">
       <motion.div
         style={{ scale, opacity, zIndex: index * 10 }}
-        className={`w-full min-h-screen overflow-y-auto ${bgWhite ? 'bg-white' : 'bg-[#faf9f6]'} rounded-t-[40px] shadow-[0_-15px_30px_rgba(0,0,0,0.05)] border-t border-black/5 flex flex-col`}
+        className={`w-full min-h-screen md:overflow-y-auto ${bgWhite ? 'bg-white' : 'bg-[#faf9f6]'} rounded-t-[40px] shadow-[0_-15px_30px_rgba(0,0,0,0.05)] border-t border-black/5 flex flex-col`}
       >
         {children}
       </motion.div>

@@ -56,8 +56,8 @@ export default function Hero() {
           {/* =====================================================
               REVEALED BACKGROUND TEXT
           ====================================================== */}
-          <div className="absolute inset-0 flex flex-col items-center justify-end pb-10 pointer-events-none z-0 overflow-hidden">
-             <h1 className="text-[7vw] sm:text-[5vw] font-black uppercase tracking-tighter text-black/90 leading-none text-center whitespace-nowrap">
+          <div className="absolute inset-0 flex flex-col items-center justify-end pb-10 pointer-events-none z-0 overflow-hidden px-4">
+             <h1 className="text-[12vw] sm:text-[7vw] md:text-[5vw] font-black uppercase tracking-tighter text-black/90 leading-[0.9] text-center whitespace-normal sm:whitespace-nowrap">
                 STAFFING & CONSULTANCY SERVICES
              </h1>
           </div>
@@ -88,9 +88,9 @@ export default function Hero() {
             />
 
             {/* Orbiting Circles Animation */}
-            <div className="absolute inset-0 origin-center -z-10">
+            <div className="absolute left-1/2 top-[40%] md:top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 w-[600px] h-[600px] scale-[0.55] sm:scale-90 lg:scale-100 pointer-events-none">
               {/* Center Graphic */}
-              <div className="absolute left-1/2 top-1/2 flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-2xl bg-black text-3xl font-bold text-white shadow-xl">
+              <div className="absolute left-1/2 top-1/2 flex h-16 w-16 md:h-20 md:w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-2xl bg-black text-2xl md:text-3xl font-bold text-white shadow-xl pointer-events-auto scale-[1.3] sm:scale-100">
                 S
               </div>
 
@@ -127,7 +127,7 @@ export default function Hero() {
                     animate={{ rotate: [-item.startAngle, -(item.startAngle + 360)] }}
                     transition={{ repeat: Infinity, duration: item.duration, ease: "linear" }}
                   >
-                    <div className="flex items-center gap-2 whitespace-nowrap rounded-full border border-black/10 bg-white/70 px-4 py-2 text-xs font-medium text-black shadow-sm backdrop-blur-md md:text-sm">
+                    <div className="flex items-center gap-2 whitespace-nowrap rounded-full border border-black/10 bg-white/70 px-3 py-1.5 md:px-4 md:py-2 text-[10px] md:text-sm font-medium text-black shadow-sm backdrop-blur-md pointer-events-auto transition-transform hover:scale-110 scale-[1.3] sm:scale-100">
                       <div className="h-1.5 w-1.5 rounded-full bg-black/80"></div>
                       {item.text}
                     </div>
@@ -142,7 +142,7 @@ export default function Hero() {
             {/* Bottom Content (Slides out when shrinking) */}
             <motion.div 
               style={{ y: bottomContentY, opacity: bottomContentOpacity }}
-              className="mt-20 flex flex-col gap-8 md:flex-row md:items-end md:justify-between pb-8"
+              className="mt-10 md:mt-20 flex flex-col gap-6 md:gap-8 md:flex-row md:items-end md:justify-between pb-4 md:pb-8"
             >
               <p className="max-w-md text-base leading-relaxed text-black/65 md:text-lg">
                 Connecting businesses with exceptional technology talent

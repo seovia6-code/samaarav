@@ -71,35 +71,35 @@ function Card({ item, index, progress, targetScale }: { item: any, index: number
     <div ref={containerRef} className="sticky top-0 flex h-screen items-center justify-center pt-24 md:pt-32">
       <motion.div 
         style={{ backgroundColor: item.color, color: item.textColor, scale, top: `calc(-5vh + ${index * 15}px)` }} 
-        className="relative flex h-[500px] w-full max-w-5xl flex-col justify-between overflow-hidden rounded-3xl border border-black/10 p-10 shadow-lg md:h-[600px] md:p-16"
+        className="relative flex h-[500px] w-full max-w-5xl flex-col justify-between overflow-hidden rounded-3xl border border-black/10 p-8 shadow-lg md:h-[600px] md:p-16"
       >
         <div className="flex h-full w-full flex-col justify-between">
           <div className="flex items-end justify-between">
-            <div className="text-[5rem] font-medium leading-none tracking-[-0.09em] opacity-20 md:text-[7rem]">
+            <div className="text-[4rem] font-medium leading-none tracking-[-0.09em] opacity-20 md:text-[7rem]">
               {String(index + 1).padStart(2, "0")}
             </div>
-            <div className="text-2xl font-medium tracking-tight opacity-40 md:text-4xl">
+            <div className="text-xl font-medium tracking-tight opacity-40 md:text-4xl">
               {item.name}
             </div>
           </div>
           
-          <div className="mt-8 flex flex-col justify-between gap-10 md:flex-row md:items-end">
+          <div className="mt-4 md:mt-8 flex flex-col justify-between gap-6 md:gap-10 md:flex-row md:items-end">
             <div className="max-w-xl">
-              <h3 className="mb-4 text-3xl font-medium tracking-[-0.05em] md:text-5xl">
+              <h3 className="mb-2 md:mb-4 text-2xl font-medium tracking-[-0.05em] md:text-5xl">
                 {item.title}
               </h3>
-              <p className="text-base leading-relaxed opacity-70 md:text-lg">
+              <p className="text-sm leading-relaxed opacity-70 md:text-lg">
                 {item.description}
               </p>
             </div>
             
             <div className="min-w-[200px]">
-              <p className="mb-4 text-xs uppercase tracking-[0.18em] opacity-50">
+              <p className="mb-2 md:mb-4 text-[10px] md:text-xs uppercase tracking-[0.18em] opacity-50">
                 Key Roles We Fill
               </p>
-              <div className="space-y-2">
+              <div className="space-y-1.5 md:space-y-2">
                 {item.roles.map((role: string) => (
-                  <div key={role} className="border-b border-current pb-2 text-sm md:text-base opacity-90">
+                  <div key={role} className="border-b border-current pb-1.5 md:pb-2 text-xs md:text-base opacity-90">
                     {role}
                   </div>
                 ))}
@@ -122,7 +122,7 @@ export default function Expertise() {
   return (
     <section ref={containerRef} id="expertise" className="relative px-6 pb-24 md:px-10 lg:px-14">
       {/* Header */}
-      <div className="sticky top-10 mb-20 pt-24">
+      <div className="relative md:sticky top-10 mb-12 md:mb-20 pt-16 md:pt-24">
         <p className="mb-6 text-xs uppercase tracking-[0.2em] text-[#6B6B67]">
           Technology Expertise
         </p>

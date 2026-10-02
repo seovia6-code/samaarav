@@ -21,13 +21,13 @@ export default function ContactPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-40 pb-20 px-5 md:px-10 overflow-hidden">
+      <section className="relative pt-28 md:pt-40 pb-16 md:pb-20 px-4 md:px-10 overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-bold tracking-[-0.04em] text-[#171717] mb-6"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-[-0.04em] text-[#171717] mb-4 md:mb-6"
           >
             Contact <span className="text-black/40">Us</span>
           </motion.h1>
@@ -35,7 +35,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-lg md:text-xl text-black/60 max-w-2xl mx-auto"
+            className="text-base md:text-lg lg:text-xl text-black/60 max-w-2xl mx-auto px-2"
           >
             Reach out to our team by sending us an email—we're here to assist you with your inquiries.
           </motion.p>
@@ -43,15 +43,15 @@ export default function ContactPage() {
       </section>
 
       {/* Main Content Area */}
-      <section className="pb-32 px-5 md:px-10 relative z-10">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <section className="pb-20 md:pb-32 px-4 md:px-10 relative z-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
           
           {/* Left Column: Office Details */}
           <div>
-            <h2 className="text-3xl font-bold text-[#171717] mb-8">Our Offices</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#171717] mb-6 md:mb-8">Our Offices</h2>
             
             {/* Quick Contact Info */}
-            <div className="bg-white p-8 rounded-3xl shadow-sm border border-black/5 mb-10">
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-black/5 mb-8 md:mb-10">
               <div className="space-y-6">
                 <div>
                   <h4 className="text-sm font-semibold text-black/40 uppercase tracking-wider mb-2">Email</h4>
@@ -85,10 +85,10 @@ export default function ContactPage() {
                   </button>
                 ))}
               </div>
-              <div className="p-8">
+              <div className="p-6 md:p-8">
                 {offices.map((office) => (
                   <div key={office.name} className={`${activeTab === office.name ? 'block' : 'hidden'}`}>
-                    <h3 className="text-2xl font-bold text-[#171717] mb-2">{office.company}</h3>
+                    <h3 className="text-xl md:text-2xl font-bold text-[#171717] mb-2">{office.company}</h3>
                     <p className="text-black/60 text-lg">{office.address}</p>
                     <a href="mailto:info@samaarav.com" className="inline-block mt-4 text-blue-600 font-medium hover:underline">
                       info@samaarav.com
@@ -101,8 +101,8 @@ export default function ContactPage() {
 
           {/* Right Column: Contact Form */}
           <div>
-            <h2 className="text-3xl font-bold text-[#171717] mb-8">Let's Connect</h2>
-            <form className="bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-black/5 shadow-blue-900/5">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#171717] mb-6 md:mb-8">Let's Connect</h2>
+            <form className="bg-white p-6 md:p-10 rounded-3xl shadow-lg border border-black/5 shadow-blue-900/5">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label className="block text-sm font-medium text-black/70 mb-2" htmlFor="name">Full Name *</label>

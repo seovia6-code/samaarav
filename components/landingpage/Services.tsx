@@ -51,7 +51,7 @@ function Card({ service, index, progress, targetScale }: { service: any, index: 
     <div ref={containerRef} className="sticky top-0 flex h-screen items-center justify-center pt-24 md:pt-32">
       <motion.div 
         style={{ backgroundColor: service.color, color: service.textColor, scale, top: `calc(-5vh + ${index * 25}px)` }} 
-        className="relative flex h-[400px] w-full max-w-5xl flex-col justify-between overflow-hidden rounded-3xl border border-black/10 p-10 shadow-lg md:h-[500px] md:p-16 lg:flex-row lg:items-center lg:justify-between"
+        className="relative flex h-[400px] w-full max-w-5xl flex-col justify-between overflow-hidden rounded-3xl border border-black/10 p-8 shadow-lg md:h-[500px] md:p-16 lg:flex-row lg:items-center lg:justify-between"
       >
         <div className="flex h-full w-full flex-col justify-between">
           <div className="text-[6rem] font-medium leading-none tracking-[-0.09em] opacity-20 md:text-[8rem]">
@@ -88,7 +88,7 @@ export default function Services() {
   return (
     <section ref={containerRef} id="services" className="relative px-6 pb-24 md:px-10 lg:px-14">
       {/* Section Header */}
-      <div className="sticky top-10 mb-20 flex flex-col gap-8 md:flex-row md:items-end md:justify-between pt-24">
+      <div className="relative md:sticky top-10 mb-12 md:mb-20 flex flex-col gap-6 md:gap-8 md:flex-row md:items-end md:justify-between pt-16 md:pt-24">
         <h2 className="max-w-4xl text-[12vw] font-medium leading-[0.82] tracking-[-0.07em] md:text-[8vw] lg:text-[7vw]">
           WHAT
           <br />

@@ -93,19 +93,19 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 1.7, ease: [0.16, 1, 0.3, 1] }}
-              className="flex gap-8"
+              className="flex flex-wrap gap-6 md:gap-8"
             >
-              <div className="flex flex-col gap-2 border-l border-black/15 pl-6">
-                <span className="text-3xl font-medium tracking-tight md:text-4xl">85%</span>
-                <span className="text-xs uppercase tracking-wider text-black/50">Success Rate</span>
+              <div className="flex flex-col gap-1 md:gap-2 border-l border-black/15 pl-4 md:pl-6">
+                <span className="text-2xl font-medium tracking-tight md:text-4xl">85%</span>
+                <span className="text-[10px] md:text-xs uppercase tracking-wider text-black/50">Success Rate</span>
               </div>
-              <div className="flex flex-col gap-2 border-l border-black/15 pl-6">
-                <span className="text-3xl font-medium tracking-tight md:text-4xl">500+</span>
-                <span className="text-xs uppercase tracking-wider text-black/50">Professionals Placed</span>
+              <div className="flex flex-col gap-1 md:gap-2 border-l border-black/15 pl-4 md:pl-6">
+                <span className="text-2xl font-medium tracking-tight md:text-4xl">500+</span>
+                <span className="text-[10px] md:text-xs uppercase tracking-wider text-black/50">Professionals Placed</span>
               </div>
-              <div className="flex flex-col gap-2 border-l border-black/15 pl-6">
-                <span className="text-3xl font-medium tracking-tight md:text-4xl">95%</span>
-                <span className="text-xs uppercase tracking-wider text-black/50">Client Satisfaction</span>
+              <div className="flex flex-col gap-1 md:gap-2 border-l border-black/15 pl-4 md:pl-6">
+                <span className="text-2xl font-medium tracking-tight md:text-4xl">95%</span>
+                <span className="text-[10px] md:text-xs uppercase tracking-wider text-black/50">Client Satisfaction</span>
               </div>
             </motion.div>
           </motion.div>
