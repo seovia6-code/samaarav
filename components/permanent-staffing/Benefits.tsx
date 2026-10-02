@@ -36,33 +36,33 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section className="relative px-6 py-12 md:px-10 lg:px-14 min-h-screen flex flex-col justify-center">
-      <div className="mb-10 pt-10">
+    <section className="relative px-6 py-6 md:py-8 md:px-10 lg:px-14 min-h-screen flex flex-col justify-center">
+      <div className="mb-6 md:mb-8 pt-4 md:pt-6">
         <p className="mb-2 text-xs uppercase tracking-[0.2em] text-[#6B6B67]">
           Core Benefits
         </p>
-        <h2 className="max-w-4xl text-[10vw] font-medium leading-[0.82] tracking-[-0.07em] md:text-[6vw] lg:text-[5vw]">
+        <h2 className="max-w-4xl text-[10vw] font-medium leading-[0.82] tracking-[-0.07em] md:text-[5vw] lg:text-[4.5vw]">
           WHY PERMANENT
           <br />
           STAFFING?
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full flex-grow pb-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full flex-grow pb-6 md:pb-8">
         {benefits.map((benefit, index) => (
           <div 
             key={index}
             style={{ backgroundColor: benefit.color, color: benefit.textColor }} 
-            className="flex flex-col justify-between overflow-hidden rounded-3xl border border-black/10 p-6 shadow-sm md:p-8"
+            className="flex flex-col justify-between overflow-hidden rounded-3xl border border-black/10 p-5 md:p-6 shadow-sm"
           >
-            <div className="text-[3rem] font-medium leading-none tracking-[-0.09em] opacity-20 md:text-[4rem] mb-4">
+            <div className="text-[3rem] font-medium leading-none tracking-[-0.09em] opacity-20 md:text-[3.5rem] mb-3 md:mb-4">
               {benefit.number}
             </div>
             <div>
-              <h3 className="mb-2 text-xl font-medium tracking-[-0.05em] md:text-2xl">
+              <h3 className="mb-2 text-xl font-medium tracking-[-0.05em] md:text-xl">
                 {benefit.title}
               </h3>
-              <p className="text-sm leading-relaxed opacity-70 md:text-base">
+              <p className="text-sm leading-relaxed opacity-70">
                 {benefit.description}
               </p>
             </div>
