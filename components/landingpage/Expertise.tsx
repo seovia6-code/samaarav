@@ -68,10 +68,10 @@ function Card({ item, index, progress, targetScale }: { item: any, index: number
   const scale = useTransform(progress, [index * (1/expertise.length), 1], [1, targetScale]);
 
   return (
-    <div ref={containerRef} className="sticky top-0 flex h-screen items-center justify-center pt-24 md:pt-32">
+    <div ref={containerRef} className="sticky top-0 flex h-screen items-center justify-center pt-24 md:pt-32 pointer-events-none">
       <motion.div 
         style={{ backgroundColor: item.color, color: item.textColor, scale, top: `calc(-5vh + ${index * 15}px)` }} 
-        className="relative flex h-[500px] w-full max-w-5xl flex-col justify-between overflow-hidden rounded-3xl border border-black/10 p-8 shadow-lg md:h-[450px] md:p-12 lg:p-16"
+        className="pointer-events-auto relative flex h-[500px] w-full max-w-5xl flex-col justify-between overflow-hidden rounded-3xl border border-black/10 p-8 shadow-lg md:h-[450px] md:p-12 lg:p-16"
       >
         <div className="flex h-full w-full flex-col justify-between">
           <div className="flex items-end justify-between">
