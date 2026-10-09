@@ -26,7 +26,7 @@ export default function ServiceBenefits({
           <div 
             key={index}
             style={{ backgroundColor: benefit.color, color: benefit.textColor }} 
-            className="flex flex-col justify-between overflow-hidden rounded-3xl border border-black/10 p-6 shadow-sm"
+            className="flex flex-col justify-between overflow-hidden rounded-3xl border border-border p-6 shadow-sm"
           >
             <div className="text-[2.5rem] font-medium leading-none tracking-[-0.09em] opacity-20 md:text-[3rem] mb-3">
               {benefit.number}

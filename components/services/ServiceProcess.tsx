@@ -15,7 +15,7 @@ function TimelineItem({ step, index }: { step: any; index: number }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="relative flex flex-col justify-between overflow-hidden rounded-2xl border border-black/10 p-8 shadow-sm md:p-10"
+          className="relative flex flex-col justify-between overflow-hidden rounded-2xl border border-border p-8 shadow-sm md:p-10"
           style={{ backgroundColor: step.color || '#fff', color: step.textColor || '#000' }}
         >
           <div className="mb-6 text-[3rem] font-medium leading-none tracking-[-0.09em] opacity-20 md:text-[5rem]">
@@ -79,11 +79,11 @@ export default function ServiceProcess({
 
       <div ref={containerRef} className="relative mx-auto mt-20 w-full max-w-6xl">
         {/* Dashed Center Line */}
-        <div className="absolute bottom-0 left-0 top-0 w-px -translate-x-1/2 border-l-2 border-dashed border-black/15 md:left-1/2"></div>
+        <div className="absolute bottom-0 left-0 top-0 w-px -translate-x-1/2 border-l-2 border-dashed border-border md:left-1/2"></div>
 
         {/* Animated Moving Square */}
         <motion.div
-          className="absolute left-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 bg-blue-500 shadow-[0_0_20px_rgba(59,130,246,0.8)] md:left-1/2"
+          className="absolute left-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 bg-primary shadow-[0_0_20px_rgba(37,99,235,0.8)] md:left-1/2"
           style={{ top: dotTop }}
         />
 

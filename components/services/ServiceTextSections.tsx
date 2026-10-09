@@ -6,7 +6,7 @@ export default function ServiceTextSections({ sections }: { sections: { title: s
   if (!sections || sections.length === 0) return null;
 
   return (
-    <div className="w-full bg-[#faf9f6] text-[#171717] py-20 px-6 md:px-10 lg:px-14">
+    <div className="w-full bg-background text-foreground py-20 px-6 md:px-10 lg:px-14">
       <div className="max-w-7xl mx-auto space-y-24">
         {sections.map((sec, idx) => (
           <motion.div 
@@ -22,7 +22,7 @@ export default function ServiceTextSections({ sections }: { sections: { title: s
                 {sec.title}
               </h2>
             </div>
-            <div className="md:w-2/3 space-y-6 text-lg md:text-xl text-black/70 leading-relaxed">
+            <div className="md:w-2/3 space-y-6 text-lg md:text-xl text-muted leading-relaxed">
               {sec.content.map((p: string, pIdx: number) => (
                 <p key={pIdx}>{p}</p>
               ))}

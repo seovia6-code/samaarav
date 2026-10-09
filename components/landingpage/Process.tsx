@@ -8,29 +8,29 @@ const steps = [
     number: "01",
     title: "Share Requirements",
     description: "Tell us about your technology hiring requirements, skills, experience, and team needs.",
-    color: "#ffffff",
-    textColor: "#171717",
+    color: "var(--color-white)",
+    textColor: "var(--color-foreground)",
   },
   {
     number: "02",
     title: "Receive Pre-Vetted Profiles",
     description: "Our team identifies and presents qualified technology professionals aligned with your requirements.",
-    color: "#f5f5f5",
-    textColor: "#171717",
+    color: "#FFFFFF",
+    textColor: "var(--color-foreground)",
   },
   {
     number: "03",
     title: "Interview Candidates",
     description: "Review profiles, connect with candidates, and identify the professionals who best fit your organization.",
-    color: "#eaeaea",
-    textColor: "#171717",
+    color: "#FFFFFF",
+    textColor: "var(--color-foreground)",
   },
   {
     number: "04",
     title: "Onboard Talent",
     description: "Once you select your candidate, we help move the process forward so your new talent can get started.",
-    color: "#171717",
-    textColor: "#ffffff",
+    color: "var(--color-foreground)",
+    textColor: "var(--color-white)",
   },
 ];
 
@@ -46,7 +46,7 @@ function TimelineItem({ step, index }: { step: any; index: number }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="relative flex flex-col justify-between overflow-hidden rounded-2xl border border-black/10 p-8 shadow-sm md:p-10"
+          className="relative flex flex-col justify-between overflow-hidden rounded-2xl border border-border p-8 shadow-sm md:p-10"
           style={{ backgroundColor: step.color, color: step.textColor }}
         >
           <div className="mb-6 text-[3rem] font-medium leading-none tracking-[-0.09em] opacity-20 md:text-[5rem]">
@@ -102,7 +102,7 @@ export default function Process() {
 
       <div ref={containerRef} className="relative mx-auto mt-20 w-full max-w-6xl">
         {/* Dashed Center Line */}
-        <div className="absolute bottom-0 left-0 top-0 w-px -translate-x-1/2 border-l-2 border-dashed border-black/15 md:left-1/2"></div>
+        <div className="absolute bottom-0 left-0 top-0 w-px -translate-x-1/2 border-l-2 border-dashed border-border md:left-1/2"></div>
 
         {/* Animated Moving Square */}
         <motion.div

@@ -1,16 +1,28 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-secondary: #06b6d4;
+  --color-accent: #38bdf8;
+  --color-navy: #071a2b;
+  --color-background: #f8fafc;
+  --color-foreground: #0f172a;
+  --color-muted: #64748b;
+  --color-border: #e2e8f0;
+}
+
 /* =========================================
    GLOBAL THEME
 ========================================= */
 
 :root {
-  --background: #fffdf3;
-  --foreground: #171717;
+  --background: #f8fafc;
+  --foreground: #0f172a;
 
-  --line: rgba(23, 23, 23, 0.12);
-  --line-light: rgba(23, 23, 23, 0.07);
-  --muted: rgba(23, 23, 23, 0.55);
+  --line: rgba(7, 26, 43, 0.12);
+  --line-light: rgba(7, 26, 43, 0.07);
+  --muted: #64748b;
 }
 
 * {
@@ -23,8 +35,8 @@ html {
 
 body {
   margin: 0;
-  background: #fffdf3;
-  color: #171717;
+  background: var(--background);
+  color: var(--foreground);
   font-family: "Inter", sans-serif;
 }
 
@@ -37,15 +49,15 @@ body {
   position: relative;
   min-height: 100vh;
 
-  background-color: #fffdf3;
+  background-color: var(--background);
 
   /*
     Fine horizontal lines
   */
   background-image: repeating-linear-gradient(
     to bottom,
-    rgba(23, 23, 23, 0.055) 0px,
-    rgba(23, 23, 23, 0.055) 1px,
+    rgba(7, 26, 43, 0.055) 0px,
+    rgba(7, 26, 43, 0.055) 1px,
     transparent 1px,
     transparent 5px
   );
@@ -61,8 +73,8 @@ body {
   max-width: 1600px;
   margin: 0 auto;
 
-  border-left: 1px solid rgba(23, 23, 23, 0.14);
-  border-right: 1px solid rgba(23, 23, 23, 0.14);
+  border-left: 1px solid rgba(7, 26, 43, 0.14);
+  border-right: 1px solid rgba(7, 26, 43, 0.14);
 
   min-height: 100vh;
 }
@@ -73,7 +85,7 @@ body {
 ========================================= */
 
 .section-border {
-  border-top: 1px solid rgba(23, 23, 23, 0.12);
+  border-top: 1px solid rgba(7, 26, 43, 0.12);
 }
 
 
@@ -82,7 +94,7 @@ body {
 ========================================= */
 
 .fine-border {
-  border-color: rgba(23, 23, 23, 0.10);
+  border-color: rgba(7, 26, 43, 0.10);
 }
 
 
@@ -93,8 +105,8 @@ body {
 .pleurat-lines {
   background-image: repeating-linear-gradient(
     to bottom,
-    rgba(23, 23, 23, 0.045) 0px,
-    rgba(23, 23, 23, 0.045) 1px,
+    rgba(7, 26, 43, 0.045) 0px,
+    rgba(7, 26, 43, 0.045) 1px,
     transparent 1px,
     transparent 5px
   );
@@ -108,14 +120,14 @@ body {
 .pleurat-section {
   position: relative;
 
-  border-top: 1px solid rgba(23, 23, 23, 0.12);
+  border-top: 1px solid rgba(7, 26, 43, 0.12);
 
-  background-color: rgba(255, 253, 243, 0.75);
+  background-color: rgba(248, 250, 252, 0.75);
 
   background-image: repeating-linear-gradient(
     to bottom,
-    rgba(23, 23, 23, 0.045) 0px,
-    rgba(23, 23, 23, 0.045) 1px,
+    rgba(7, 26, 43, 0.045) 0px,
+    rgba(7, 26, 43, 0.045) 1px,
     transparent 1px,
     transparent 5px
   );
@@ -138,8 +150,8 @@ a {
 ========================================= */
 
 ::selection {
-  background: #171717;
-  color: #fffdf3;
+  background: var(--color-primary);
+  color: #ffffff;
 }
 
 

@@ -15,13 +15,13 @@ export default function ServiceTechExpertise({
   const activeContent = expertise.find((item) => item.id === activeTab) || expertise[0];
 
   return (
-    <section className="relative px-6 py-12 md:px-10 lg:px-14 min-h-screen flex flex-col justify-center w-full bg-[#faf9f6] text-[#171717] rounded-t-[40px]">
+    <section className="relative px-6 py-12 md:px-10 lg:px-14 min-h-screen flex flex-col justify-center w-full bg-background text-foreground rounded-t-[40px]">
       <div className="mb-10 text-center md:text-left pt-10">
         <h2 
           className="text-3xl md:text-5xl lg:text-6xl font-medium tracking-[-0.05em] mb-4"
           dangerouslySetInnerHTML={{ __html: title }}
         ></h2>
-        <p className="text-black/60 text-lg md:text-xl max-w-2xl">
+        <p className="text-muted text-lg md:text-xl max-w-2xl">
           We specialize across the full spectrum of modern tech roles and emerging technologies.
         </p>
       </div>
@@ -38,24 +38,24 @@ export default function ServiceTechExpertise({
                 onClick={() => setActiveTab(item.id)}
                 className={`w-full text-left px-6 py-5 rounded-2xl flex items-center justify-between transition-all duration-300 border ${
                   isActive 
-                    ? "bg-white border-black/10 shadow-sm" 
-                    : "bg-transparent border-transparent hover:bg-black/[0.03]"
+                    ? "bg-white border-border shadow-sm" 
+                    : "bg-transparent border-transparent hover:bg-primary-dark/[0.03]"
                 }`}
               >
                 <div className="flex items-center gap-4">
-                  <div className={`w-10 h-10 rounded-full flex items-center justify-center ${isActive ? 'bg-black/5 text-black' : 'bg-transparent text-black/50'}`}>
+                  <div className={`w-10 h-10 rounded-full flex items-center justify-center ${isActive ? 'bg-foreground/5 text-foreground' : 'bg-transparent text-muted'}`}>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <polyline points="16 18 22 12 16 6"></polyline>
                       <polyline points="8 6 2 12 8 18"></polyline>
                     </svg>
                   </div>
-                  <span className={`text-lg font-medium ${isActive ? 'text-black' : 'text-black/60'}`}>
+                  <span className={`text-lg font-medium ${isActive ? 'text-foreground' : 'text-muted'}`}>
                     {item.title}
                   </span>
                 </div>
                 {isActive && (
                   <motion.div layoutId="active-arrow">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#171717" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-foreground)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <line x1="5" y1="12" x2="19" y2="12"></line>
                       <polyline points="12 5 19 12 12 19"></polyline>
                     </svg>
@@ -68,7 +68,7 @@ export default function ServiceTechExpertise({
 
         {/* Right Side: Animated Content Box */}
         <div className="w-full lg:w-2/3">
-          <div className="bg-[#171717] border border-white/10 rounded-3xl p-8 md:p-12 min-h-[500px] h-full flex flex-col shadow-xl">
+          <div className="bg-navy border border-white/10 rounded-3xl p-8 md:p-12 min-h-[500px] h-full flex flex-col shadow-xl">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeContent.id}

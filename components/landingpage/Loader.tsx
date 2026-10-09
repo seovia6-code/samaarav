@@ -32,7 +32,7 @@ export default function Loader() {
           initial={{ y: 0 }}
           exit={{ y: "-100%" }}
           transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black text-white"
+          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-primary text-white"
         >
           <div className="flex h-full w-full flex-col justify-end p-8 md:p-14">
              <div className="flex w-full items-end justify-between overflow-hidden">

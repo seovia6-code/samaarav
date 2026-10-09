@@ -2,17 +2,17 @@
 
 export default function Footer() {
   return (
-    <footer className="bg-[#FFFDF3] px-6 pt-20 md:px-10 md:pt-28 lg:px-14">
+    <footer className="bg-navy px-6 pt-20 md:px-10 md:pt-28 lg:px-14">
       {/* Top section */}
-      <div className="grid gap-16 border-b border-[#171717]/15 pb-16 md:grid-cols-2 lg:grid-cols-5">
+      <div className="grid gap-16 border-b border-white/10 pb-16 md:grid-cols-2 lg:grid-cols-5">
         
         {/* Brand */}
         <div className="lg:col-span-2">
-          <h2 className="text-4xl font-semibold tracking-[-0.05em] md:text-5xl">
+          <h2 className="text-4xl font-semibold tracking-[-0.05em] md:text-5xl text-white">
             SAMAARAV
           </h2>
 
-          <p className="mt-6 max-w-md text-sm leading-relaxed text-[#171717]/60 md:text-base">
+          <p className="mt-6 max-w-md text-sm leading-relaxed text-slate-300 md:text-base">
             Connecting exceptional technology talent with businesses that are
             building what's next.
           </p>
@@ -20,49 +20,49 @@ export default function Footer() {
 
         {/* Registered Office */}
         <div>
-          <p className="mb-6 text-xs uppercase tracking-[0.2em] text-[#171717]/40">
+          <p className="mb-6 text-xs uppercase tracking-[0.2em] text-white">
             Registered Office
           </p>
-          <div className="flex flex-col gap-2 text-sm text-[#171717]/70 mb-8 lg:mb-0">
+          <div className="flex flex-col gap-2 text-sm text-slate-300 mb-8 lg:mb-0">
             <p>London, UK</p>
             <p>Branch: 44 Widnell Lane, Edinburgh, Scotland, UK</p>
-            <p className="mt-2 text-[#171717]">
-              <a href="tel:+447550051466" className="transition-opacity hover:opacity-50">+44 7550051466</a>
+            <p className="mt-2 text-slate-300">
+              <a href="tel:+447550051466" className="transition-colors hover:text-accent">+44 7550051466</a>
             </p>
           </div>
         </div>
 
         {/* Company */}
         <div>
-          <p className="mb-6 text-xs uppercase tracking-[0.2em] text-[#171717]/40">
+          <p className="mb-6 text-xs uppercase tracking-[0.2em] text-white">
             Company
           </p>
 
-          <div className="flex flex-col gap-4 text-sm">
+          <div className="flex flex-col gap-4 text-sm text-slate-300">
             <a
               href="#services"
-              className="w-fit transition-opacity hover:opacity-50"
+              className="w-fit transition-colors hover:text-accent"
             >
               Services
             </a>
 
             <a
               href="#clients"
-              className="w-fit transition-opacity hover:opacity-50"
+              className="w-fit transition-colors hover:text-accent"
             >
               Clients
             </a>
 
             <a
               href="#about"
-              className="w-fit transition-opacity hover:opacity-50"
+              className="w-fit transition-colors hover:text-accent"
             >
               About Us
             </a>
 
             <a
               href="#contact"
-              className="w-fit transition-opacity hover:opacity-50"
+              className="w-fit transition-colors hover:text-accent"
             >
               Contact
             </a>
@@ -71,28 +71,28 @@ export default function Footer() {
 
         {/* Connect */}
         <div>
-          <p className="mb-6 text-xs uppercase tracking-[0.2em] text-[#171717]/40">
+          <p className="mb-6 text-xs uppercase tracking-[0.2em] text-white">
             Connect
           </p>
 
-          <div className="flex flex-col gap-4 text-sm">
+          <div className="flex flex-col gap-4 text-sm text-slate-300">
             <a
               href="#"
-              className="w-fit transition-opacity hover:opacity-50"
+              className="w-fit transition-colors hover:text-accent"
             >
               LinkedIn ↗
             </a>
 
             <a
               href="mailto:info@samaarav.co.uk"
-              className="w-fit transition-opacity hover:opacity-50"
+              className="w-fit transition-colors hover:text-accent"
             >
               Email ↗
             </a>
 
             <a
               href="#contact"
-              className="w-fit transition-opacity hover:opacity-50"
+              className="w-fit transition-colors hover:text-accent"
             >
               Get in Touch ↗
             </a>
@@ -101,17 +101,17 @@ export default function Footer() {
       </div>
 
       {/* Bottom info section */}
-      <div className="flex flex-col gap-4 pt-12 pb-4 text-xs text-[#171717]/50 md:flex-row md:items-center md:justify-between">
+      <div className="flex flex-col gap-4 pt-12 pb-4 text-xs text-slate-300 md:flex-row md:items-center md:justify-between">
         <p>
           © {new Date().getFullYear()} Samaarav. All rights reserved.
         </p>
 
         <div className="flex gap-6">
-          <a href="#" className="transition-opacity hover:opacity-100">
+          <a href="#" className="transition-colors hover:text-accent">
             Privacy
           </a>
 
-          <a href="#" className="transition-opacity hover:opacity-100">
+          <a href="#" className="transition-colors hover:text-accent">
             Terms
           </a>
         </div>
@@ -120,8 +120,8 @@ export default function Footer() {
       </div>
 
       {/* Big footer text */}
-      <div className="overflow-hidden pt-4 md:pt-8 flex justify-center items-end leading-none">
-        <h2 className="whitespace-nowrap text-[18vw] font-medium leading-[0.75] tracking-[-0.09em] text-[#171717] translate-y-[10%]">
+      <div className="overflow-hidden pt-4 md:pt-8 flex justify-center items-end leading-none opacity-50">
+        <h2 className="whitespace-nowrap text-[18vw] font-medium leading-[0.75] tracking-[-0.09em] text-white translate-y-[10%]">
           SAMAARAV
         </h2>
       </div>

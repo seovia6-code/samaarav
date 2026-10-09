@@ -14,7 +14,7 @@ import ServiceTextSections from "./ServiceTextSections";
 
 export default function ServiceTemplate({ data }: { data: any }) {
   return (
-    <main className="bg-[#faf9f6]">
+    <main className="bg-background">
       <Navbar />
       <ServiceHero 
         title={data.title} 
@@ -41,7 +41,7 @@ export default function ServiceTemplate({ data }: { data: any }) {
         )}
       </div>
 
-      <div className="relative z-50 bg-[#faf9f6] rounded-t-[40px] shadow-[0_-15px_30px_rgba(0,0,0,0.05)] border-t border-black/5">
+      <div className="relative z-50 bg-background rounded-t-[40px] shadow-[0_-15px_30px_rgba(0,0,0,0.05)] border-t border-border">
         {data.textSections && data.textSections.length > 0 && (
           <ServiceTextSections sections={data.textSections} />
         )}

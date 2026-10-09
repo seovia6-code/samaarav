@@ -12,7 +12,7 @@ export default function ServiceConversionProcess({
   subtitle?: string
 }) {
   return (
-    <section className="relative px-6 py-20 md:px-10 lg:px-14 flex flex-col justify-center w-full bg-[#faf9f6] text-[#171717]">
+    <section className="relative px-6 py-20 md:px-10 lg:px-14 flex flex-col justify-center w-full bg-background text-foreground">
       <div className="max-w-7xl mx-auto w-full">
         <div className="mb-16 text-center md:text-left">
           <motion.h2 
@@ -28,7 +28,7 @@ export default function ServiceConversionProcess({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-black/60 text-lg md:text-xl max-w-2xl"
+            className="text-muted text-lg md:text-xl max-w-2xl"
           >
             {subtitle}
           </motion.p>
@@ -42,14 +42,14 @@ export default function ServiceConversionProcess({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white p-8 rounded-3xl border border-black/5 flex flex-col relative overflow-hidden"
+              className="bg-white p-8 rounded-3xl border border-border flex flex-col relative overflow-hidden"
             >
-              <div className="absolute -right-4 -top-4 text-[8rem] font-bold text-black/5 leading-none select-none">
+              <div className="absolute -right-4 -top-4 text-[8rem] font-bold text-foreground/5 leading-none select-none">
                 {index + 1}
               </div>
               <div className="relative z-10">
                 <h3 className="text-2xl font-medium tracking-[-0.03em] mb-4 pr-12">{step.title}</h3>
-                <p className="text-black/60 text-base leading-relaxed">
+                <p className="text-muted text-base leading-relaxed">
                   {step.description}
                 </p>
               </div>

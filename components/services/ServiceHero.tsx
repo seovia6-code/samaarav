@@ -25,7 +25,7 @@ export default function ServiceHero({ title, subtitle, description, stats }: any
     <>
       <section
         ref={containerRef}
-        className="relative min-h-screen overflow-hidden px-6 pb-12 pt-32 md:px-10 md:pt-40 lg:px-14 bg-[#faf9f6]"
+        className="relative min-h-screen overflow-hidden px-6 pb-12 pt-32 md:px-10 md:pt-40 lg:px-14 bg-background"
       >
         <motion.div style={{ y: bgY }} className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
           {/* Subtle grid pattern */}
@@ -38,7 +38,7 @@ export default function ServiceHero({ title, subtitle, description, stats }: any
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="mb-8 text-xs uppercase tracking-[0.25em] text-black/40"
+              className="mb-8 text-xs uppercase tracking-[0.25em] text-muted"
             >
               {subtitle}
             </motion.p>
@@ -91,7 +91,7 @@ export default function ServiceHero({ title, subtitle, description, stats }: any
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 1.5, ease: [0.16, 1, 0.3, 1] }}
-              className="max-w-md text-base leading-relaxed text-black/65 md:text-lg"
+              className="max-w-md text-base leading-relaxed text-muted md:text-lg"
             >
               {description}
             </motion.p>
@@ -103,9 +103,9 @@ export default function ServiceHero({ title, subtitle, description, stats }: any
               className="flex gap-8"
             >
               {stats?.slice(0, 3).map((stat: any, index: number) => (
-                <div key={index} className="flex flex-col gap-2 border-l border-black/15 pl-6">
+                <div key={index} className="flex flex-col gap-2 border-l border-border pl-6">
                   <span className="text-3xl font-medium tracking-tight md:text-4xl">{stat.value}</span>
-                  <span className="text-xs uppercase tracking-wider text-black/50">{stat.label}</span>
+                  <span className="text-xs uppercase tracking-wider text-muted">{stat.label}</span>
                 </div>
               ))}
             </motion.div>

@@ -10,7 +10,7 @@ import StackedSection from "@/components/permanent-staffing/StackedSection";
 
 export default function PermanentStaffingPage() {
   return (
-    <main className="bg-[#faf9f6]">
+    <main className="bg-background">
       <Navbar />
       <Hero />
       
@@ -24,7 +24,7 @@ export default function PermanentStaffingPage() {
         </StackedSection>
       </div>
 
-      <div className="relative z-50 bg-[#faf9f6] rounded-t-[40px] shadow-[0_-15px_30px_rgba(0,0,0,0.05)] border-t border-black/5">
+      <div className="relative z-50 bg-background rounded-t-[40px] shadow-[0_-15px_30px_rgba(0,0,0,0.05)] border-t border-border">
         <Process />
         <FAQ />
         <div className="bg-transparent rounded-t-[40px]">

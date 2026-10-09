@@ -11,7 +11,7 @@ export default function Clients() {
   return (
     <section
       id="clients"
-      className="relative overflow-hidden border-y border-black/10 py-24"
+      className="relative overflow-hidden border-y border-border py-24"
     >
       {/* Heading */}
       <motion.div 
@@ -34,7 +34,7 @@ export default function Clients() {
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0, transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } }
               }}
-              className="mb-4 text-xs uppercase tracking-[0.25em] text-black/40"
+              className="mb-4 text-xs uppercase tracking-[0.25em] text-muted"
             >
               Trusted Enterprises
             </motion.p>
@@ -57,7 +57,7 @@ export default function Clients() {
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0, transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } }
             }}
-            className="max-w-sm text-sm leading-relaxed text-black/50 md:text-base"
+            className="max-w-sm text-sm leading-relaxed text-muted md:text-base"
           >
             We connect exceptional technology talent with organizations building
             what comes next.
@@ -123,7 +123,7 @@ function LogoCard({
   };
 }) {
   return (
-    <div className="flex h-24 w-48 shrink-0 items-center justify-center rounded-2xl border border-black/10 bg-white/35 px-7 transition-transform duration-300 hover:scale-[1.03] md:h-28 md:w-56">
+    <div className="flex h-24 w-48 shrink-0 items-center justify-center rounded-2xl border border-border bg-white/35 px-7 transition-transform duration-300 hover:scale-[1.03] md:h-28 md:w-56">
       <Image
         src={client.logo}
         alt={`${client.name} logo`}

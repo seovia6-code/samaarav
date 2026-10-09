@@ -20,7 +20,7 @@ export default function Hero() {
     <>
       <section
         ref={containerRef}
-        className="relative min-h-screen overflow-hidden px-6 pb-12 pt-32 md:px-10 md:pt-40 lg:px-14 bg-[#faf9f6]"
+        className="relative min-h-screen overflow-hidden px-6 pb-12 pt-32 md:px-10 md:pt-40 lg:px-14 bg-background"
       >
         <motion.div style={{ y: bgY }} className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
           {/* Subtle grid pattern */}
@@ -33,7 +33,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="mb-8 text-xs uppercase tracking-[0.25em] text-black/40"
+              className="mb-8 text-xs uppercase tracking-[0.25em] text-muted"
             >
               Permanent IT Staffing
             </motion.p>
@@ -84,7 +84,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 1.5, ease: [0.16, 1, 0.3, 1] }}
-              className="max-w-md text-base leading-relaxed text-black/65 md:text-lg"
+              className="max-w-md text-base leading-relaxed text-muted md:text-lg"
             >
               Connect with top-tier tech talent. Build teams that grow with your business. Expert placement in 2-4 weeks.
             </motion.p>
@@ -95,17 +95,17 @@ export default function Hero() {
               transition={{ duration: 1.2, delay: 1.7, ease: [0.16, 1, 0.3, 1] }}
               className="flex flex-wrap gap-6 md:gap-8"
             >
-              <div className="flex flex-col gap-1 md:gap-2 border-l border-black/15 pl-4 md:pl-6">
+              <div className="flex flex-col gap-1 md:gap-2 border-l border-border pl-4 md:pl-6">
                 <span className="text-2xl font-medium tracking-tight md:text-4xl">85%</span>
-                <span className="text-[10px] md:text-xs uppercase tracking-wider text-black/50">Success Rate</span>
+                <span className="text-[10px] md:text-xs uppercase tracking-wider text-muted">Success Rate</span>
               </div>
-              <div className="flex flex-col gap-1 md:gap-2 border-l border-black/15 pl-4 md:pl-6">
+              <div className="flex flex-col gap-1 md:gap-2 border-l border-border pl-4 md:pl-6">
                 <span className="text-2xl font-medium tracking-tight md:text-4xl">500+</span>
-                <span className="text-[10px] md:text-xs uppercase tracking-wider text-black/50">Professionals Placed</span>
+                <span className="text-[10px] md:text-xs uppercase tracking-wider text-muted">Professionals Placed</span>
               </div>
-              <div className="flex flex-col gap-1 md:gap-2 border-l border-black/15 pl-4 md:pl-6">
+              <div className="flex flex-col gap-1 md:gap-2 border-l border-border pl-4 md:pl-6">
                 <span className="text-2xl font-medium tracking-tight md:text-4xl">95%</span>
-                <span className="text-[10px] md:text-xs uppercase tracking-wider text-black/50">Client Satisfaction</span>
+                <span className="text-[10px] md:text-xs uppercase tracking-wider text-muted">Client Satisfaction</span>
               </div>
             </motion.div>
           </motion.div>

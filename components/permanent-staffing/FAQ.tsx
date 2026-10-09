@@ -46,14 +46,14 @@ export default function FAQ() {
         </h2>
       </div>
 
-      <div className="mx-auto max-w-4xl border-t border-[#171717]/20">
+      <div className="mx-auto max-w-4xl border-t border-foreground/20">
         {faqs.map((faq, index) => {
           const isOpen = openIndex === index;
           return (
-            <div key={index} className="border-b border-[#171717]/20">
+            <div key={index} className="border-b border-foreground/20">
               <button
                 onClick={() => setOpenIndex(isOpen ? null : index)}
-                className="flex w-full items-center justify-between py-6 text-left transition-colors hover:text-black/60 md:py-8"
+                className="flex w-full items-center justify-between py-6 text-left transition-colors hover:text-muted md:py-8"
               >
                 <span className="text-xl font-medium tracking-tight md:text-2xl">
                   {faq.question}

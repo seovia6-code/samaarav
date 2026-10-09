@@ -17,7 +17,7 @@ export default function ContactPage() {
   ];
 
   return (
-    <main className="bg-[#faf9f6]">
+    <main className="bg-background">
       <Navbar />
 
       {/* Hero Section */}
@@ -27,15 +27,15 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-[-0.04em] text-[#171717] mb-4 md:mb-6"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-[-0.04em] text-foreground mb-4 md:mb-6"
           >
-            Contact <span className="text-black/40">Us</span>
+            Contact <span className="text-muted">Us</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-base md:text-lg lg:text-xl text-black/60 max-w-2xl mx-auto px-2"
+            className="text-base md:text-lg lg:text-xl text-muted max-w-2xl mx-auto px-2"
           >
             Reach out to our team by sending us an email—we're here to assist you with your inquiries.
           </motion.p>
@@ -48,20 +48,20 @@ export default function ContactPage() {
           
           {/* Left Column: Office Details */}
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#171717] mb-6 md:mb-8">Our Offices</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 md:mb-8">Our Offices</h2>
             
             {/* Quick Contact Info */}
-            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-black/5 mb-8 md:mb-10">
+            <div className="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-border mb-8 md:mb-10">
               <div className="space-y-6">
                 <div>
-                  <h4 className="text-sm font-semibold text-black/40 uppercase tracking-wider mb-2">Email</h4>
-                  <a href="mailto:info@samaarav.co.uk" className="text-lg font-medium text-blue-600 hover:underline">
+                  <h4 className="text-sm font-semibold text-muted uppercase tracking-wider mb-2">Email</h4>
+                  <a href="mailto:info@samaarav.co.uk" className="text-lg font-medium text-primary hover:underline">
                     info@samaarav.co.uk
                   </a>
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-black/40 uppercase tracking-wider mb-2">Phone</h4>
-                  <div className="space-y-2 text-black/80">
+                  <h4 className="text-sm font-semibold text-muted uppercase tracking-wider mb-2">Phone</h4>
+                  <div className="space-y-2 text-foreground">
                     <p><span className="font-medium w-24 inline-block">Phone:</span> +44 7550051466</p>
                   </div>
                 </div>
@@ -69,16 +69,16 @@ export default function ContactPage() {
             </div>
 
             {/* Office Tabs */}
-            <div className="bg-white rounded-3xl shadow-sm border border-black/5 overflow-hidden">
-              <div className="flex border-b border-black/5 overflow-x-auto">
+            <div className="bg-white rounded-3xl shadow-sm border border-border overflow-hidden">
+              <div className="flex border-b border-border overflow-x-auto">
                 {offices.map((office) => (
                   <button
                     key={office.name}
                     onClick={() => setActiveTab(office.name)}
                     className={`flex-1 py-4 px-4 text-sm font-medium whitespace-nowrap transition-colors ${
                       activeTab === office.name 
-                        ? 'text-blue-600 border-b-2 border-blue-600 bg-blue-50/50' 
-                        : 'text-black/60 hover:bg-black/5'
+                        ? 'text-primary border-b-2 border-primary bg-primary/5' 
+                        : 'text-muted hover:bg-primary/5'
                     }`}
                   >
                     {office.name.split(' ')[0]}
@@ -88,9 +88,9 @@ export default function ContactPage() {
               <div className="p-6 md:p-8">
                 {offices.map((office) => (
                   <div key={office.name} className={`${activeTab === office.name ? 'block' : 'hidden'}`}>
-                    <h3 className="text-xl md:text-2xl font-bold text-[#171717] mb-2">{office.company}</h3>
-                    <p className="text-black/60 text-lg">{office.address}</p>
-                    <a href="mailto:info@samaarav.com" className="inline-block mt-4 text-blue-600 font-medium hover:underline">
+                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">{office.company}</h3>
+                    <p className="text-muted text-lg">{office.address}</p>
+                    <a href="mailto:info@samaarav.com" className="inline-block mt-4 text-primary font-medium hover:underline">
                       info@samaarav.com
                     </a>
                   </div>
@@ -101,34 +101,34 @@ export default function ContactPage() {
 
           {/* Right Column: Contact Form */}
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#171717] mb-6 md:mb-8">Let's Connect</h2>
-            <form className="bg-white p-6 md:p-10 rounded-3xl shadow-lg border border-black/5 shadow-blue-900/5">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 md:mb-8">Let's Connect</h2>
+            <form className="bg-white p-6 md:p-10 rounded-3xl shadow-lg border border-border shadow-navy/5">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label className="block text-sm font-medium text-black/70 mb-2" htmlFor="name">Full Name *</label>
-                  <input type="text" id="name" required placeholder="Enter your full name" className="w-full px-4 py-3 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-blue-600/50 bg-[#faf9f6]" />
+                  <label className="block text-sm font-medium text-muted mb-2" htmlFor="name">Full Name *</label>
+                  <input type="text" id="name" required placeholder="Enter your full name" className="w-full px-4 py-3 rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 bg-background" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-black/70 mb-2" htmlFor="company">Company Name *</label>
-                  <input type="text" id="company" required placeholder="Enter your company" className="w-full px-4 py-3 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-blue-600/50 bg-[#faf9f6]" />
+                  <label className="block text-sm font-medium text-muted mb-2" htmlFor="company">Company Name *</label>
+                  <input type="text" id="company" required placeholder="Enter your company" className="w-full px-4 py-3 rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 bg-background" />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label className="block text-sm font-medium text-black/70 mb-2" htmlFor="email">Work Email *</label>
-                  <input type="email" id="email" required placeholder="Enter your work email" className="w-full px-4 py-3 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-blue-600/50 bg-[#faf9f6]" />
+                  <label className="block text-sm font-medium text-muted mb-2" htmlFor="email">Work Email *</label>
+                  <input type="email" id="email" required placeholder="Enter your work email" className="w-full px-4 py-3 rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 bg-background" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-black/70 mb-2" htmlFor="jobtitle">Job Title</label>
-                  <input type="text" id="jobtitle" placeholder="Enter your job title" className="w-full px-4 py-3 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-blue-600/50 bg-[#faf9f6]" />
+                  <label className="block text-sm font-medium text-muted mb-2" htmlFor="jobtitle">Job Title</label>
+                  <input type="text" id="jobtitle" placeholder="Enter your job title" className="w-full px-4 py-3 rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 bg-background" />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label className="block text-sm font-medium text-black/70 mb-2" htmlFor="country">Country</label>
-                  <select id="country" className="w-full px-4 py-3 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-blue-600/50 bg-[#faf9f6]">
+                  <label className="block text-sm font-medium text-muted mb-2" htmlFor="country">Country</label>
+                  <select id="country" className="w-full px-4 py-3 rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 bg-background">
                     <option value="">Select Country</option>
                     <option value="us">United States</option>
                     <option value="in">India</option>
@@ -137,22 +137,22 @@ export default function ContactPage() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-black/70 mb-2" htmlFor="mobilenumber">Mobile Number</label>
+                  <label className="block text-sm font-medium text-muted mb-2" htmlFor="mobilenumber">Mobile Number</label>
                   <div className="flex gap-2">
-                    <input type="text" placeholder="+1" className="w-20 px-4 py-3 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-blue-600/50 bg-[#faf9f6]" />
-                    <input type="text" id="mobilenumber" placeholder="Mobile number" className="flex-1 px-4 py-3 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-blue-600/50 bg-[#faf9f6]" />
+                    <input type="text" placeholder="+1" className="w-20 px-4 py-3 rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 bg-background" />
+                    <input type="text" id="mobilenumber" placeholder="Mobile number" className="flex-1 px-4 py-3 rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 bg-background" />
                   </div>
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label className="block text-sm font-medium text-black/70 mb-2" htmlFor="nicheindustry">Niche Industry</label>
-                  <input type="text" id="nicheindustry" placeholder="Your niche industry" className="w-full px-4 py-3 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-blue-600/50 bg-[#faf9f6]" />
+                  <label className="block text-sm font-medium text-muted mb-2" htmlFor="nicheindustry">Niche Industry</label>
+                  <input type="text" id="nicheindustry" placeholder="Your niche industry" className="w-full px-4 py-3 rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 bg-background" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-black/70 mb-2" htmlFor="hearus">How did you hear about us?</label>
-                  <select id="hearus" className="w-full px-4 py-3 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-blue-600/50 bg-[#faf9f6]">
+                  <label className="block text-sm font-medium text-muted mb-2" htmlFor="hearus">How did you hear about us?</label>
+                  <select id="hearus" className="w-full px-4 py-3 rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 bg-background">
                     <option value="">Select Option</option>
                     <option value="search">Search Engine</option>
                     <option value="social">Social Media</option>
@@ -163,20 +163,20 @@ export default function ContactPage() {
               </div>
 
               <div className="mb-6">
-                <label className="block text-sm font-medium text-black/70 mb-2" htmlFor="message">How can we help? *</label>
-                <textarea id="message" required rows={4} placeholder="Tell us what you need support with..." className="w-full px-4 py-3 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-blue-600/50 bg-[#faf9f6] resize-none"></textarea>
+                <label className="block text-sm font-medium text-muted mb-2" htmlFor="message">How can we help? *</label>
+                <textarea id="message" required rows={4} placeholder="Tell us what you need support with..." className="w-full px-4 py-3 rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 bg-background resize-none"></textarea>
               </div>
 
               <div className="mb-8 flex items-start gap-3">
-                <input type="checkbox" id="agreement" required className="mt-1.5 w-4 h-4 rounded border-black/20 text-blue-600 focus:ring-blue-600/50" />
-                <label htmlFor="agreement" className="text-xs text-black/60 leading-relaxed">
+                <input type="checkbox" id="agreement" required className="mt-1.5 w-4 h-4 rounded border-border text-primary focus:ring-primary/50" />
+                <label htmlFor="agreement" className="text-xs text-muted leading-relaxed">
                   By submitting this form, you acknowledge that Samaarav may use your personal information for marketing communications as outlined in its privacy policy.
                 </label>
               </div>
 
               <button 
                 type="button" 
-                className="w-full bg-[#171717] hover:bg-black text-white font-medium py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl flex items-center justify-center gap-2"
+                className="w-full bg-navy hover:bg-primary text-white font-medium py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl flex items-center justify-center gap-2"
               >
                 Submit Inquiry
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

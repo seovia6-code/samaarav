@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function AboutUsPage() {
   return (
-    <main className="bg-[#faf9f6]">
+    <main className="bg-background">
       <Navbar />
       
       {/* Hero Section */}
@@ -17,16 +17,16 @@ export default function AboutUsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-bold tracking-[-0.04em] text-[#171717] mb-6"
+            className="text-5xl md:text-7xl font-bold tracking-[-0.04em] text-foreground mb-6"
           >
             Empowering Global Businesses with <br className="hidden md:block" />
-            <span className="text-black/40">Exceptional Talent</span>
+            <span className="text-muted">Exceptional Talent</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-lg md:text-xl text-black/60 max-w-3xl mx-auto"
+            className="text-lg md:text-xl text-muted max-w-3xl mx-auto"
           >
             Connecting Visionary Companies with World-Class Technology and IT Professionals. 
             At Samaarav, we believe that the right talent can transform an organization.
@@ -39,33 +39,33 @@ export default function AboutUsPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.04em] text-[#171717] mb-8">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.04em] text-foreground mb-8">
                 Why Choose Samaarav?
               </h2>
-              <p className="text-lg text-black/60 mb-6">
+              <p className="text-lg text-muted mb-6">
                 We are more than just a staffing agency; we are your strategic growth partner. 
                 With deep industry knowledge and a robust global network, we deliver precision in every placement.
               </p>
               <ul className="space-y-6">
                 <li className="flex items-start gap-4">
-                  <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5 shrink-0" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0" />
                   <div>
-                    <h4 className="text-xl font-bold text-[#171717]">Specialized IT Focus</h4>
-                    <p className="text-black/60">Our recruiters are domain experts in AI, Cloud, ERP, and Cybersecurity.</p>
+                    <h4 className="text-xl font-bold text-foreground">Specialized IT Focus</h4>
+                    <p className="text-muted">Our recruiters are domain experts in AI, Cloud, ERP, and Cybersecurity.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
-                  <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5 shrink-0" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0" />
                   <div>
-                    <h4 className="text-xl font-bold text-[#171717]">Global Reach & Precision</h4>
-                    <p className="text-black/60">Access to a pre-vetted global talent pool matching your exact tech stack.</p>
+                    <h4 className="text-xl font-bold text-foreground">Global Reach & Precision</h4>
+                    <p className="text-muted">Access to a pre-vetted global talent pool matching your exact tech stack.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
-                  <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5 shrink-0" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0" />
                   <div>
-                    <h4 className="text-xl font-bold text-[#171717]">Agility & Scale</h4>
-                    <p className="text-black/60">From single niche hires to building entire engineering squads rapidly.</p>
+                    <h4 className="text-xl font-bold text-foreground">Agility & Scale</h4>
+                    <p className="text-muted">From single niche hires to building entire engineering squads rapidly.</p>
                   </div>
                 </li>
               </ul>
@@ -73,20 +73,20 @@ export default function AboutUsPage() {
             <div className="bg-[#f5f5f5] rounded-3xl p-10 h-full flex flex-col justify-center">
               <div className="grid grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-5xl font-bold text-[#171717] mb-2">95%</h3>
-                  <p className="text-sm font-medium uppercase tracking-widest text-black/40">Client Retention</p>
+                  <h3 className="text-5xl font-bold text-foreground mb-2">95%</h3>
+                  <p className="text-sm font-medium uppercase tracking-widest text-muted">Client Retention</p>
                 </div>
                 <div>
-                  <h3 className="text-5xl font-bold text-[#171717] mb-2">48h</h3>
-                  <p className="text-sm font-medium uppercase tracking-widest text-black/40">Avg Submittal Time</p>
+                  <h3 className="text-5xl font-bold text-foreground mb-2">48h</h3>
+                  <p className="text-sm font-medium uppercase tracking-widest text-muted">Avg Submittal Time</p>
                 </div>
                 <div>
-                  <h3 className="text-5xl font-bold text-[#171717] mb-2">1k+</h3>
-                  <p className="text-sm font-medium uppercase tracking-widest text-black/40">Professionals Placed</p>
+                  <h3 className="text-5xl font-bold text-foreground mb-2">1k+</h3>
+                  <p className="text-sm font-medium uppercase tracking-widest text-muted">Professionals Placed</p>
                 </div>
                 <div>
-                  <h3 className="text-5xl font-bold text-[#171717] mb-2">Top 5%</h3>
-                  <p className="text-sm font-medium uppercase tracking-widest text-black/40">Vetted Talent</p>
+                  <h3 className="text-5xl font-bold text-foreground mb-2">Top 5%</h3>
+                  <p className="text-sm font-medium uppercase tracking-widest text-muted">Vetted Talent</p>
                 </div>
               </div>
             </div>
@@ -95,7 +95,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 px-5 md:px-10 bg-[#171717] text-white">
+      <section className="py-20 px-5 md:px-10 bg-navy text-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.04em] mb-16 text-center">
             Our Core Values
@@ -122,23 +122,23 @@ export default function AboutUsPage() {
       </section>
 
       {/* What We Do */}
-      <section className="py-20 px-5 md:px-10 bg-[#faf9f6]">
+      <section className="py-20 px-5 md:px-10 bg-background">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.04em] text-[#171717] mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.04em] text-foreground mb-12">
             What We Do
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-10 rounded-3xl shadow-sm border border-black/5 text-left">
-              <h3 className="text-2xl font-bold text-[#171717] mb-4">Contract Staffing</h3>
-              <p className="text-black/60">Flexible, project-based talent to help you scale your workforce quickly during peaks and critical deliverables.</p>
+            <div className="bg-white p-10 rounded-3xl shadow-sm border border-border text-left">
+              <h3 className="text-2xl font-bold text-foreground mb-4">Contract Staffing</h3>
+              <p className="text-muted">Flexible, project-based talent to help you scale your workforce quickly during peaks and critical deliverables.</p>
             </div>
-            <div className="bg-white p-10 rounded-3xl shadow-sm border border-black/5 text-left">
-              <h3 className="text-2xl font-bold text-[#171717] mb-4">Permanent Staffing</h3>
-              <p className="text-black/60">End-to-end direct hire solutions to find committed, long-term technical talent that aligns with your culture.</p>
+            <div className="bg-white p-10 rounded-3xl shadow-sm border border-border text-left">
+              <h3 className="text-2xl font-bold text-foreground mb-4">Permanent Staffing</h3>
+              <p className="text-muted">End-to-end direct hire solutions to find committed, long-term technical talent that aligns with your culture.</p>
             </div>
-            <div className="bg-white p-10 rounded-3xl shadow-sm border border-black/5 text-left">
-              <h3 className="text-2xl font-bold text-[#171717] mb-4">Statement of Work (SOW)</h3>
-              <p className="text-black/60">Outcome-based delivery models where we manage the project, team, and timelines for guaranteed results.</p>
+            <div className="bg-white p-10 rounded-3xl shadow-sm border border-border text-left">
+              <h3 className="text-2xl font-bold text-foreground mb-4">Statement of Work (SOW)</h3>
+              <p className="text-muted">Outcome-based delivery models where we manage the project, team, and timelines for guaranteed results.</p>
             </div>
           </div>
         </div>

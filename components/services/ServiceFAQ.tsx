@@ -20,17 +20,17 @@ export default function ServiceFAQ({ faqs }: { faqs: any[] }) {
       </div>
 
       <div className="mx-auto w-full max-w-4xl">
-        <div className="flex flex-col border-t border-black/10">
+        <div className="flex flex-col border-t border-border">
           {faqs.map((faq, index) => (
-            <div key={index} className="border-b border-black/10">
+            <div key={index} className="border-b border-border">
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="flex w-full items-center justify-between py-8 text-left transition-colors hover:text-black/60 md:py-10"
+                className="flex w-full items-center justify-between py-8 text-left transition-colors hover:text-muted md:py-10"
               >
                 <span className="text-xl font-medium tracking-tight md:text-3xl">
                   {faq.question}
                 </span>
-                <span className="ml-6 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-black/10 text-2xl font-light transition-transform duration-300">
+                <span className="ml-6 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-border text-2xl font-light transition-transform duration-300">
                   {openIndex === index ? "−" : "+"}
                 </span>
               </button>
@@ -44,7 +44,7 @@ export default function ServiceFAQ({ faqs }: { faqs: any[] }) {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <p className="pb-10 pr-12 text-base leading-relaxed text-black/60 md:text-xl">
+                    <p className="pb-10 pr-12 text-base leading-relaxed text-muted md:text-xl">
                       {faq.answer}
                     </p>
                   </motion.div>

@@ -8,29 +8,29 @@ const benefits = [
     number: "01",
     title: "Cultural Fit & Alignment",
     description: "We go beyond skills and experience. Our rigorous vetting process identifies professionals who share your values, communication style, and commitment to excellence.",
-    color: "#ffffff",
-    textColor: "#171717",
+    color: "var(--color-white)",
+    textColor: "var(--color-foreground)",
   },
   {
     number: "02",
     title: "Access Specialized Expertise",
     description: "Our extensive network spans cloud platforms, DevOps, AI/ML, full-stack development, and cybersecurity. We pre-screen for technical depth and certifications.",
-    color: "#f5f5f5",
-    textColor: "#171717",
+    color: "#FFFFFF",
+    textColor: "var(--color-foreground)",
   },
   {
     number: "03",
     title: "Build Sustainable Pipeline",
     description: "Permanent placements create stability for long-term growth. You retain institutional knowledge, develop future leaders, and build organizational resilience.",
-    color: "#eaeaea",
-    textColor: "#171717",
+    color: "#FFFFFF",
+    textColor: "var(--color-foreground)",
   },
   {
     number: "04",
     title: "Strategic Partnership Approach",
     description: "We're invested in your success. Our tech-savvy recruiters provide ongoing guidance, market insights, and pre-placement technical assessments to ensure perfect fits.",
-    color: "#171717",
-    textColor: "#ffffff",
+    color: "var(--color-foreground)",
+    textColor: "var(--color-white)",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function Benefits() {
           <div 
             key={index}
             style={{ backgroundColor: benefit.color, color: benefit.textColor }} 
-            className="flex flex-col justify-between overflow-hidden rounded-3xl border border-black/10 p-5 md:p-6 shadow-sm"
+            className="flex flex-col justify-between overflow-hidden rounded-3xl border border-border p-5 md:p-6 shadow-sm"
           >
             <div className="text-[3rem] font-medium leading-none tracking-[-0.09em] opacity-20 md:text-[3.5rem] mb-3 md:mb-4">
               {benefit.number}

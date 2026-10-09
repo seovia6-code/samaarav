@@ -50,8 +50,8 @@ export default function Navbar() {
           justify-between
           rounded-full
           border
-          border-black/10
-          bg-[#FFFDF3]/95
+          border-border
+          bg-white/95
           px-5
           shadow-[0_8px_30px_rgba(0,0,0,0.08)]
           backdrop-blur-xl
@@ -66,15 +66,15 @@ export default function Navbar() {
         >
           <div className="flex flex-col">
             <div className="flex items-center">
-              <span className="text-[22px] font-bold tracking-tight text-[#2d2d32] lowercase leading-none">
+              <span className="text-[22px] font-bold tracking-tight text-navy lowercase leading-none">
                 samaarav
               </span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-1 -mt-1">
-                <path d="M13 5H20V12" stroke="#10b981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M6 10H13V17" stroke="#10b981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M13 5H20V12" stroke="#06B6D4" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M6 10H13V17" stroke="#06B6D4" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <span className="text-[9px] font-medium tracking-wide text-[#2d2d32]/70 mt-[1px]">
+            <span className="text-[9px] font-medium tracking-wide text-muted mt-[1px]">
               IT Services & Staffing Solutions
             </span>
           </div>
@@ -90,7 +90,7 @@ export default function Navbar() {
           >
             <Link
               href="#"
-              className="text-sm text-black/60 transition-colors hover:text-black flex items-center gap-1"
+              className="text-sm text-muted transition-colors hover:text-navy flex items-center gap-1"
             >
               Services
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`transition-transform ${isServicesHovered ? 'rotate-180' : ''}`}>
@@ -105,17 +105,17 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 10, scale: 0.95 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-[600px] bg-white rounded-3xl border border-black/10 shadow-2xl p-8 grid grid-cols-3 gap-8"
+                  className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-[600px] bg-white rounded-3xl border border-border shadow-2xl p-8 grid grid-cols-3 gap-8"
                 >
                   {servicesMenu.map((category) => (
                     <div key={category.title}>
-                      <h4 className="text-xs font-semibold uppercase tracking-widest text-black/40 mb-4">
+                      <h4 className="text-xs font-semibold uppercase tracking-widest text-muted mb-4">
                         {category.title}
                       </h4>
                       <ul className="flex flex-col gap-3">
                         {category.items.map((item) => (
                           <li key={item.name}>
-                            <Link href={item.href} className="text-sm font-medium text-black/70 hover:text-blue-600 transition-colors">
+                            <Link href={item.href} className="text-sm font-medium text-muted hover:text-primary transition-colors">
                               {item.name}
                             </Link>
                           </li>
@@ -130,21 +130,21 @@ export default function Navbar() {
 
           <Link
             href="#clients"
-            className="text-sm text-black/60 transition-colors hover:text-black"
+            className="text-sm text-muted transition-colors hover:text-navy"
           >
             Clients
           </Link>
 
           <Link
             href="/about"
-            className="text-sm text-black/60 transition-colors hover:text-black"
+            className="text-sm text-muted transition-colors hover:text-navy"
           >
             About
           </Link>
 
           <Link
             href="/contact"
-            className="text-sm text-black/60 transition-colors hover:text-black"
+            className="text-sm text-muted transition-colors hover:text-navy"
           >
             Contact
           </Link>
@@ -156,7 +156,7 @@ export default function Navbar() {
             href="/contact"
             className="
               rounded-full
-              bg-black
+              bg-gradient-to-br from-primary to-secondary
               px-4
               py-2
               text-[11px] md:text-xs md:px-5 md:py-2.5
@@ -172,11 +172,11 @@ export default function Navbar() {
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden flex flex-col items-center justify-center w-9 h-9 rounded-full bg-black/5 hover:bg-black/10 transition-colors"
+            className="md:hidden flex flex-col items-center justify-center w-9 h-9 rounded-full bg-foreground/5 hover:bg-primary-dark/10 transition-colors"
           >
-            <div className={`w-4 h-[1.5px] bg-black transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-[4.5px]' : '-translate-y-1'}`} />
-            <div className={`w-4 h-[1.5px] bg-black transition-opacity duration-300 my-[2px] ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`} />
-            <div className={`w-4 h-[1.5px] bg-black transition-transform duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-[4.5px]' : 'translate-y-1'}`} />
+            <div className={`w-4 h-[1.5px] bg-primary transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-[4.5px]' : '-translate-y-1'}`} />
+            <div className={`w-4 h-[1.5px] bg-primary transition-opacity duration-300 my-[2px] ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`} />
+            <div className={`w-4 h-[1.5px] bg-primary transition-transform duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-[4.5px]' : 'translate-y-1'}`} />
           </button>
         </div>
       </nav>
@@ -189,22 +189,22 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-[calc(100%+10px)] left-0 w-full bg-white/95 backdrop-blur-xl rounded-3xl border border-black/10 shadow-2xl p-6 md:hidden flex flex-col gap-6 max-h-[75vh] overflow-y-auto"
+            className="absolute top-[calc(100%+10px)] left-0 w-full bg-white/95 backdrop-blur-xl rounded-3xl border border-border shadow-2xl p-6 md:hidden flex flex-col gap-6 max-h-[75vh] overflow-y-auto"
           >
             <div className="flex flex-col gap-5">
-              <Link href="#clients" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-semibold text-black/90">Clients</Link>
-              <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-semibold text-black/90">About</Link>
-              <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-semibold text-black/90">Contact</Link>
+              <Link href="#clients" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-semibold text-foreground">Clients</Link>
+              <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-semibold text-foreground">About</Link>
+              <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-semibold text-foreground">Contact</Link>
               
-              <div className="pt-4 border-t border-black/10">
-                <h4 className="text-sm font-bold uppercase tracking-widest text-black/40 mb-4">Services</h4>
-                <div className="flex flex-col gap-6 pl-2 border-l-2 border-black/5">
+              <div className="pt-4 border-t border-border">
+                <h4 className="text-sm font-bold uppercase tracking-widest text-muted mb-4">Services</h4>
+                <div className="flex flex-col gap-6 pl-2 border-l-2 border-border">
                   {servicesMenu.map((category) => (
                     <div key={category.title}>
-                      <div className="text-xs font-bold text-black/60 uppercase mb-3 tracking-wider">{category.title}</div>
+                      <div className="text-xs font-bold text-muted uppercase mb-3 tracking-wider">{category.title}</div>
                       <div className="flex flex-col gap-3 pl-3">
                         {category.items.map((item) => (
-                          <Link key={item.name} href={item.href} onClick={() => setIsMobileMenuOpen(false)} className="text-base font-medium text-black/70 hover:text-black">
+                          <Link key={item.name} href={item.href} onClick={() => setIsMobileMenuOpen(false)} className="text-base font-medium text-muted hover:text-foreground">
                             {item.name}
                           </Link>
                         ))}

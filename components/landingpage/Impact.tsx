@@ -33,7 +33,7 @@ export default function Impact() {
           Our Impact
         </p>
 
-        <h2 className="max-w-5xl text-[12vw] font-medium leading-[0.82] tracking-[-0.07em] md:text-[8vw] lg:text-[7vw]">
+        <h2 className="max-w-5xl text-[12vw] font-medium leading-[0.82] tracking-[-0.07em] md:text-[8vw] lg:text-[7vw] text-navy">
           NUMBERS
           <br />
           THAT
@@ -62,7 +62,7 @@ export default function Impact() {
               </span>
 
               <div>
-                <div className="mb-4 text-[17vw] font-medium leading-none tracking-[-0.09em] md:text-[9vw] lg:text-[6vw]">
+                <div className="mb-4 text-[17vw] font-medium leading-none tracking-[-0.09em] md:text-[9vw] lg:text-[6vw] bg-clip-text text-transparent bg-gradient-to-br from-primary to-secondary">
                   {stat.value}
                 </div>
 
