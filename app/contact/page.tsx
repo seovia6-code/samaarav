@@ -11,8 +11,9 @@ export default function ContactPage() {
   const offices = [
     {
       name: "United Kingdom",
-      company: "Samaarav UK (Registered Office)",
-      address: "Registered Office: London, UK | Branch: 44 Widnell Lane, Edinburgh, Scotland, UK",
+      company: "Samaarav UK",
+      branch1: "Branch 1: 124 City Road, London, EC1V 2NX",
+      branch2: "Branch 2: 44 Widnell Lane, Edinburgh, Scotland, UK",
     }
   ];
 
@@ -55,7 +56,7 @@ export default function ContactPage() {
               <div className="space-y-6">
                 <div>
                   <h4 className="text-sm font-semibold text-muted uppercase tracking-wider mb-2">Email</h4>
-                  <a href="mailto:info@samaarav.co.uk" className="text-lg font-medium text-primary hover:underline">
+                  <a href="mailto:info@samaarav.co.uk" className="text-lg font-medium text-black hover:underline">
                     info@samaarav.co.uk
                   </a>
                 </div>
@@ -88,10 +89,13 @@ export default function ContactPage() {
               <div className="p-6 md:p-8">
                 {offices.map((office) => (
                   <div key={office.name} className={`${activeTab === office.name ? 'block' : 'hidden'}`}>
-                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">{office.company}</h3>
-                    <p className="text-muted text-lg">{office.address}</p>
-                    <a href="mailto:info@samaarav.com" className="inline-block mt-4 text-primary font-medium hover:underline">
-                      info@samaarav.com
+                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3">{office.company}</h3>
+                    <div className="space-y-1.5 text-muted text-base md:text-lg">
+                      <p>{office.branch1}</p>
+                      <p>{office.branch2}</p>
+                    </div>
+                    <a href="mailto:info@samaarav.co.uk" className="inline-block mt-4 text-black font-medium hover:underline">
+                      info@samaarav.co.uk
                     </a>
                   </div>
                 ))}
@@ -136,11 +140,11 @@ export default function ContactPage() {
                     <option value="id">Indonesia</option>
                   </select>
                 </div>
-                <div>
+                <div className="min-w-0">
                   <label className="block text-sm font-medium text-muted mb-2" htmlFor="mobilenumber">Mobile Number</label>
-                  <div className="flex gap-2">
-                    <input type="text" placeholder="+1" className="w-20 px-4 py-3 rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 bg-background" />
-                    <input type="text" id="mobilenumber" placeholder="Mobile number" className="flex-1 px-4 py-3 rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 bg-background" />
+                  <div className="flex gap-2 min-w-0">
+                    <input type="text" placeholder="+44" className="w-16 shrink-0 px-2 py-3 text-center rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 bg-background" />
+                    <input type="text" id="mobilenumber" placeholder="Mobile number" className="flex-1 min-w-0 px-4 py-3 rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 bg-background" />
                   </div>
                 </div>
               </div>

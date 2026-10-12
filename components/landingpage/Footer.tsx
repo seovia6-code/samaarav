@@ -24,8 +24,8 @@ export default function Footer() {
             Registered Office
           </p>
           <div className="flex flex-col gap-2 text-sm text-slate-300 mb-8 lg:mb-0">
-            <p>London, UK</p>
-            <p>Branch: 44 Widnell Lane, Edinburgh, Scotland, UK</p>
+            <p>Branch 1: 124 City Road, London, EC1V 2NX</p>
+            <p>Branch 2: 44 Widnell Lane, Edinburgh, Scotland, UK</p>
             <p className="mt-2 text-slate-300">
               <a href="tel:+447550051466" className="transition-colors hover:text-accent">+44 7550051466</a>
             </p>

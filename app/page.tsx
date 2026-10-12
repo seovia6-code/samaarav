@@ -1,4 +1,3 @@
-import Loader from "@/components/landingpage/Loader";
 import Navbar from "@/components/landingpage/Navbar";
 import Hero from "@/components/landingpage/Hero";
 import TechMarquee from "@/components/landingpage/TechMarquee";
@@ -14,7 +13,6 @@ import Footer from "@/components/landingpage/Footer";
 export default function Home() {
   return (
     <main>
-      <Loader />
       <Navbar />
       <Hero />
       <TechMarquee />

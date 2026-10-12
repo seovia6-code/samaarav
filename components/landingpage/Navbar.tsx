@@ -62,16 +62,35 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-1"
+          className="flex items-center"
         >
           <div className="flex flex-col">
-            <div className="flex items-center">
-              <span className="text-[22px] font-bold tracking-tight text-navy lowercase leading-none">
+            <div className="flex items-start">
+              <span className="text-[24px] font-bold tracking-tight text-navy lowercase leading-none">
                 samaarav
               </span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-1 -mt-1">
-                <path d="M13 5H20V12" stroke="#06B6D4" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M6 10H13V17" stroke="#06B6D4" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="-ml-1.5 -mt-2.5 shrink-0"
+              >
+                <path
+                  d="M12 4H20V12"
+                  stroke="#18CB96"
+                  strokeWidth="3.2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M4 11H12V19"
+                  stroke="#18CB96"
+                  strokeWidth="3.2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
               </svg>
             </div>
             <span className="text-[9px] font-medium tracking-wide text-muted mt-[1px]">
